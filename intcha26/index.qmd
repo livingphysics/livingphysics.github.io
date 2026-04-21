@@ -247,7 +247,8 @@ S = A · B
 
 :::
 
-::: {.column width="70%" style="text-align:center"}
+::: {.column width="70%"}
+::: {style="text-align:center"}
 
 **Transcriptional circuit**
 
@@ -285,6 +286,8 @@ max(A, B),&emsp;&emsp;A + B ⇌ C
 </svg>
 
 min(A, B)
+:::
+
 :::
 
 :::
@@ -431,7 +434,9 @@ From @Xiang_2018
 :::
 
 ## Biological Logic Circuits
+
 ![](images/2bit_hash.png){fig-align="center"}
+
 ::: footer
 From @Padmakumar_2024
 :::
