@@ -294,13 +294,6 @@ min(A, B)
 
 ::::
 
-## Transcriptional Circuits
-
-::: {style="display:flex; justify-content:center; align-items:center; height:80vh"}
-
-<video src="images/adder.mp4" controls autoplay loop muted style="max-width:90%; max-height:80vh;"></video>
-
-:::
 
 ## Gene Schedule {auto-animate=true auto-animate-easing="ease-in-out" .smaller}
 
@@ -412,9 +405,6 @@ min(A, B)
         }
     ]
 ```
-## Biological 2-bit Adder
-
-
 
 ## Biological Logic Gates {auto-animate=true}
 
@@ -422,6 +412,14 @@ min(A, B)
 
 ::: footer
 From @Stanton_2013
+:::
+
+## Biological 2-bit Adder
+
+::: {style="display:flex; justify-content:center; align-items:center; height:80vh"}
+
+<video src="images/adder.mp4" controls autoplay loop muted style="max-width:90%; max-height:80vh;"></video>
+
 :::
 
 
