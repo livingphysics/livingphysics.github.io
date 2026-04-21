@@ -552,7 +552,7 @@ digraph D {
 :::
 
 ::: {.fragment}
-![](images/erez_dark.png){fig-align="center" width="60%"}
+![](images/erez_dark.png){fig-align="center" width="50%"}
 :::
 
 ::: footer
@@ -635,7 +635,7 @@ end
 gal  = make_panel("250829_naive_galhis_csm-his-leu-gal.csv", "2% Galactose",      false)
 glu1 = make_panel("250827_yeast_galhis_csm-his-leu-glu.csv", "2% Glucose Run 1",  true)
 
-display(plot(gal, glu1, layout=(2, 1), size=(900, 560)))
+display(plot(gal, glu1, layout=(2, 1), size=(900, 500)))
 ```
 
 :::
@@ -648,7 +648,7 @@ display(plot(gal, glu1, layout=(2, 1), size=(900, 560)))
 #| echo: true
 #| code-fold: true
 glu2 = make_panel("250901_naive_galhis_csm-his-leu-glu.csv", "2% Glucose Run 2", false)
-display(plot(glu1, glu2, layout=(3, 1), size=(900, 780)))
+display(plot(glu1, glu2, layout=(3, 1), size=(900, 720)))
 ```
 
 :::
@@ -849,7 +849,7 @@ p_temp = plot(t_h, temp; color="#E65100", lw=1.2, label="Temperature")
 ylabel!(p_temp, "Temperature (°C)")
 xlabel!(p_temp, "Elapsed time (hours)")
 
-display(plot(p_od, p_dt, p_temp; layout=(3, 1), size=(1000, 700),
+display(plot(p_od, p_dt, p_temp; layout=(3, 1), size=(1000, 500),
              legend=:topleft, left_margin=10Plots.mm))
 ```
 
