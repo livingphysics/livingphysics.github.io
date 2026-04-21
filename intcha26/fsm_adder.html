@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FSM Binary Adder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=JetBrains+Mono:wght@400;500;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #111111;
+  --paper-warm: #1a1a1a;
+  --ink: #e8e8e8;
+  --ink-soft: #b0b0b0;
+  --muted: #6f6f6f;
+  --grid-strong: #333333;
+  --red: #e05a4d;
+  --red-deep: #b8392e;
+  --brass: #bfbfbf;
+  --highlight: #262626;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  min-height: 100vh;
+  background: var(--paper);
+}
+
+body {
+  color: var(--ink);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.55;
+  padding: 12px 24px;
+}
+
+.sheet {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.panel {
+  background: var(--paper-warm);
+  border: 1px solid var(--grid-strong);
+  padding: 26px 24px 18px;
+  position: relative;
+  box-shadow:
+    0 1px 0 rgba(255, 220, 160, 0.04) inset,
+    0 20px 40px -20px rgba(0, 0, 0, 0.5);
+}
+.panel::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -11px;
+  left: 20px;
+  background: var(--paper);
+  padding: 2px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--grid-strong);
+}
+
+.state-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.state-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.state-badge .label {
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.state-badge .value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  padding: 3px 12px;
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+  transition: all 0.3s ease;
+}
+.state-badge .value.halted {
+  background: var(--red);
+  color: var(--paper);
+  border-color: var(--red);
+}
+
+.step-counter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+}
+.step-counter strong {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* State diagram */
+.diagram {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 170px;
+  padding: 0;
+}
+.node-bg { fill: var(--paper); stroke: var(--ink); stroke-width: 1.5; transition: all 0.3s; }
+.node-bg.dim { stroke: var(--grid-strong); }
+.node-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700;
+  fill: var(--ink); transition: fill 0.3s;
+}
+.node-label.dim { fill: var(--muted); }
+.node-sub {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  fill: var(--ink-soft); transition: fill 0.3s;
+}
+.node-sub.dim { fill: var(--muted); }
+.edge { fill: none; stroke: var(--grid-strong); stroke-width: 1.2; }
+.edge.flash { animation: edge-flash 0.75s ease; }
+@keyframes edge-flash {
+  0%   { stroke: var(--grid-strong); stroke-width: 1.2; }
+  20%  { stroke: var(--red); stroke-width: 3; }
+  70%  { stroke: var(--red); stroke-width: 2.2; }
+  100% { stroke: var(--grid-strong); stroke-width: 1.2; }
+}
+.edge-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  fill: var(--ink-soft);
+}
+.node-bg.flash { animation: node-flash 0.75s ease; }
+.node-label.flash { animation: node-label-flash 0.75s ease; }
+@keyframes node-flash {
+  0%   { filter: none; stroke-width: 1.5; }
+  25%  { filter: drop-shadow(0 0 6px var(--red)); stroke: var(--red); stroke-width: 2.5; }
+  100% { filter: none; stroke-width: 1.5; }
+}
+@keyframes node-label-flash {
+  0%, 100% { fill: var(--ink); }
+  25%      { fill: var(--red); }
+}
+
+/* Bit-feed rows */
+.bit-rows { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.bit-row { display: flex; align-items: center; gap: 0; }
+.bit-row .row-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  width: 86px;
+  text-align: right;
+  padding-right: 12px;
+  flex-shrink: 0;
+}
+.bit {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--ink);
+  border-right-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--paper);
+  flex-shrink: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.bit.tail { border-right-width: 1.5px; }
+.bit.pending { color: var(--grid-strong); }
+.bit.done { background: var(--highlight); }
+.bit.active { background: var(--red); color: var(--paper); }
+.bit.just-wrote {
+  animation: pulse-write 0.5s ease;
+}
+@keyframes pulse-write {
+  0% { background: var(--red); color: var(--paper); transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+.bit.empty { color: var(--grid-strong); }
+.bit.carry { border-left-width: 1.5px; margin-left: 8px; border-right-width: 1.5px; }
+
+/* Rules panel */
+.rules {
+  display: grid;
+  gap: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13.5px;
+}
+.rule {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 14px;
+  row-gap: 3px;
+  padding: 11px 14px;
+  border: 1px solid transparent;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+.rule + .rule { border-top: 1px dashed var(--grid-strong); }
+.rule.active {
+  background: var(--highlight);
+  border-color: var(--brass);
+  border-left-color: var(--red);
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.4);
+}
+.rule-num {
+  color: var(--muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  grid-row: 1;
+  padding-top: 3px;
+}
+.rule-body {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap; grid-row: 1;
+}
+.tuple { display: inline-flex; align-items: center; }
+.tuple .paren { color: var(--muted); }
+.tuple .item { color: var(--ink); font-weight: 500; padding: 0 3px; }
+.tuple .item.sym { color: var(--red); }
+.arrow {
+  color: var(--red); font-weight: 700;
+  font-family: 'Fraunces', serif; font-size: 18px; padding: 0 2px;
+}
+.rule-note {
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 14px;
+  grid-column: 2;
+  grid-row: 2;
+  line-height: 1.3;
+}
+.rule.active .rule-note { color: var(--ink-soft); }
+
+/* Controls */
+.controls {
+  display: flex; justify-content: center; align-items: center;
+  gap: 8px; margin-top: 16px; flex-wrap: wrap;
+}
+button {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 11px 20px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+button:hover:not(:disabled) { background: var(--ink); color: var(--paper); }
+button:disabled { opacity: 0.35; cursor: not-allowed; }
+button.primary { background: var(--red); color: var(--paper); border-color: var(--red); }
+button.primary:hover:not(:disabled) { background: var(--red-deep); border-color: var(--red-deep); }
+
+/* Log */
+.log {
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  text-align: center;
+  min-height: 22px;
+  margin-top: 10px;
+  font-size: 15px;
+  transition: opacity 0.2s;
+}
+.log .em {
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+  font-size: 12.5px;
+  background: var(--paper);
+  padding: 1px 6px;
+  border: 1px solid var(--grid-strong);
+  color: var(--ink);
+}
+
+/* Result */
+.result {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 10px;
+  text-align: center;
+}
+.result .v {
+  color: var(--ink); font-weight: 700; font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 960px) {
+  .sheet { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  body { padding: 28px 14px; }
+  .panel { padding: 32px 18px 22px; }
+  .bit { width: 32px; height: 32px; font-size: 15px; }
+  .bit-row .row-label { width: 72px; font-size: 9.5px; }
+  .rule-body { font-size: 12px; gap: 6px; }
+  .state-row { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- Machine panel -->
+  <div class="panel" data-label="the machine · 9 + 7">
+    <div class="state-row">
+      <div class="state-badge">
+        <span class="label">state</span>
+        <span class="value" id="state-display">S0</span>
+      </div>
+      <div class="step-counter">
+        step <strong id="step-display">0</strong> / 4
+      </div>
+    </div>
+
+    <svg class="diagram" viewBox="0 0 390 220" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+      </defs>
+
+      <!-- entry arrow -->
+      <circle cx="50" cy="110" r="3" fill="#6f6f6f"/>
+      <line x1="30" y1="110" x2="67" y2="110" class="edge" marker-end="url(#ah)"/>
+
+      <!-- Rule 0: S0 self-loop (0,0|0) — top -->
+      <path id="e-r0" class="edge" marker-end="url(#ah)"
+            d="M 100 72 C 100 32, 120 32, 120 72"/>
+      <text x="110" y="22" text-anchor="middle" class="edge-label">0,0|0</text>
+
+      <!-- Rule 1: S0 self-loop (0,1|1) — upper-left -->
+      <path id="e-r1" class="edge" marker-end="url(#ah)"
+            d="M 72 96 C 38 78, 60 46, 90 75"/>
+      <text x="46" y="50" text-anchor="middle" class="edge-label">0,1|1</text>
+
+      <!-- Rule 2: S0 self-loop (1,0|1) — lower-left -->
+      <path id="e-r2" class="edge" marker-end="url(#ah)"
+            d="M 72 124 C 38 142, 60 174, 90 145"/>
+      <text x="46" y="190" text-anchor="middle" class="edge-label">1,0|1</text>
+
+      <!-- Rule 3: S0 -> S1 (1,1|0) -->
+      <path id="e-r3" class="edge" marker-end="url(#ah)"
+            d="M 150 102 L 240 102"/>
+      <text x="195" y="94" text-anchor="middle" class="edge-label">1,1|0</text>
+
+      <!-- Rule 4: S1 -> S0 (0,0|1) -->
+      <path id="e-r4" class="edge" marker-end="url(#ah)"
+            d="M 240 118 L 150 118"/>
+      <text x="195" y="134" text-anchor="middle" class="edge-label">0,0|1</text>
+
+      <!-- Rule 5: S1 self-loop (0,1|0) — top -->
+      <path id="e-r5" class="edge" marker-end="url(#ah)"
+            d="M 270 72 C 270 32, 290 32, 290 72"/>
+      <text x="280" y="22" text-anchor="middle" class="edge-label">0,1|0</text>
+
+      <!-- Rule 6: S1 self-loop (1,0|0) — upper-right -->
+      <path id="e-r6" class="edge" marker-end="url(#ah)"
+            d="M 308 96 C 342 78, 320 46, 290 75"/>
+      <text x="336" y="50" text-anchor="middle" class="edge-label">1,0|0</text>
+
+      <!-- Rule 7: S1 self-loop (1,1|1) — lower-right -->
+      <path id="e-r7" class="edge" marker-end="url(#ah)"
+            d="M 308 124 C 342 142, 320 174, 290 145"/>
+      <text x="336" y="190" text-anchor="middle" class="edge-label">1,1|1</text>
+
+      <!-- S0 node -->
+      <circle cx="110" cy="110" r="40" class="node-bg" id="n0"/>
+      <text x="110" y="105" text-anchor="middle" dominant-baseline="central" class="node-label" id="n0-lbl">S0</text>
+      <text x="110" y="125" text-anchor="middle" dominant-baseline="central" class="node-sub" id="n0-sub">carry=0</text>
+
+      <!-- S1 node -->
+      <circle cx="280" cy="110" r="40" class="node-bg dim" id="n1"/>
+      <text x="280" y="105" text-anchor="middle" dominant-baseline="central" class="node-label dim" id="n1-lbl">S1</text>
+      <text x="280" y="125" text-anchor="middle" dominant-baseline="central" class="node-sub dim" id="n1-sub">carry=1</text>
+    </svg>
+
+    <div class="bit-rows" id="bits"></div>
+
+    <div class="result" id="result"></div>
+
+    <div class="log" id="log">ready — press <span class="em">run</span> to begin <span style="color:var(--muted)">(bits fed LSB first)</span></div>
+
+    <div class="controls">
+      <button id="btn-step">Step</button>
+      <button id="btn-run" class="primary">Run</button>
+      <button id="btn-reset">Reset</button>
+    </div>
+  </div>
+
+  <!-- Rules panel -->
+  <div class="panel" data-label="transition table δ">
+    <div class="rules" id="rules"></div>
+  </div>
+
+</div>
+
+<script>
+// Transitions: δ(state, a, b) → (out, next)
+const transitions = [
+  { from: 0, a: 0, b: 0, out: 0, to: 0, note: '0 + 0 with no carry — emit 0, stay in S0' },
+  { from: 0, a: 0, b: 1, out: 1, to: 0, note: '0 + 1 with no carry — emit 1, stay in S0' },
+  { from: 0, a: 1, b: 0, out: 1, to: 0, note: '1 + 0 with no carry — emit 1, stay in S0' },
+  { from: 0, a: 1, b: 1, out: 0, to: 1, note: '1 + 1 — emit 0, generate carry, go to S1' },
+  { from: 1, a: 0, b: 0, out: 1, to: 0, note: 'carry + 0 + 0 — emit 1, back to S0' },
+  { from: 1, a: 0, b: 1, out: 0, to: 1, note: 'carry + 0 + 1 — emit 0, carry propagates' },
+  { from: 1, a: 1, b: 0, out: 0, to: 1, note: 'carry + 1 + 0 — emit 0, carry propagates' },
+  { from: 1, a: 1, b: 1, out: 1, to: 1, note: 'carry + 1 + 1 — emit 1, carry stays' },
+];
+
+// 9 = 1001, 7 = 0111 — bits fed LSB first
+const A = [1, 0, 0, 1];
+const B = [1, 1, 1, 0];
+const N = A.length;
+
+let state, pos, outBits, lastRule, justWrote, running, runTimer, halted;
+
+const stateDisp = document.getElementById('state-display');
+const stepDisp = document.getElementById('step-display');
+const rulesEl = document.getElementById('rules');
+const logEl = document.getElementById('log');
+const bitsEl = document.getElementById('bits');
+const resultEl = document.getElementById('result');
+const btnStep = document.getElementById('btn-step');
+const btnRun = document.getElementById('btn-run');
+const btnReset = document.getElementById('btn-reset');
+
+function renderRules() {
+  rulesEl.innerHTML = transitions.map((r, i) => `
+    <div class="rule" data-idx="${i}">
+      <span class="rule-num">${String(i+1).padStart(2,'0')}</span>
+      <div class="rule-body">
+        <span class="tuple">
+          <span class="paren">(</span><span class="item">S${r.from}</span><span class="paren">,</span>
+          <span class="item sym">${r.a}</span><span class="paren">,</span>
+          <span class="item sym">${r.b}</span><span class="paren">)</span>
+        </span>
+        <span class="arrow">→</span>
+        <span class="tuple">
+          <span class="paren">(</span><span class="item sym">${r.out}</span><span class="paren">,</span>
+          <span class="item">S${r.to}</span><span class="paren">)</span>
+        </span>
+      </div>
+      <span class="rule-note">${r.note}</span>
+    </div>
+  `).join('');
+}
+
+function renderBits() {
+  function inputRow(label, arr) {
+    let cells = '';
+    for (let i = 0; i < N; i++) {
+      const classes = ['bit'];
+      if (i === N - 1) classes.push('tail');
+      if (i < pos) classes.push('done');
+      else if (i === pos && pos < N) classes.push('active');
+      else classes.push('pending');
+      cells += `<div class="${classes.join(' ')}">${arr[i]}</div>`;
+    }
+    return `<div class="bit-row"><span class="row-label">${label}</span>${cells}</div>`;
+  }
+  let sumCells = '';
+  for (let i = 0; i < N; i++) {
+    const classes = ['bit'];
+    if (i === N - 1) classes.push('tail');
+    if (i < outBits.length) classes.push('done');
+    else classes.push('empty');
+    if (i === justWrote) classes.push('just-wrote');
+    const val = i < outBits.length ? outBits[i] : '';
+    sumCells += `<div class="${classes.join(' ')}">${val}</div>`;
+  }
+  // carry cell (only meaningful after all bits consumed)
+  const carryClasses = ['bit', 'carry'];
+  let carryVal = '';
+  if (pos > N) {
+    carryVal = state;
+    carryClasses.push(state === 1 ? 'active' : 'done');
+  } else {
+    carryClasses.push('empty');
+  }
+  const carry = `<div class="${carryClasses.join(' ')}">${carryVal}</div>`;
+  bitsEl.innerHTML =
+    inputRow('A = 9', A) +
+    inputRow('B = 7', B) +
+    `<div class="bit-row"><span class="row-label">Sum</span>${sumCells}${carry}</div>`;
+}
+
+function updateDiagram() {
+  const n0 = document.getElementById('n0');
+  const n1 = document.getElementById('n1');
+  const n0l = document.getElementById('n0-lbl');
+  const n1l = document.getElementById('n1-lbl');
+  const n0s = document.getElementById('n0-sub');
+  const n1s = document.getElementById('n1-sub');
+  [n0, n0l, n0s].forEach(el => el.classList.toggle('dim', state !== 0));
+  [n1, n1l, n1s].forEach(el => el.classList.toggle('dim', state !== 1));
+}
+
+function restartAnim(el) {
+  if (!el) return;
+  el.classList.remove('flash');
+  void el.getBoundingClientRect();
+  el.classList.add('flash');
+}
+
+function flashTransition(ruleIdx, newState) {
+  restartAnim(document.getElementById('e-r' + ruleIdx));
+  restartAnim(document.getElementById('n' + newState));
+  restartAnim(document.getElementById('n' + newState + '-lbl'));
+}
+
+function highlightRule(idx) {
+  document.querySelectorAll('.rule').forEach(el => el.classList.remove('active'));
+  if (idx !== null && idx !== undefined && idx >= 0) {
+    const el = document.querySelector(`.rule[data-idx="${idx}"]`);
+    if (el) el.classList.add('active');
+  }
+}
+
+function updateState() {
+  stateDisp.textContent = 'S' + state;
+  stateDisp.classList.toggle('halted', halted);
+  stepDisp.textContent = Math.min(pos, N);
+}
+
+function updateResult() {
+  if (outBits.length === 0 && !halted) { resultEl.innerHTML = ''; return; }
+  const finalBits = outBits.slice();
+  if (halted && state === 1) finalBits.push(1);
+  const lsbStr = finalBits.join('');
+  const msbStr = finalBits.slice().reverse().join('');
+  let dec = 0;
+  for (let i = 0; i < finalBits.length; i++) dec += finalBits[i] * (1 << i);
+  resultEl.innerHTML =
+    `output <span class="v">${lsbStr}</span> (LSB) = <span class="v">${msbStr}</span><sub>2</sub> = <span class="v">${dec}</span>`;
+}
+
+function setLog(html) { logEl.innerHTML = html; }
+
+function doStep() {
+  if (halted) return false;
+  if (pos === N) {
+    // finalise: emit carry if any
+    halted = true;
+    pos++;
+    justWrote = -1;
+    updateState();
+    renderBits();
+    updateResult();
+    setLog(`all bits consumed — final carry <span class="em">${state}</span>, machine halts`);
+    return false;
+  }
+  const a = A[pos], b = B[pos];
+  const idx = transitions.findIndex(r => r.from === state && r.a === a && r.b === b);
+  const r = transitions[idx];
+  justWrote = outBits.length;
+  outBits.push(r.out);
+  state = r.to;
+  pos += 1;
+  lastRule = idx;
+  updateState();
+  renderBits();
+  updateDiagram();
+  flashTransition(idx, state);
+  highlightRule(idx);
+  updateResult();
+  setLog(`applied rule <span class="em">${String(idx+1).padStart(2,'0')}</span> — ${r.note}`);
+  return true;
+}
+
+function reset() {
+  stopRun();
+  state = 0;
+  pos = 0;
+  outBits = [];
+  lastRule = null;
+  justWrote = -1;
+  halted = false;
+  updateState();
+  renderBits();
+  updateDiagram();
+  highlightRule(-1);
+  updateResult();
+  setLog('ready — press <span class="em">run</span> to begin <span style="color:var(--muted)">(bits fed LSB first)</span>');
+  btnStep.disabled = false;
+  btnRun.disabled = false;
+  btnRun.textContent = 'Run';
+}
+
+function stopRun() {
+  running = false;
+  clearInterval(runTimer);
+  btnRun.textContent = 'Run';
+}
+
+function startRun() {
+  if (halted) return;
+  running = true;
+  btnRun.textContent = 'Pause';
+  runTimer = setInterval(() => {
+    const ok = doStep();
+    if (!ok) stopRun();
+  }, 800);
+}
+
+btnStep.addEventListener('click', () => { if (running) stopRun(); doStep(); });
+btnRun.addEventListener('click', () => { if (running) stopRun(); else startRun(); });
+btnReset.addEventListener('click', reset);
+
+renderRules();
+reset();
+</script>
+</body>
+</html>

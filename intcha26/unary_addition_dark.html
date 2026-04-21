@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unary Addition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=JetBrains+Mono:wght@400;500;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #111111;
+  --paper-warm: #1a1a1a;
+  --ink: #e8e8e8;
+  --ink-soft: #b0b0b0;
+  --muted: #6f6f6f;
+  --grid-strong: #333333;
+  --red: #e05a4d;
+  --red-deep: #b8392e;
+  --brass: #bfbfbf;
+  --highlight: #262626;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  min-height: 100vh;
+  background: var(--paper);
+}
+
+body {
+  color: var(--ink);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.55;
+  padding: 40px 24px;
+}
+
+.sheet {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* ——— Panel ——— */
+.panel {
+  background: var(--paper-warm);
+  border: 1px solid var(--grid-strong);
+  padding: 36px 28px 26px;
+  position: relative;
+  box-shadow:
+    0 1px 0 rgba(255, 220, 160, 0.04) inset,
+    0 20px 40px -20px rgba(0, 0, 0, 0.5);
+}
+.panel::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -11px;
+  left: 20px;
+  background: var(--paper);
+  padding: 2px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--grid-strong);
+}
+
+/* ——— State badge ——— */
+.state-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.state-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.state-badge .label {
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.state-badge .value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  padding: 3px 12px;
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+  transition: all 0.3s ease;
+}
+.state-badge .value.halted {
+  background: var(--red);
+  color: var(--paper);
+  border-color: var(--red);
+}
+
+.step-counter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+}
+.step-counter strong {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ——— Tape ——— */
+.tape-viewport {
+  overflow: hidden;
+  padding: 24px 0 44px;
+  position: relative;
+}
+
+.tape {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
+}
+
+.cell {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid var(--ink);
+  border-right-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--paper);
+  flex-shrink: 0;
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.cell:last-child {
+  border-right-width: 1.5px;
+}
+.cell.blank { color: var(--grid-strong); }
+.cell.sep { color: var(--red); font-weight: 700; }
+.cell.active {
+  background: var(--highlight);
+}
+.cell.just-wrote {
+  animation: pulse-write 0.5s ease;
+}
+@keyframes pulse-write {
+  0% { background: var(--red); color: var(--paper); transform: scale(1.08); }
+  100% { background: var(--highlight); color: var(--ink); transform: scale(1); }
+}
+
+/* Head indicator */
+.head-wrap {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
+}
+.head-arrow {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 11px solid var(--red);
+  margin-bottom: 3px;
+}
+.head-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  color: var(--red);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ——— Transition table ——— */
+.rules {
+  display: grid;
+  gap: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13.5px;
+}
+.rule {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 14px;
+  row-gap: 3px;
+  padding: 11px 14px;
+  border: 1px solid transparent;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+.rule + .rule { border-top: 1px dashed var(--grid-strong); }
+.rule.active {
+  background: var(--highlight);
+  border-color: var(--brass);
+  border-left-color: var(--red);
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.4);
+}
+.rule-num {
+  color: var(--muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  grid-row: 1;
+  padding-top: 3px;
+}
+.rule-body {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  grid-row: 1;
+}
+.tuple {
+  display: inline-flex;
+  align-items: center;
+}
+.tuple .paren { color: var(--muted); }
+.tuple .item { color: var(--ink); font-weight: 500; padding: 0 3px; }
+.tuple .item.sym { color: var(--red); }
+.arrow {
+  color: var(--red);
+  font-weight: 700;
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  padding: 0 2px;
+}
+.rule-note {
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 14px;
+  grid-column: 2;
+  grid-row: 2;
+  line-height: 1.3;
+}
+.rule.active .rule-note { color: var(--ink-soft); }
+
+/* ——— Controls ——— */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+button {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 11px 20px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+button:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--paper);
+}
+button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+button.primary {
+  background: var(--red);
+  color: var(--paper);
+  border-color: var(--red);
+}
+button.primary:hover:not(:disabled) {
+  background: var(--red-deep);
+  border-color: var(--red-deep);
+}
+
+/* ——— Log ——— */
+.log {
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  text-align: center;
+  min-height: 26px;
+  margin-top: 14px;
+  font-size: 15.5px;
+  transition: opacity 0.2s;
+}
+.log .em {
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+  font-size: 12.5px;
+  background: var(--paper);
+  padding: 1px 6px;
+  border: 1px solid var(--grid-strong);
+  color: var(--ink);
+}
+
+@media (max-width: 960px) {
+  .sheet { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  body { padding: 28px 14px; }
+  .panel { padding: 32px 18px 22px; }
+  .cell { width: 38px; height: 38px; font-size: 17px; }
+  .rule-body { font-size: 12px; gap: 6px; }
+  .state-row { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- Machine panel -->
+  <div class="panel" data-label="the machine · 111 + 11">
+    <div class="state-row">
+      <div class="state-badge">
+        <span class="label">state</span>
+        <span class="value" id="state-display">q0</span>
+      </div>
+      <div class="step-counter">
+        step <strong id="step-display">0</strong>
+      </div>
+    </div>
+
+    <div class="tape-viewport">
+      <div class="tape" id="tape"></div>
+      <div class="head-wrap" id="head-wrap">
+        <div class="head-arrow"></div>
+        <div class="head-label">head</div>
+      </div>
+    </div>
+
+    <div class="log" id="log">ready — press <span class="em">run</span> to begin</div>
+
+    <div class="controls">
+      <button id="btn-step">Step</button>
+      <button id="btn-run" class="primary">Run</button>
+      <button id="btn-reset">Reset</button>
+    </div>
+  </div>
+
+  <!-- Rules panel -->
+  <div class="panel rules-panel" data-label="transition table δ">
+    <div class="rules" id="rules"></div>
+  </div>
+
+</div>
+
+<script>
+const transitions = [
+  { from: 'q0', read: '1', write: '1', move: 'R', to: 'q0',
+    note: 'scan right through the first addend' },
+  { from: 'q0', read: '+', write: '1', move: 'R', to: 'q1',
+    note: 'bridge the gap — overwrite + with 1' },
+  { from: 'q1', read: '1', write: '1', move: 'R', to: 'q1',
+    note: 'continue across the second addend' },
+  { from: 'q1', read: '_', write: '_', move: 'L', to: 'q2',
+    note: 'reached the end — step back onto last 1' },
+  { from: 'q2', read: '1', write: '_', move: 'L', to: 'q3',
+    note: 'erase one 1 (we added one too many)' },
+  { from: 'q3', read: '1', write: '1', move: 'L', to: 'q3',
+    note: 'rewind over the sum' },
+  { from: 'q3', read: '_', write: '_', move: 'R', to: 'qH',
+    note: 'home — step in and halt' },
+];
+
+const initialTape = ['_', '1', '1', '1', '+', '1', '1', '_', '_'];
+const initialHead = 1;
+const initialState = 'q0';
+
+let tape, head, state, step, running, runTimer;
+const CELL_W = 48;
+
+const tapeEl = document.getElementById('tape');
+const headWrap = document.getElementById('head-wrap');
+const stateDisp = document.getElementById('state-display');
+const stepDisp = document.getElementById('step-display');
+const rulesEl = document.getElementById('rules');
+const logEl = document.getElementById('log');
+const btnStep = document.getElementById('btn-step');
+const btnRun = document.getElementById('btn-run');
+const btnReset = document.getElementById('btn-reset');
+
+function symDisplay(s) { return s === '_' ? '␣' : s; }
+
+function renderRules() {
+  rulesEl.innerHTML = transitions.map((r, i) => `
+    <div class="rule" data-idx="${i}">
+      <span class="rule-num">${String(i+1).padStart(2,'0')}</span>
+      <div class="rule-body">
+        <span class="tuple">
+          <span class="paren">(</span><span class="item">${r.from}</span><span class="paren">,</span>
+          <span class="item sym">${symDisplay(r.read)}</span><span class="paren">)</span>
+        </span>
+        <span class="arrow">→</span>
+        <span class="tuple">
+          <span class="paren">(</span><span class="item sym">${symDisplay(r.write)}</span><span class="paren">,</span>
+          <span class="item">${r.move}</span><span class="paren">,</span>
+          <span class="item">${r.to}</span><span class="paren">)</span>
+        </span>
+      </div>
+      <span class="rule-note">${r.note}</span>
+    </div>
+  `).join('');
+}
+
+function renderTape(justWroteIdx = -1) {
+  tapeEl.innerHTML = tape.map((s, i) => {
+    const classes = ['cell'];
+    if (s === '_') classes.push('blank');
+    if (s === '+') classes.push('sep');
+    if (i === head) classes.push('active');
+    if (i === justWroteIdx) classes.push('just-wrote');
+    return `<div class="${classes.join(' ')}">${symDisplay(s)}</div>`;
+  }).join('');
+
+  const cellCount = tape.length;
+  const headOffset = (head - (cellCount - 1) / 2) * CELL_W;
+  headWrap.style.transform = `translateX(calc(-50% + ${headOffset}px))`;
+}
+
+function highlightRule(idx) {
+  document.querySelectorAll('.rule').forEach(el => el.classList.remove('active'));
+  if (idx >= 0) {
+    const el = document.querySelector(`.rule[data-idx="${idx}"]`);
+    if (el) el.classList.add('active');
+  }
+}
+
+function updateState() {
+  stateDisp.textContent = state;
+  stateDisp.classList.toggle('halted', state === 'qH');
+  stepDisp.textContent = step;
+}
+
+function setLog(html) { logEl.innerHTML = html; }
+
+function findRule() {
+  return transitions.findIndex(r => r.from === state && r.read === tape[head]);
+}
+
+function doStep() {
+  if (state === 'qH') return false;
+  const idx = findRule();
+  if (idx === -1) {
+    setLog(`no rule for <span class="em">(${state}, ${symDisplay(tape[head])})</span> — machine halts`);
+    state = 'qH';
+    updateState();
+    highlightRule(-1);
+    return false;
+  }
+  const r = transitions[idx];
+  const wroteIdx = head;
+  tape[head] = r.write;
+
+  if (r.move === 'R') head += 1;
+  else if (r.move === 'L') head -= 1;
+
+  if (head >= tape.length) tape.push('_');
+  if (head < 0) { tape.unshift('_'); head = 0; }
+
+  state = r.to;
+  step += 1;
+
+  setLog(`applied rule <span class="em">${String(idx+1).padStart(2,'0')}</span> — ${r.note}`);
+  highlightRule(idx);
+  renderTape(wroteIdx);
+  updateState();
+
+  if (state === 'qH') {
+    setTimeout(() => {
+      const ones = tape.filter(s => s === '1').length;
+      setLog(`halted — tape contains <span class="em">${ones}</span> ones <span style="color:var(--muted)">(3 + 2 = ${ones})</span>`);
+    }, 500);
+    return false;
+  }
+  return true;
+}
+
+function reset() {
+  stopRun();
+  tape = [...initialTape];
+  head = initialHead;
+  state = initialState;
+  step = 0;
+  renderTape();
+  updateState();
+  highlightRule(-1);
+  setLog('ready — press <span class="em">run</span> to begin');
+  btnStep.disabled = false;
+  btnRun.disabled = false;
+  btnRun.textContent = 'Run';
+}
+
+function stopRun() {
+  running = false;
+  clearInterval(runTimer);
+  btnRun.textContent = 'Run';
+}
+
+function startRun() {
+  if (state === 'qH') return;
+  running = true;
+  btnRun.textContent = 'Pause';
+  runTimer = setInterval(() => {
+    const ok = doStep();
+    if (!ok) stopRun();
+  }, 700);
+}
+
+btnStep.addEventListener('click', () => {
+  if (running) stopRun();
+  doStep();
+});
+btnRun.addEventListener('click', () => {
+  if (running) stopRun();
+  else startRun();
+});
+btnReset.addEventListener('click', reset);
+
+renderRules();
+reset();
+</script>
+</body>
+</html>

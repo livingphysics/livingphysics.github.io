@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2-bit Adder</title>
+<style>
+  :root {
+    --adder-bg-primary: #ffffff;
+    --adder-bg-secondary: #f5f4f0;
+    --adder-bg-info: #E6F1FB;
+    --adder-bg-success: #EAF3DE;
+    --adder-text-primary: #1a1a1a;
+    --adder-text-secondary: #6b6b6b;
+    --adder-text-tertiary: #999999;
+    --adder-text-info: #185FA5;
+    --adder-text-success: #3B6D11;
+    --adder-border-secondary: rgba(0,0,0,0.2);
+    --adder-border-tertiary: rgba(0,0,0,0.12);
+    --adder-border-info: #85B7EB;
+    --adder-border-success: #97C459;
+    --adder-radius: 8px;
+    --adder-font: system-ui, -apple-system, sans-serif;
+    --adder-mono: ui-monospace, "SF Mono", "Cascadia Mono", monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --adder-bg-primary: #1a1a1a;
+      --adder-bg-secondary: #2a2a28;
+      --adder-bg-info: #0C447C;
+      --adder-bg-success: #27500A;
+      --adder-text-primary: #e8e6df;
+      --adder-text-secondary: #a0a09a;
+      --adder-text-tertiary: #6b6b65;
+      --adder-text-info: #85B7EB;
+      --adder-text-success: #97C459;
+      --adder-border-secondary: rgba(255,255,255,0.2);
+      --adder-border-tertiary: rgba(255,255,255,0.12);
+      --adder-border-info: #378ADD;
+      --adder-border-success: #639922;
+    }
+  }
+  .adder-wrap { font-family: var(--adder-font); color: var(--adder-text-primary); width: 100%; max-width: 1100px; margin: 0 auto; }
+  .adder-wrap .section-label { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+  .adder-wrap .inputs-row { display: flex; gap: 20px; margin-bottom: 16px; flex-wrap: wrap; align-items: flex-end; }
+  .adder-wrap .input-group { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .adder-wrap .input-group label { font-size: 12px; color: var(--adder-text-secondary); font-family: var(--adder-mono); }
+  .adder-wrap .bit-btn {
+    width: 42px; height: 42px; border-radius: var(--adder-radius);
+    font-size: 18px; font-weight: 600; font-family: var(--adder-mono);
+    cursor: pointer; transition: all 0.15s;
+    display: flex; align-items: center; justify-content: center; border: none;
+  }
+  .adder-wrap .bit-btn.off { background: var(--adder-bg-secondary); border: 1px solid var(--adder-border-secondary); color: var(--adder-text-secondary); }
+  .adder-wrap .bit-btn.on { background: var(--adder-bg-info); border: 1px solid var(--adder-border-info); color: var(--adder-text-info); }
+  .adder-wrap .result-bit {
+    width: 34px; height: 34px; border-radius: var(--adder-radius);
+    font-size: 16px; font-weight: 600; font-family: var(--adder-mono);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .adder-wrap .result-bit.off { background: var(--adder-bg-secondary); color: var(--adder-text-secondary); border: 1px solid var(--adder-border-tertiary); }
+  .adder-wrap .result-bit.on { background: var(--adder-bg-success); color: var(--adder-text-success); border: 1px solid var(--adder-border-success); }
+  .adder-wrap .op { font-size: 18px; color: var(--adder-text-tertiary); padding-bottom: 4px; }
+  .adder-wrap .dec-row { font-family: var(--adder-mono); font-size: 14px; color: var(--adder-text-secondary); margin-bottom: 20px; }
+  .adder-wrap .dec-row .val { font-weight: 600; color: var(--adder-text-primary); font-size: 16px; }
+  .adder-wrap .panels { display: flex; gap: 24px; flex-wrap: wrap; }
+  .adder-wrap .panel-lut { flex: 1 1 0; min-width: 240px; }
+  .adder-wrap .panel-circuit { flex: 1 1 0; min-width: 280px; }
+  .adder-wrap table { width: 100%; border-collapse: collapse; font-family: var(--adder-mono); font-size: 12px; }
+  .adder-wrap th { font-size: 11px; font-weight: 600; color: var(--adder-text-secondary); padding: 4px 5px; text-align: center; border-bottom: 1px solid var(--adder-border-tertiary); }
+  .adder-wrap td { padding: 3px 5px; text-align: center; border-bottom: 1px solid var(--adder-border-tertiary); transition: background 0.15s; font-size: 11px; }
+  .adder-wrap tr.hl td { background: var(--adder-bg-info); color: var(--adder-text-info); font-weight: 600; }
+  .adder-wrap .wire-on { stroke: var(--adder-text-info); stroke-width: 2; }
+  .adder-wrap .wire-off { stroke: var(--adder-border-secondary); stroke-width: 1.5; }
+  .adder-wrap .gb { fill: var(--adder-bg-secondary); stroke: var(--adder-border-secondary); stroke-width: 1; stroke-linejoin: round; }
+  .adder-wrap .gb.act { fill: var(--adder-bg-info); stroke: var(--adder-border-info); }
+  .adder-wrap .gt { font-family: var(--adder-mono); font-size: 10px; font-weight: 600; fill: var(--adder-text-secondary); text-anchor: middle; dominant-baseline: central; }
+  .adder-wrap .gt.act { fill: var(--adder-text-info); }
+  .adder-wrap .il { font-family: var(--adder-mono); font-size: 11px; dominant-baseline: central; }
+  .adder-wrap .il.on { fill: var(--adder-text-info); font-weight: 600; }
+  .adder-wrap .il.off { fill: var(--adder-text-secondary); }
+  .adder-wrap .sl { font-family: var(--adder-font); font-size: 11px; fill: var(--adder-text-tertiary); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="adder-wrap">
+  <div class="section-label">Input bits</div>
+  <div class="inputs-row">
+    <div style="display:flex;gap:6px;">
+      <div class="input-group"><label>A&#x2081;</label><button class="bit-btn off" id="btn-a1">0</button></div>
+      <div class="input-group"><label>A&#x2080;</label><button class="bit-btn off" id="btn-a0">0</button></div>
+    </div>
+    <div class="op">+</div>
+    <div style="display:flex;gap:6px;">
+      <div class="input-group"><label>B&#x2081;</label><button class="bit-btn off" id="btn-b1">0</button></div>
+      <div class="input-group"><label>B&#x2080;</label><button class="bit-btn off" id="btn-b0">0</button></div>
+    </div>
+    <div class="op">=</div>
+    <div style="display:flex;gap:4px;">
+      <div class="input-group"><label>S&#x2082;</label><div class="result-bit off" id="out-s2">0</div></div>
+      <div class="input-group"><label>S&#x2081;</label><div class="result-bit off" id="out-s1">0</div></div>
+      <div class="input-group"><label>S&#x2080;</label><div class="result-bit off" id="out-s0">0</div></div>
+    </div>
+  </div>
+  <div class="dec-row"><span id="da">0</span> + <span id="db">0</span> = <span class="val" id="ds">0</span></div>
+
+  <div class="panels">
+    <div class="panel-lut">
+      <div class="section-label">Lookup table</div>
+      <table>
+        <thead><tr>
+          <th>A&#x2081;</th><th>A&#x2080;</th><th>B&#x2081;</th><th>B&#x2080;</th>
+          <th style="border-left:1px solid var(--adder-border-tertiary)">S&#x2082;</th><th>S&#x2081;</th><th>S&#x2080;</th><th>Dec</th>
+        </tr></thead>
+        <tbody id="tb"></tbody>
+      </table>
+    </div>
+    <div class="panel-circuit">
+      <div class="section-label">Logic gates</div>
+      <svg width="100%" viewBox="0 0 390 310" id="cir"></svg>
+    </div>
+  </div>
+</div>
+
+<script>
+var S = {a1:0, a0:0, b1:0, b0:0};
+
+document.getElementById('btn-a1').addEventListener('click', function(){S.a1^=1; upBtn(this,S.a1); go();});
+document.getElementById('btn-a0').addEventListener('click', function(){S.a0^=1; upBtn(this,S.a0); go();});
+document.getElementById('btn-b1').addEventListener('click', function(){S.b1^=1; upBtn(this,S.b1); go();});
+document.getElementById('btn-b0').addEventListener('click', function(){S.b0^=1; upBtn(this,S.b0); go();});
+
+function upBtn(el, v) {
+  el.textContent = v;
+  el.className = 'bit-btn ' + (v ? 'on' : 'off');
+}
+
+function calc() {
+  var s0 = S.a0 ^ S.b0, c0 = S.a0 & S.b0;
+  var x2 = S.a1 ^ S.b1, s1 = x2 ^ c0;
+  var s2 = (S.a1 & S.b1) | (x2 & c0);
+  return {s0:s0, s1:s1, s2:s2, c0:c0, x2:x2};
+}
+
+function buildLUT() {
+  var h = '';
+  for (var i = 0; i < 16; i++) {
+    var a1=(i>>3)&1, a0=(i>>2)&1, b1=(i>>1)&1, b0=i&1;
+    var s = a1*2 + a0 + b1*2 + b0;
+    h += '<tr id="r'+i+'"><td>'+a1+'</td><td>'+a0+'</td><td>'+b1+'</td><td>'+b0+'</td>'
+       + '<td style="border-left:1px solid var(--adder-border-tertiary)">'+((s>>2)&1)+'</td><td>'+((s>>1)&1)+'</td><td>'+(s&1)+'</td><td>'+s+'</td></tr>';
+  }
+  document.getElementById('tb').innerHTML = h;
+}
+
+function draw() {
+  var R = calc();
+  var a1=S.a1, a0=S.a0, b1=S.b1, b0=S.b0;
+  var s0=R.s0, s1=R.s1, s2=R.s2, c0=R.c0, x2=R.x2;
+  var and1=a0&b0, and2=a1&b1, and3=x2&c0;
+
+  function w(v){return v ? 'wire-on' : 'wire-off';}
+  function g(v){return v ? 'gb act' : 'gb';}
+  function t(v){return v ? 'gt act' : 'gt';}
+  function l(v){return v ? 'il on' : 'il off';}
+
+  var gw=52, gh=28;
+  var o = '';
+
+  function gate(type, gx, gy, act, hp) {
+    var h = hp || gh;
+    var cls = act ? 'gb act' : 'gb';
+    var tcls = act ? 'gt act' : 'gt';
+    var body='', extra='';
+    if (type === 'AND') {
+      body = '<path d="M '+gx+' '+gy+' L '+(gx+gw-h/2)+' '+gy
+           + ' A '+(h/2)+' '+(h/2)+' 0 0 1 '+(gx+gw-h/2)+' '+(gy+h)
+           + ' L '+gx+' '+(gy+h)+' Z" class="'+cls+'"/>';
+    } else {
+      var d = 'M '+gx+' '+gy
+            + ' Q '+(gx+10)+' '+(gy+h/2)+' '+gx+' '+(gy+h)
+            + ' Q '+(gx+gw*0.5)+' '+(gy+h)+' '+(gx+gw)+' '+(gy+h/2)
+            + ' Q '+(gx+gw*0.5)+' '+gy+' '+gx+' '+gy+' Z';
+      body = '<path d="'+d+'" class="'+cls+'"/>';
+      if (type === 'XOR') {
+        var d2 = 'M '+(gx-6)+' '+gy+' Q '+(gx+4)+' '+(gy+h/2)+' '+(gx-6)+' '+(gy+h);
+        extra = '<path d="'+d2+'" class="'+cls+'" fill="none"/>';
+      }
+    }
+    var lx = gx + (type === 'AND' ? gw*0.38 : gw*0.52);
+    var ly = gy + h/2;
+    return extra + body + '<text x="'+lx+'" y="'+ly+'" class="'+tcls+'" style="font-size:9px">'+type+'</text>';
+  }
+
+  o += '<text x="4" y="30" class="'+l(a0)+'">A\u2080='+a0+'</text>';
+  o += '<text x="4" y="58" class="'+l(b0)+'">B\u2080='+b0+'</text>';
+  o += '<text x="4" y="150" class="'+l(a1)+'">A\u2081='+a1+'</text>';
+  o += '<text x="4" y="178" class="'+l(b1)+'">B\u2081='+b1+'</text>';
+
+  // Half adder
+  o += '<text x="80" y="14" class="sl">Half adder (bit 0)</text>';
+  o += '<line x1="50" y1="30" x2="84" y2="30" class="'+w(a0)+'"/>';
+  o += '<line x1="50" y1="58" x2="84" y2="58" class="'+w(b0)+'"/>';
+  o += gate('XOR', 80, 26, s0, 36);
+  o += '<line x1="132" y1="44" x2="340" y2="44" class="'+w(s0)+'"/>';
+  o += '<text x="344" y="44" class="'+l(s0)+'" dominant-baseline="central">S\u2080='+s0+'</text>';
+
+  o += '<line x1="55" y1="30" x2="55" y2="80" class="'+w(a0)+'"/>';
+  o += '<line x1="55" y1="80" x2="80" y2="80" class="'+w(a0)+'"/>';
+  o += '<line x1="60" y1="58" x2="60" y2="94" class="'+w(b0)+'"/>';
+  o += '<line x1="60" y1="94" x2="80" y2="94" class="'+w(b0)+'"/>';
+  o += gate('AND', 80, 74, and1);
+  o += '<line x1="132" y1="88" x2="155" y2="88" class="'+w(c0)+'"/>';
+  o += '<line x1="155" y1="88" x2="155" y2="215" class="'+w(c0)+'"/>';
+  o += '<text x="143" y="112" style="font-family:var(--adder-mono);font-size:10px;fill:var(--adder-text-tertiary);">C\u2080</text>';
+
+  // Full adder
+  o += '<text x="80" y="134" class="sl">Full adder (bit 1)</text>';
+  o += '<line x1="50" y1="150" x2="84" y2="150" class="'+w(a1)+'"/>';
+  o += '<line x1="50" y1="178" x2="84" y2="178" class="'+w(b1)+'"/>';
+  o += gate('XOR', 80, 146, x2, 36);
+
+  o += '<line x1="132" y1="164" x2="165" y2="164" class="'+w(x2)+'"/>';
+  o += '<line x1="165" y1="164" x2="165" y2="205" class="'+w(x2)+'"/>';
+  o += '<line x1="165" y1="205" x2="189" y2="205" class="'+w(x2)+'"/>';
+  o += '<line x1="155" y1="215" x2="189" y2="215" class="'+w(c0)+'"/>';
+  o += gate('XOR', 185, 196, s1);
+  o += '<line x1="237" y1="210" x2="340" y2="210" class="'+w(s1)+'"/>';
+  o += '<text x="344" y="210" class="'+l(s1)+'" dominant-baseline="central">S\u2081='+s1+'</text>';
+
+  o += '<line x1="55" y1="150" x2="55" y2="248" class="'+w(a1)+'"/>';
+  o += '<line x1="55" y1="248" x2="185" y2="248" class="'+w(a1)+'"/>';
+  o += '<line x1="60" y1="178" x2="60" y2="258" class="'+w(b1)+'"/>';
+  o += '<line x1="60" y1="258" x2="185" y2="258" class="'+w(b1)+'"/>';
+  o += gate('AND', 185, 242, and2);
+
+  o += '<line x1="170" y1="205" x2="170" y2="284" class="'+w(x2)+'"/>';
+  o += '<line x1="170" y1="284" x2="189" y2="284" class="'+w(x2)+'"/>';
+  o += '<line x1="160" y1="215" x2="160" y2="294" class="'+w(c0)+'"/>';
+  o += '<line x1="160" y1="294" x2="189" y2="294" class="'+w(c0)+'"/>';
+  o += gate('AND', 185, 278, and3);
+
+  o += '<line x1="237" y1="256" x2="260" y2="256" class="'+w(and2)+'"/>';
+  o += '<line x1="260" y1="256" x2="260" y2="267" class="'+w(and2)+'"/>';
+  o += '<line x1="260" y1="267" x2="276" y2="267" class="'+w(and2)+'"/>';
+  o += '<line x1="237" y1="292" x2="260" y2="292" class="'+w(and3)+'"/>';
+  o += '<line x1="260" y1="292" x2="260" y2="281" class="'+w(and3)+'"/>';
+  o += '<line x1="260" y1="281" x2="276" y2="281" class="'+w(and3)+'"/>';
+  o += gate('OR', 272, 260, s2);
+  o += '<line x1="324" y1="274" x2="340" y2="274" class="'+w(s2)+'"/>';
+  o += '<text x="344" y="274" class="'+l(s2)+'" dominant-baseline="central">S\u2082='+s2+'</text>';
+
+  document.getElementById('cir').innerHTML = o;
+}
+
+function go() {
+  var R = calc();
+  var a = S.a1*2 + S.a0, b = S.b1*2 + S.b0, s = a + b;
+  ['s2','s1','s0'].forEach(function(k) {
+    var v = R[k];
+    var el = document.getElementById('out-' + k);
+    el.textContent = v;
+    el.className = 'result-bit ' + (v ? 'on' : 'off');
+  });
+  document.getElementById('da').textContent = a;
+  document.getElementById('db').textContent = b;
+  document.getElementById('ds').textContent = s;
+  var idx = (S.a1 << 3) | (S.a0 << 2) | (S.b1 << 1) | S.b0;
+  var rows = document.querySelectorAll('#tb tr');
+  for (var i = 0; i < rows.length; i++) rows[i].className = (i === idx ? 'hl' : '');
+  draw();
+}
+
+buildLUT();
+go();
+</script>
+</body>
+</html>

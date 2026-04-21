@@ -1,0 +1,5 @@
+engine: julia
+julia:
+  exeflags: ["--project=/home/davidjordan/.julia/environments/v1.12/"]
+
+code-fold: true

@@ -1,0 +1,163 @@
+{
+    "label": "two-bit-adder",
+    "input_gene": {
+        "base_rates": {
+            "$": ["defaults", "gene", "base_rates"],
+            "activation": 0.0,
+            "protein_decay": 0.0
+        }
+    },
+    "gate_rates": {
+        "$": ["defaults", "gene", "base_rates"],
+        "activation": 1.0,
+        "deactivation": 20.0,
+        "transcription": 0.0005
+        },
+    "xor_gate_rates": {
+        "$": ["defaults", "gene", "base_rates"],
+        "transcription": 0.002
+    },
+    "s1_rates": {
+        "$": ["defaults", "gene", "base_rates"],
+        "deactivation": 30.0,
+        "transcription": 0.002
+    },
+    "step": {
+        "do": {"{regulation/v1}": {
+            "genes": [
+                {"name": "A0", "base_rates": {"$": ["input_gene", "base_rates"]}},
+                {"name": "A1", "base_rates": {"$": ["input_gene", "base_rates"]}},
+                {"name": "B0", "base_rates": {"$": ["input_gene", "base_rates"]}},
+                {"name": "B1", "base_rates": {"$": ["input_gene", "base_rates"]}},
+
+                {
+                    "name": "S0",
+                    "base_rates": {"$": "xor_gate_rates"},
+                    "activation": {
+                        "slots": [
+                            {"from": "A0", "at": 25.0},
+                            {"from": "B0", "at": 25.0}
+                        ],
+                        "aggregate": "minimum"
+                    },
+                    "repression": [
+                        {"from": "C0", "at": 1.0}
+                    ]
+                },
+
+                {
+                    "name": "C0",
+                    "base_rates": {"$": "gate_rates"},
+                    "activation": {
+                        "slots": [
+                            {"from": "A0", "at": 25.0},
+                            {"from": "B0", "at": 25.0}
+                        ],
+                        "aggregate": "maximum"
+                    }
+                },
+
+                {
+                    "name": "X2",
+                    "base_rates": {"$": "xor_gate_rates"},
+                    "activation": {
+                        "slots": [
+                            {"from": "A1", "at": 25.0},
+                            {"from": "B1", "at": 25.0}
+                        ],
+                        "aggregate": "minimum"
+                    },
+                    "repression": [
+                        {"from": "M2", "at": 1.0}
+                    ]
+                },
+
+                {
+                    "name": "S1",
+                    "base_rates": {"$": "s1_rates"},
+                    "activation": {
+                        "slots": [
+                            {"from": "X2", "at": 60.0, "k": -3.0},
+                            {"from": "C0", "at": 25.0, "k": -3.0}
+                        ],
+                        "aggregate": "minimum"
+                    },
+                    "repression": [
+                        {"from": "M3", "at": 2.0},
+                        {"from": "M3", "at": 10.0, "k": -3.0}
+                    ]
+                },
+
+                {
+                    "name": "M2",
+                    "base_rates": {"$": "gate_rates"},
+                    "activation": {
+                        "slots": [
+                            {"from": "A1", "at": 25.0},
+                            {"from": "B1", "at": 25.0}
+                        ],
+                        "aggregate": "maximum"
+                    }
+                },
+
+                {
+                    "name": "M3",
+                    "base_rates": {"$": "gate_rates"},
+                    "activation": {
+                        "slots": [
+                            {"from": "X2", "at": 60.0, "k": -3.0},
+                            {"from": "C0", "at": 25.0, "k": -3.0}
+                        ],
+                        "aggregate": "maximum"
+                    }
+                },
+
+                {
+                    "name": "S2",
+                    "base_rates": {"$": "gate_rates"},
+                    "activation": {
+                        "slots": [
+                            {"from": "M2", "at": 25.0, "k": -2.0},
+                            {"from": "M3", "at": 40.0, "k": -2.0}
+                        ],
+                        "aggregate": "minimum"
+                    }
+                }
+            ],
+            "reactions": []
+        }},
+        "each": [
+            [0,   0,   0,   0  ],
+            [0,   0,   0,   200],
+            [0,   0,   200, 0  ],
+            [0,   0,   200, 200],
+            [0,   200, 0,   0  ],
+            [0,   200, 0,   200],
+            [0,   200, 200, 0  ],
+            [0,   200, 200, 200],
+            [200, 0,   0,   0  ],
+            [200, 0,   0,   200],
+            [200, 0,   200, 0  ],
+            [200, 0,   200, 200],
+            [200, 200, 0,   0  ],
+            [200, 200, 0,   200],
+            [200, 200, 200, 0  ],
+            [200, 200, 200, 200]
+        ],
+        "as": "in",
+        "step": {
+            "each": {"length": 2},
+            "branch": true,
+            "step": [
+                {"{add}": {
+                    "$": ["defaults", "bootstrap"],
+                    "A1.proteins": {"$": ["in", 1]},
+                    "A0.proteins": {"$": ["in", 2]},
+                    "B1.proteins": {"$": ["in", 3]},
+                    "B0.proteins": {"$": ["in", 4]}
+                }},
+                {"to": 600000.0, "step": 6000.0}
+            ]
+        }
+    }
+}
