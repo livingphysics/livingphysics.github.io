@@ -808,7 +808,7 @@ Time-lapse of 2 colonies growing under a glass coverslip on a +glu-his-leu agar 
 
 ## Improved Colony Assay
 
-<video src="images/GalHis-Gellan-Series012-2.mp4" controls autoplay loop muted playsinline style="max-width:70%; max-height:65vh; display:block; margin:0 auto;"></video>
+<video src="images/GalHis-Gellan-Series012-2.mp4" controls autoplay loop muted playsinline style="max-width:55%; max-height:450px; display:block; margin:0 auto;"></video>
 
 Time-lapse of 2 colonies growing under a glass coverslip on a +glu-his-leu agar plate
 
