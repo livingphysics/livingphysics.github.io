@@ -491,7 +491,7 @@ From @Xiang_2018
 
 ## Biological Logic Circuits
 
-![](images/2bit_hash.png){.nostretch fig-align="center"}
+![](images/2bit_hash.png){.nostretch fig-align="center" style="max-height:500px"}
 
 ::: footer
 From @Padmakumar_2024
@@ -502,7 +502,7 @@ From @Padmakumar_2024
 *A unicellular walker controlled by a microtubule-
 based finite-state machine*
 
-![](images/larson.png){.nostretch fig-align="center" style="max-height:65vh; max-width:65%"}
+![](images/larson.png){.nostretch fig-align="center" style="max-height:450px; max-width:60%"}
 
 ::: footer
 From @Larson_2022
@@ -512,7 +512,7 @@ From @Larson_2022
 
 *A Markovian dynamics for Caenorhabditis elegans behavior across scales*
 
-![](images/markov_worm_dark.png){.nostretch fig-align="center" style="max-height:65vh; max-width:75%"}
+![](images/markov_worm_dark.png){.nostretch fig-align="center" style="max-height:450px; max-width:60%"}
 
 ::: footer
 From @Costa_2024
