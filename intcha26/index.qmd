@@ -20,9 +20,57 @@ format:
     include-in-header:
       text: |
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <style>
+        .reveal .slides section#title-slide::before {
+          content: '';
+          position: absolute;
+          bottom: -60px;
+          right: 20px;
+          width: 140px;
+          height: 140px;
+          background-image: url('images/slides_qr.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+        .reveal .slides section#title-slide::after {
+          content: 'scan for slides';
+          position: absolute;
+          bottom: -80px;
+          right: 20px;
+          width: 140px;
+          font-size: 0.4em;
+          text-align: center;
+          opacity: 0.7;
+        }
+        </style>
 ---
 
-## Interacting with a Complex World 
+## Opportunities at the Interface {auto-animate=true}
+
+::: {style="font-size:1.1em; padding:8vh 4vw; line-height:1.5"}
+"It is interesting to contemplate an entangled bank, clothed with many plants of many kinds, with birds singing on the bushes, with various insects flitting about, and with worms crawling through the damp earth, and to reflect that these elaborately constructed forms, so different from each other, and dependent upon each other in so complex a manner, have all been produced by laws acting around us."
+:::
+
+::: footer
+Darwin, *On the Origin of Species* (1859)
+:::
+
+## Opportunities at the Interface {auto-animate=true}
+
+::: {style="font-size:1.1em; padding:8vh 4vw; line-height:1.5"}
+[\"It is interesting to contemplate an entangled bank, clothed with many plants of many kinds, with birds singing on the bushes, with various insects flitting about, and with worms crawling through the damp earth, and to reflect that]{style="color:#777"} [these elaborately constructed forms, so different from each other, and dependent upon each other in so complex a manner, have all been produced by laws acting around us.]{style="color:#ffd54f"}[\"]{style="color:#777"}
+:::
+
+::: footer
+Darwin, *On the Origin of Species* (1859)
+:::
+
+::: {.notes}
+Complex behaviors must too be governed by the laws of physics, yet give rise to wonderful diversity
+:::
+
+## Interacting with a Complex World
+
 ... requires sensing, information processing, and action
 
 <br/>
@@ -84,6 +132,14 @@ Learn more
 - Turing Machine (TM)
 - Universal Turing Machine (UTM)
 
+:::
+
+## Look Up Tables (LUT)
+
+The least powerful computational class is the Look Up Table (LUT).  This class is also called combinational logic because it is also the class of problems that can be solved with elementary logic gates
+
+::: {.notes}
+Addition using a look up table is self explanatory, you just make a table of all the possible sums. It might not be obvious how to do addition with a series of logic gates however.
 :::
 
 ## Look Up Tables (LUT)
@@ -468,7 +524,13 @@ A biological systems whose behavior is determined by a system of dynamical rules
 
 <br/>
 
+::: {.fragment}
 *An RNA-Based Theory of Natural Universal Computation*
+:::
+
+::: {.notes}
+So why this and not simply automata and evolution? There are a few reasons, for one, Turing Award winning computer scientist Les Valiant argues that there simply has not been enough time for random search to have evolved the diversity of life we see, and another is that evolution is very wasteful.
+:::
 
 ::: footer
 From @Akhlaghpour_2022
@@ -484,7 +546,7 @@ If such a thing exists, how might we go about finding and understanding it?
 
 ::: incremental
  - Finding a system whose capacity to learn exceeds that of a simple automata
- - In a system that is composed of components whose behavior we know how to describe
+ - and composed of components whose behavior we know how to describe
 :::
 
 ## Cell Learning 
@@ -850,7 +912,7 @@ ylabel!(p_temp, "Temperature (°C)")
 xlabel!(p_temp, "Elapsed time (hours)")
 
 display(plot(p_od, p_dt, p_temp; layout=(3, 1), size=(1000, 500),
-             legend=:topleft, left_margin=10Plots.mm))
+             legend=:topleft, left_margin=10Plots.mm, bottom_margin=6Plots.mm))
 ```
 
 :::
@@ -859,7 +921,10 @@ display(plot(p_od, p_dt, p_temp; layout=(3, 1), size=(1000, 500),
 @Hoffmann2017-po
 :::
 
+
 ## References
 
 ::: {#refs}
 :::
+
+## Thank You
