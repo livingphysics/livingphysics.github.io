@@ -239,7 +239,7 @@ In this view, I would define the capability to learn as the capability to modify
 
 ## Genetic Switches and Circuits {auto-animate=true}
 
-![](images/lac_operon_dark.png){fig-align="center" width="55%"}
+![](images/lac_operon_dark.png){.nostretch fig-align="center" width="55%"}
 
 ::: footer
 @Jacob_1961
@@ -466,7 +466,7 @@ min(A, B)
 
 ## Biological Logic Gates {auto-animate=true}
 
-![](images/logic_mining.png){fig-align="center"}
+![](images/logic_mining.png){.nostretch fig-align="center"}
 
 ::: footer
 From @Stanton_2013
@@ -483,7 +483,7 @@ From @Stanton_2013
 
 ## Biological Logic Gates {auto-animate=true}
 
-![](images/biological_circuit_dark.png){fig-align="center"}
+![](images/biological_circuit_dark.png){.nostretch fig-align="center"}
 
 ::: footer
 From @Xiang_2018
@@ -491,7 +491,7 @@ From @Xiang_2018
 
 ## Biological Logic Circuits
 
-![](images/2bit_hash.png){fig-align="center"}
+![](images/2bit_hash.png){.nostretch fig-align="center"}
 
 ::: footer
 From @Padmakumar_2024
