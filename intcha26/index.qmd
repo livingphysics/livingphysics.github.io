@@ -639,7 +639,7 @@ digraph D {
 
 ## Bioreactor Design
 
-![](./images/bioreactor_v3.png){.nostretch fig-align="center" width="75%"}
+![](./images/bioreactor_v3.png){.nostretch fig-align="center" style="max-height:400px; max-width:55%"}
 
 <div style="font-size:0.85em">
 
