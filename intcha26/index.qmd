@@ -502,7 +502,7 @@ From @Padmakumar_2024
 *A unicellular walker controlled by a microtubule-
 based finite-state machine*
 
-![](images/larson.png){fig-align="center" width="65%"}
+![](images/larson.png){.nostretch fig-align="center" width="65%"}
 
 ::: footer
 From @Larson_2022
@@ -512,7 +512,7 @@ From @Larson_2022
 
 *A Markovian dynamics for Caenorhabditis elegans behavior across scales*
 
-![](images/markov_worm_dark.png){fig-align="center" width="75%"}
+![](images/markov_worm_dark.png){.nostretch fig-align="center" width="75%"}
 
 ::: footer
 From @Costa_2024
@@ -639,7 +639,7 @@ digraph D {
 
 ## Bioreactor Design
 
-![](./images/bioreactor_v3.png){fig-align="center" width="75%"}
+![](./images/bioreactor_v3.png){.nostretch fig-align="center" width="75%"}
 
 <div style="font-size:0.85em">
 
