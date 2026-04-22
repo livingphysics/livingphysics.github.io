@@ -502,7 +502,7 @@ From @Padmakumar_2024
 *A unicellular walker controlled by a microtubule-
 based finite-state machine*
 
-![](images/larson.png){.nostretch fig-align="center" width="65%"}
+![](images/larson.png){.nostretch fig-align="center" style="max-height:65vh; max-width:65%"}
 
 ::: footer
 From @Larson_2022
@@ -512,7 +512,7 @@ From @Larson_2022
 
 *A Markovian dynamics for Caenorhabditis elegans behavior across scales*
 
-![](images/markov_worm_dark.png){.nostretch fig-align="center" width="75%"}
+![](images/markov_worm_dark.png){.nostretch fig-align="center" style="max-height:65vh; max-width:75%"}
 
 ::: footer
 From @Costa_2024
@@ -801,14 +801,14 @@ Photomicrographs of rewired cell pre and post adaptation to glucose.
 
 ## Colony assays do not support a mutational model
 
-<video src="images/Composite-1.mp4" controls autoplay loop muted playsinline style="max-width:90%; max-height:75vh; display:block; margin:0 auto;"></video>
+<video src="images/Composite-1.mp4" controls autoplay loop muted playsinline style="max-width:70%; max-height:65vh; display:block; margin:0 auto;"></video>
 
 Time-lapse of 2 colonies growing under a glass coverslip on a +glu-his-leu agar plate
 
 
 ## Improved Colony Assay
 
-<video src="images/GalHis-Gellan-Series012-2.mp4" controls autoplay loop muted playsinline style="max-width:90%; max-height:75vh; display:block; margin:0 auto;"></video>
+<video src="images/GalHis-Gellan-Series012-2.mp4" controls autoplay loop muted playsinline style="max-width:70%; max-height:65vh; display:block; margin:0 auto;"></video>
 
 Time-lapse of 2 colonies growing under a glass coverslip on a +glu-his-leu agar plate
 
