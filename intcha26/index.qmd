@@ -8,6 +8,8 @@ resources:
   - two_bit_adder.html
   - fsm_adder.html
   - images/adder.mp4
+  - images/Composite-1.mp4
+  - images/GalHis-Gellan-Series012-2.mp4
 bibliography: references.bib
 format:
   revealjs:
@@ -66,7 +68,7 @@ Darwin, *On the Origin of Species* (1859)
 :::
 
 ::: {.notes}
-Complex behaviors must too be governed by the laws of physics, yet give rise to wonderful diversity
+and this tension between robustness and diversity is apparent no only in evolution. Complex behaviors must too be governed by the laws of physics, yet give rise to wonderful diversity
 :::
 
 ## Interacting with a Complex World
@@ -651,8 +653,37 @@ curl -H "Authorization: Bearer test123" \
 
 [Click Here for Build Notes](https://notes.livingphysics.org/build_posts/gen3_reactor_build/)
 
-::: 
+:::
 
+
+## Gas Composition Sensing
+
+::: {style="text-align:center"}
+
+```{julia}
+#| echo: true
+#| code-fold: true
+using CSV, DataFrames, HTTP
+using CairoMakie: Figure, Axis, lines!, hidespines!, hidexdecorations!
+
+url = "https://raw.githubusercontent.com/livingphysics/bioreactor_v3/refs/heads/experiments/src/bioreactor_data/20260303_103138/bioreactor_data.csv"
+df = CSV.read(HTTP.get(url).body, DataFrame)
+
+fig = Figure()
+ax1 = Axis(fig[1,1], ylabel="CO2 (ppm)", yticklabelcolor=:blue, ylabelcolor=:blue)
+ax2 = Axis(fig[1,1], ylabel="O2 (%)", yticklabelcolor=:red,
+           yaxisposition=:right, ylabelcolor=:red)
+
+hidespines!(ax2)
+hidexdecorations!(ax2)  # don't double-draw x ticks
+
+lines!(ax1, df.elapsed_time/3600, df.CO2_ppm, color=:blue, label="CO2")
+lines!(ax2, df.elapsed_time/3600, df.O2_percent, color=:red, label="O2")
+
+fig
+```
+
+:::
 
 ## Glucose Adaptation
 
@@ -769,11 +800,17 @@ Photomicrographs of rewired cell pre and post adaptation to glucose.
 :::
 
 ## Colony assays do not support a mutational model
-![Time-lapse of 2 colonies growing under a glass coverslip on a +glu-his-leu agar plate](./images/Composite-1.gif)
+
+<video src="images/Composite-1.mp4" controls autoplay loop muted playsinline style="max-width:90%; max-height:75vh; display:block; margin:0 auto;"></video>
+
+Time-lapse of 2 colonies growing under a glass coverslip on a +glu-his-leu agar plate
 
 
 ## Improved Colony Assay
-![Time-lapse of 2 colonies growing under a glass coverslip on a +glu-his-leu agar plate](./images/GalHis-Gellan.lif%20-%20Series012-2.gif)
+
+<video src="images/GalHis-Gellan-Series012-2.mp4" controls autoplay loop muted playsinline style="max-width:90%; max-height:75vh; display:block; margin:0 auto;"></video>
+
+Time-lapse of 2 colonies growing under a glass coverslip on a +glu-his-leu agar plate
 
 ## Continuous Culture
 
