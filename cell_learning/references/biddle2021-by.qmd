@@ -1,0 +1,27 @@
+---
+title: "Allosteric conformational ensembles have unlimited capacity for integrating information"
+subtitle: "Citation key: Biddle2021-by"
+---
+
+*Elife · 2021*
+
+**Tags:** Biological Computation, Theory
+
+[📄 Download PDF](../files/Biddle_et_al._2021_-_Allosteric_conformational_ensembles_have_unlimited_capacity_for_integrating_information.pdf)
+
+```bibtex
+@ARTICLE{Biddle2021-by,
+title = "Allosteric conformational ensembles have unlimited capacity for
+integrating information",
+author = "Biddle, John W and Martinez-Corral, Rosa and Wong, Felix and
+Gunawardena, Jeremy",
+journal = "Elife",
+volume = 10,
+month = jun,
+year = 2021,
+keywords = "allostery; conformational ensembles; higher-order coopeartivity;
+information integration; linear framework; molecular biophysics;
+none; physics of living systems; structural biology",
+language = "en"
+}
+```

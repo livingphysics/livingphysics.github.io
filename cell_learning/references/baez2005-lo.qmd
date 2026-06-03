@@ -1,0 +1,25 @@
+---
+title: "Mammalian Smaug is a translational repressor that forms cytoplasmic foci similar to stress granules"
+subtitle: "Citation key: Baez2005-lo"
+---
+
+*J. Biol. Chem. · 2005*
+
+**Tags:** Granule, Prion, RNA
+
+[📄 Download PDF](../files/Baez_and_Boccaccio_2005_-_Mammalian_Smaug_is_a_translational_repressor_that_forms_cytoplasmic_foci_similar_to_stress_granules.pdf)
+
+```bibtex
+@ARTICLE{Baez2005-lo,
+title = "Mammalian Smaug is a translational repressor that forms
+cytoplasmic foci similar to stress granules",
+author = "Baez, Mar{\'\i}a V and Boccaccio, Graciela L",
+journal = "J. Biol. Chem.",
+volume = 280,
+number = 52,
+pages = "43131--43140",
+month = dec,
+year = 2005,
+language = "en"
+}
+```

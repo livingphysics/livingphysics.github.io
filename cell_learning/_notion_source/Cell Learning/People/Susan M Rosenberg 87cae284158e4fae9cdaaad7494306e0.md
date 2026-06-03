@@ -1,0 +1,7 @@
+# Susan M Rosenberg
+
+[Susan M Rosenberg](Susan%20M%20Rosenberg%2087cae284158e4fae9cdaaad7494306e0.md) demonstrated that in the bacterial *Escherichia coli,* mutations are indeed not random as we’ve defined them. Rosenberg’s group engineered bacteria to have a nonfunctional Lac gene, which is required for growth on lactose.  She observed that in response to this growth-arresting stress, a subpopulation of cells up-regulated their rate of mutagenesis. She further found that this up-regulation was localized to sites near DNA double-strand breaks.  This subpopulation of mutator cells was able to escape growth arrest, and form colonies on lactose.  Over the course of more than a decade, the Rosenberg group elucidated molecular mechanisms responsible for this adaptive mutagenesis.  There appear to be two distinct mechanisms, corresponding to two different mutational strategies - point mutation and gene duplication.  Both mechanisms require the SOS stress response for initiation, and are closely tied to competing high and low-fidelity polymerases competing for binding on open DNA strands during double-strand break repair. Although the Rosenberg group showed conclusively that mutations could be regulated in time, the evidence for spatial regulation was weaker.  Her group observed that the mutational landscape broadly followed the distribution of double-strand breaks in DNA throughout the genome; mutations were not localized to the Lac gene.
+
+Summary of contributions
+
+[Untitled](Susan%20M%20Rosenberg/Untitled%20bee5294ef00047d1b9ab1afda84fd148.csv)

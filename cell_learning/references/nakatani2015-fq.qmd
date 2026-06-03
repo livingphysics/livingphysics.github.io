@@ -1,0 +1,49 @@
+---
+title: "Large expansion of CTG•CAG repeats is exacerbated by MutS$\\beta$ in human cells"
+subtitle: "Citation key: Nakatani2015-fq"
+---
+
+*Sci. Rep. · 2015*
+
+**Tags:** MMR, Tri-nucleotide Repeats
+
+[📄 Download PDF](../files/Nakatani_et_al._2015_-_Large_expansion_of_CTGCAG_repeats_is_exacerbated_by_MutS_in_human_cells.pdf)
+
+```bibtex
+@ARTICLE{Nakatani2015-fq,
+title = "Large expansion of {CTG•CAG} repeats is exacerbated by
+{MutS$\beta$} in human cells",
+author = "Nakatani, Rie and Nakamori, Masayuki and Fujimura, Harutoshi and
+Mochizuki, Hideki and Takahashi, Masanori P",
+abstract = "Trinucleotide repeat expansion disorders (TRED) are caused by
+genomic expansions of trinucleotide repeats, such as CTG and CAG.
+These expanded repeats are unstable in germline and somatic
+cells, with potential consequences for disease severity. Previous
+studies have demonstrated the involvement of DNA repair proteins
+in repeat instability, although the key factors affecting large
+repeat expansion and contraction are unclear. Here we
+investigated these factors in a human cell model harboring 800
+CTG•CAG repeats by individually knocking down various DNA repair
+proteins using short interfering RNA. Knockdown of MSH2 and MSH3,
+which form the MutS$\beta$ heterodimer and function in mismatch
+repair, suppressed large repeat expansions, whereas knockdown of
+MSH6, which forms the MutS$\alpha$ heterodimer with MSH2,
+promoted large expansions exceeding 200 repeats by compensatory
+increases in MSH3 and the MutS$\beta$ complex. Knockdown of
+topoisomerase 1 (TOP1) and TDP1, which are involved in
+single-strand break repair, enhanced large repeat contractions.
+Furthermore, knockdown of senataxin, an RNA/DNA helicase which
+affects DNA:RNA hybrid formation and transcription-coupled
+nucleotide excision repair, exacerbated repeat instability in
+both directions. These results indicate that DNA repair factors,
+such as MutS$\beta$ play important roles in large repeat
+expansion and contraction, and can be an excellent therapeutic
+target for TRED.",
+journal = "Sci. Rep.",
+volume = 5,
+pages = "11020",
+month = jun,
+year = 2015,
+language = "en"
+}
+```

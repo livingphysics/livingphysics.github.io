@@ -1,0 +1,53 @@
+---
+title: "Behavioral diversity in microbes and low-dimensional phenotypic spaces"
+subtitle: "Citation key: Jordan2013-el"
+---
+
+*Proc. Natl. Acad. Sci. U. S. A. · 2013*
+
+[📄 Download PDF](../files/Jordan_et_al._2013_-_Behavioral_diversity_in_microbes_and_low-dimensional_phenotypic_spaces.pdf)
+
+```bibtex
+@ARTICLE{Jordan2013-el,
+title = "Behavioral diversity in microbes and low-dimensional phenotypic
+spaces",
+author = "Jordan, David and Kuehn, Seppe and Katifori, Eleni and Leibler,
+Stanislas",
+abstract = "Systematic studies of phenotypic diversity--required for
+understanding evolution--lag behind investigations of genetic
+diversity. Here we develop a quantitative approach to studying
+behavioral diversity, which we apply to swimming of the ciliate
+Tetrahymena. We measure the full-lifetime behavior of hundreds of
+individual organisms at high temporal resolution, over several
+generations and in diverse nutrient conditions. To characterize
+population diversity and temporal variability we introduce a
+unique statistical framework grounded in the notion of a
+phenotypic space of behaviors. We show that this space is
+effectively low dimensional with dimensions that correlate with a
+two-state ``roaming and dwelling'' model of swimming behavior.
+Temporal variability over the lifetime of an individual is
+correlated with the fraction of time spent roaming whereas
+diversity between individuals is correlated with the speed of
+roaming. Quantifying the dynamics of behavioral variation shows
+that behavior over the lifetime of an individual is strongly
+nonstationary. Analysis of behavioral dynamics between
+generations reveals complex patterns of behavioral heritability
+that point to the importance of considering correlations beyond
+mothers and daughters. Our description of a low-dimensional
+behavioral space should enable the systematic study of the
+evolutionary and ecological bases of phenotypic constraints.
+Future experimental and theoretical studies of behavioral
+diversity will have to account for the possibility of
+nonstationary and environmentally dependent behavioral dynamics
+that we observe.",
+journal = "Proc. Natl. Acad. Sci. U. S. A.",
+volume = 110,
+number = 34,
+pages = "14018--14023",
+month = aug,
+year = 2013,
+keywords = "behavioral variation in microbes; biological sciences; systems
+biology",
+language = "en"
+}
+```

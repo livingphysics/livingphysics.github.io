@@ -1,0 +1,27 @@
+---
+title: "Molecular Origins of Complex Heritability in Natural Genotype-to-Phenotype Relationships"
+subtitle: "Citation key: Jakobson2019-fq"
+---
+
+*Cell Syst · 2019*
+
+**Tags:** Synonymous Mutations
+
+[📄 Download PDF](../files/Jakobson_and_Jarosz_2019_-_Molecular_Origins_of_Complex_Heritability_in_Natural_Genotype-to-Phenotype_Relationships.pdf)
+
+```bibtex
+@ARTICLE{Jakobson2019-fq,
+title = "Molecular Origins of Complex Heritability in Natural
+{Genotype-to-Phenotype} Relationships",
+author = "Jakobson, Christopher M and Jarosz, Daniel F",
+journal = "Cell Syst",
+volume = 8,
+number = 5,
+pages = "363--379.e3",
+month = may,
+year = 2019,
+keywords = "complex traits; functional genomics; quantitative genetics;
+systems genetics",
+language = "en"
+}
+```

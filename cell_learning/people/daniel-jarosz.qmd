@@ -1,0 +1,22 @@
+---
+title: "Daniel Jarosz"
+---
+
+[Jarosz Lab](https://jarosz.stanford.edu/)
+
+Many organisms, including yeast, have ancient transcriptional programs that dictate how and when to use different metabolic energy sources, of which carbon sources are one of the most important.  In many organisms, glucose is a preferred carbon source, and its presence will often prevent cells from utilizing other carbon sources.  However, depending on the statistics of how often glucose is encountered, the strength of this repression should in principle vary, allowing yeast to switch fro being metabolic specialists to generalists.  In this context, Daniel Jarosz and colleagues have found that yeast can generate a non-mutation based heritable switch to relive glucose associated repression, called [GAR+].  The Jarosz lab characterizes this heritable element as a prion, as it has the hallmarks of a prion, it arises at a frequency higher than expected for genetic mutations, shows non-mendelian inheritance, which is chaperone dependent.  Prions are usually associated with so called amyloid proteins, e.g. the [PSI+] or [URE3] prions in yeast, which can adopt different folded states, however [GAR+] seems to be a non-amyloid based prion.  
+
+Perhaps even more intriguing is the [SMAUG+] prion, which has also been studied extensively by the Jarosz lab, which is a prion formed by the yeast homolog of RNA binding protein encoded by VTS1 gene. This prion is involved in the balance between mitotic proliferation and meiosis in yeast and seems particularly important for predictive growth strategies in fluctuating environments. Like the [GAR+] prion, the [SMAUG+] prion seems not to be amyloid based, but rather depends on the condensation of Vts1 into phase separated granules.  These granules are heritable and result in coordinated transcriptional changes which down-regulate a coherent network of mRNAs and improve growth under nutrient limited conditions.  This is not simply a yeast protein, however, and has two homologs in mammals.  Incredibly, [in mice](../references/baez2005-lo.qmd), mSmaug1 is expressed in the central nervous system, and is abundant granules that are localized in post-synaptic sub-cellular regions where translation is tightly regulated by synaptic stimulation. 
+
+In a recent publication the Jarosz group measured the fitness effects of synonymous and non-synonymous mutations by recombining genetic variants from a collection of wild yeast in such a way that there were many more individuals then there were variants being mapped.  In this way, the phenotypic consequences of these variants could be determined with essentially nucleotide resolution.  This statistical power allowed them to map the genetic contributions of natural variants to 90 quantitative traits.  One of their most interesting findings was that the effect size of non-synonymous and synonymous mutations were effectively the same!  Jarosz merely points to the fact that the ratio of non-synonymous mutations to synonymous ones, the dN/dS ratio, is widely used as the basis to determine whether sequences are under positive selective pressure, and underlying this calculation is the assumption that synonymous mutations are neutral!  He goes on to ask the audience simply to be…
+
+open to the idea of thinking about, at least some, synonymous variants as a type of regulatory variant that can arise within an open reading frame, and at the very least accept that is is unwise to ignore them (as is standard practice) in evolutionary biology but as well in clinical genetics.
+
+## Related references
+
+| Reference | Title |
+| --- | --- |
+| [Garcia2016-ey](../references/garcia2016-ey.qmd) | A common bacterial metabolite elicits prion-based bypass of glucose repression |
+| [Itakura2020-vq](../references/itakura2020-vq.qmd) | Widespread Prion-Based Control of Growth and Differentiation Strategies in Saccharomyces cerevisiae |
+| [Jakobson2019-fq](../references/jakobson2019-fq.qmd) | Molecular Origins of Complex Heritability in Natural Genotype-to-Phenotype Relationships |
+| [Chakravarty2020-xf](../references/chakravarty2020-xf.qmd) | A Non-amyloid Prion Particle that Activates a Heritable Gene Expression Program |

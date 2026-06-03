@@ -1,0 +1,23 @@
+---
+title: "Inactivation of conserved C. elegans genes engages pathogen- and xenobiotic-associated defenses"
+subtitle: "Citation key: Melo2012-zi"
+---
+
+*Cell · 2012*
+
+[📄 Download PDF](../files/Melo_and_Ruvkun_2012_-_Inactivation_of_conserved_C._elegans_genes_engages_pathogen-_and_xenobiotic-associated_defenses.pdf)
+
+```bibtex
+@ARTICLE{Melo2012-zi,
+title = "Inactivation of conserved C. elegans genes engages pathogen- and
+xenobiotic-associated defenses",
+author = "Melo, Justine A and Ruvkun, Gary",
+journal = "Cell",
+volume = 149,
+number = 2,
+pages = "452--466",
+month = apr,
+year = 2012,
+language = "en"
+}
+```

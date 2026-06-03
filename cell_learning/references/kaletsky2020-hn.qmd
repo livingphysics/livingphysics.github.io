@@ -1,0 +1,24 @@
+---
+title: "C. elegans interprets bacterial non-coding RNAs to learn pathogenic avoidance"
+subtitle: "Citation key: Kaletsky2020-hn"
+---
+
+*Nature · 2020*
+
+[📄 Download PDF](../files/Kaletsky_et_al._2020_-_C._elegans_interprets_bacterial_non-coding_RNAs_to_learn_pathogenic_avoidance.pdf)
+
+```bibtex
+@ARTICLE{Kaletsky2020-hn,
+title = "C. elegans interprets bacterial non-coding {RNAs} to learn
+pathogenic avoidance",
+author = "Kaletsky, Rachel and Moore, Rebecca S and Vrla, Geoffrey D and
+Parsons, Lance R and Gitai, Zemer and Murphy, Coleen T",
+journal = "Nature",
+volume = 586,
+number = 7829,
+pages = "445--451",
+month = oct,
+year = 2020,
+language = "en"
+}
+```

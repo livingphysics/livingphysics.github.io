@@ -1,0 +1,43 @@
+# Sephton2015-pp
+
+Bibtex: @ARTICLE{Sephton2015-pp,
+title = "The function of {RNA-binding} proteins at the synapse:
+implications for neurodegeneration",
+author = "Sephton, Chantelle F and Yu, Gang",
+abstract = "The loss of synapses is a central event in neurodegenerative
+diseases. Synaptic proteins are often associated with disease
+neuropathology, but their role in synaptic loss is not fully
+understood. Of the many processes involved in sustaining the
+integrity of synapses, local protein translation can directly
+impact synaptic formation, communication, and maintenance.
+RNA-binding proteins and their association with RNA granules
+serve to regulate mRNA transportation and translation at synapses
+and in turn regulate the synapse. Genetic mutations in
+RNA-binding proteins FUS and TDP-43 have been linked with causing
+neurodegenerative diseases: amyotrophic lateral sclerosis and
+frontotemporal dementia. The observation that mutations in FUS
+and TDP-43 coincide with changes in RNA granules provides
+evidence that dysfunction of RNA metabolism may underlie the
+mechanism of synaptic loss in these diseases. However, we do not
+know how mutations in RNA-binding proteins would affect RNA
+granule dynamics and local translation, or if these alterations
+would cause neurodegeneration. Further investigation into this
+area will lead to important insights into how disruption of RNA
+metabolism and local translation at synapses can cause
+neurodegenerative diseases.",
+journal = "Cell. Mol. Life Sci.",
+volume = 72,
+number = 19,
+pages = "3621--3635",
+month = oct,
+year = 2015,
+keywords = "Amyotrophic lateral sclerosis; FUS; Frontotemporal dementia;
+Local translation; RNA granules; RNP granules; Stress granules;
+TDP-43",
+language = "en"
+}
+Tags: Granule, LLPS, Neurons, RNA, Tri-nucleotide Repeats
+Title: The function of {RNA-binding} proteins at the synapse: implications for neurodegeneration
+Journal: Cell. Mol. Life Sci.
+PDF: ../Sephton_and_Yu_2015_-_The_function_of_RNA-binding_proteins_at_the_synapse_-_implications_for_neurodegeneration.pdf
+Year: 2015

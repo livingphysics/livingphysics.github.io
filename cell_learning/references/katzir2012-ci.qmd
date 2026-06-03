@@ -1,0 +1,59 @@
+---
+title: "Cellular plasticity enables adaptation to unforeseen cell-cycle rewiring challenges"
+subtitle: "Citation key: Katzir2012-ci"
+---
+
+*PLoS One · 2012*
+
+**Tags:** Accelerated Evolution, Biological Computation
+
+[📄 Download PDF](../files/Katzir_et_al._2012_-_Cellular_plasticity_enables_adaptation_to_unforeseen_cell-cycle_rewiring_challenges.pdf)
+
+```bibtex
+@ARTICLE{Katzir2012-ci,
+title = "Cellular plasticity enables adaptation to unforeseen cell-cycle
+rewiring challenges",
+author = "Katzir, Yair and Stolovicki, Elad and Stern, Shay and Braun, Erez",
+abstract = "The fundamental dynamics of the cell cycle, underlying cell
+growth and reproduction, were previously found to be robust under
+a wide range of environmental and internal perturbations. This
+property was commonly attributed to its network structure, which
+enables the coordinated interactions among hundreds of proteins.
+Despite significant advances in deciphering the components and
+autonomous interactions of this network, understanding the
+interfaces of the cell cycle with other major cellular processes
+is still lacking. To gain insight into these interfaces, we used
+the process of genome-rewiring in yeast by placing an essential
+metabolic gene HIS3 from the histidine biosynthesis pathway,
+under the exclusive regulation of different cell-cycle promoters.
+In a medium lacking histidine and under partial inhibition of the
+HIS3p, the rewired cells encountered an unforeseen multitasking
+challenge; the cell-cycle regulatory genes were required to
+regulate the essential histidine-pathway gene in concert with the
+other metabolic demands, while simultaneously driving the cell
+cycle through its proper temporal phases. We show here that
+chemostat cell populations with rewired cell-cycle promoters
+adapted within a short time to accommodate the inhibition of
+HIS3p and stabilized a new phenotypic state. Furthermore, a
+significant fraction of the population was able to adapt and grow
+into mature colonies on plates under such inhibiting conditions.
+The adapted state was shown to be stably inherited across
+generations. These adaptation dynamics were accompanied by a
+non-specific and irreproducible genome-wide transcriptional
+response. Adaptation of the cell-cycle attests to its
+multitasking capabilities and flexible interface with cellular
+metabolic processes and requirements. Similar adaptation features
+were found in our previous work when rewiring HIS3 to the GAL
+system and switching cells from galactose to glucose. Thus, at
+the basis of cellular plasticity is the emergence of a
+yet-unknown general, non-specific mechanism allowing fast
+inherited adaptation to unforeseen challenges.",
+journal = "PLoS One",
+volume = 7,
+number = 9,
+pages = "e45184",
+month = sep,
+year = 2012,
+language = "en"
+}
+```

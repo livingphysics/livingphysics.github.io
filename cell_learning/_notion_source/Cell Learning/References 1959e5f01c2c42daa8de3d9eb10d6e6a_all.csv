@@ -1,0 +1,1265 @@
+﻿Name,Bibtex,Journal,PDF,People,Summary,Tags,Title,URL,Year
+Garcia2016-ey,"@ARTICLE{Garcia2016-ey,
+title = ""A common bacterial metabolite elicits prion-based bypass of
+glucose repression"",
+author = ""Garcia, David M and Dietrich, David and Clardy, Jon and Jarosz,
+Daniel F"",
+journal = ""Elife"",
+volume = 5,
+month = nov,
+year = 2016,
+keywords = ""Dekkera bruxellensis; S. cerevisiae; Staphylococcus gallinarum;
+catabolite repression; chromosomes; genes; infectious disease;
+lactic acid; microbiology; molecular communication; prion"",
+language = ""en""
+}",Elife,Cell%20Learning/Garcia_et_al._2016_-_A_common_bacterial_metabolite_elicits_prion-based_bypass_of_glucose_repression.pdf,Daniel Jarosz,,Prion,A common bacterial metabolite elicits prion-based bypass of glucose repression,,2016
+Ponder2005-et,"@ARTICLE{Ponder2005-et,
+title = ""A switch from high-fidelity to error-prone {DNA} double-strand
+break repair underlies stress-induced mutation"",
+author = ""Ponder, Rebecca G and Fonville, Natalie C and Rosenberg, Susan M"",
+journal = ""Mol. Cell"",
+volume = 19,
+number = 6,
+pages = ""791--804"",
+month = sep,
+year = 2005,
+language = ""en""
+}",Mol. Cell,Cell%20Learning/Ponder_et_al._2005_-_A_switch_from_high-fidelity_to_error-prone_DNA_double-strand_break_repair_underlies_stress-induced_mutation.pdf,Susan M Rosenberg,,"Directed mutation debate, Spatial Non-randomness, Temporal Non-randomness",A switch from high-fidelity to error-prone {DNA} double-strand break repair underlies stress-induced mutation,,2005
+Stolovicki2006-sd,"@ARTICLE{Stolovicki2006-sd,
+title = ""Synthetic gene recruitment reveals adaptive reprogramming of gene
+regulation in yeast"",
+author = ""Stolovicki, Elad and Dror, Tali and Brenner, Naama and Braun,
+Erez"",
+journal = ""Genetics"",
+volume = 173,
+number = 1,
+pages = ""75--85"",
+month = may,
+year = 2006,
+language = ""en""
+}",Genetics,Cell%20Learning/Stolovicki_et_al._2006_-_Synthetic_gene_recruitment_reveals_adaptive_reprogramming_of_gene_regulation_in_yeast.pdf,Erez Braun,,,Synthetic gene recruitment reveals adaptive reprogramming of gene regulation in yeast,,2006
+Lenski1993-wz,"@ARTICLE{Lenski1993-wz,
+title = ""The directed mutation controversy and neo-Darwinism"",
+author = ""Lenski, R E and Mittler, J E"",
+journal = ""Science"",
+volume = 259,
+number = 5092,
+pages = ""188--194"",
+month = jan,
+year = 1993,
+language = ""en""
+}",Science,Cell%20Learning/Lenski_and_Mittler_1993_-_The_directed_mutation_controversy_and_neo-Darwinism.pdf,,,Directed mutation debate,The directed mutation controversy and neo-Darwinism,,1993
+Brisson2003-bu,"@ARTICLE{Brisson2003-bu,
+title = ""The directed mutation controversy in an evolutionary context"",
+author = ""Brisson, Dustin"",
+journal = ""Crit. Rev. Microbiol."",
+volume = 29,
+number = 1,
+pages = ""25--35"",
+year = 2003,
+language = ""en""
+}",Crit. Rev. Microbiol.,Cell%20Learning/Brisson_2003_-_The_directed_mutation_controversy_in_an_evolutionary_context.pdf,,,Directed mutation debate,The directed mutation controversy in an evolutionary context,,2003
+Xue2016-ng,"@ARTICLE{Xue2016-ng,
+title = ""Evolutionary learning of adaptation to varying environments
+through a transgenerational feedback"",
+author = ""Xue, Bingkan and Leibler, Stanislas"",
+journal = ""Proc. Natl. Acad. Sci. U. S. A."",
+volume = 113,
+number = 40,
+pages = ""11266--11271"",
+month = oct,
+year = 2016,
+keywords = ""bet hedging; environmental fluctuations; epigenetic inheritance;
+evolution; population growth"",
+language = ""en""
+}",Proc. Natl. Acad. Sci. U. S. A.,Cell%20Learning/Xue_and_Leibler_2016_-_Evolutionary_learning_of_adaptation_to_varying_environments_through_a_transgenerational_feedback.pdf,"BingKan Xue, Stanislas Leibler",,Theory,Evolutionary learning of adaptation to varying environments through a transgenerational feedback,,2016
+Rivoire2014-lh,"@ARTICLE{Rivoire2014-lh,
+title = ""A model for the generation and transmission of variations in
+evolution"",
+author = ""Rivoire, Olivier and Leibler, Stanislas"",
+journal = ""Proc. Natl. Acad. Sci. U. S. A."",
+volume = 111,
+number = 19,
+pages = ""E1940--9"",
+month = may,
+year = 2014,
+keywords = ""Darwinian evolution; Lamarckism; acquired characteristics;
+epigenetics; heredity"",
+language = ""en""
+}",Proc. Natl. Acad. Sci. U. S. A.,Cell%20Learning/Rivoire_and_Leibler_2014_-_A_model_for_the_generation_and_transmission_of_variations_in_evolution.pdf,"Olivier Rivoire, Stanislas Leibler",,Theory,A model for the generation and transmission of variations in evolution,,2014
+Hull2017-bn,"@ARTICLE{Hull2017-bn,
+title = ""Environmental change drives accelerated adaptation through
+stimulated copy number variation"",
+author = ""Hull, Ryan M and Cruz, Cristina and Jack, Carmen V and Houseley,
+Jonathan"",
+journal = ""PLoS Biol."",
+volume = 15,
+number = 6,
+pages = ""e2001333"",
+month = jun,
+year = 2017,
+language = ""en""
+}",PLoS Biol.,Cell%20Learning/Hull_et_al._2017_-_Environmental_change_drives_accelerated_adaptation_through_stimulated_copy_number_variation.pdf,Jonathan Houseley,,"CNV, Spatial Non-randomness, Temporal Non-randomness, UK Based",Environmental change drives accelerated adaptation through stimulated copy number variation,,2017
+Murugan2015-rz,"@ARTICLE{Murugan2015-rz,
+title = ""Multifarious assembly mixtures: systems allowing retrieval of
+diverse stored structures"",
+author = ""Murugan, Arvind and Zeravcic, Zorana and Brenner, Michael P and
+Leibler, Stanislas"",
+journal = ""Proc. Natl. Acad. Sci. U. S. A."",
+volume = 112,
+number = 1,
+pages = ""54--59"",
+month = jan,
+year = 2015,
+keywords = ""complex materials; programmed assembly; stored structures"",
+language = ""en""
+}",Proc. Natl. Acad. Sci. U. S. A.,Cell%20Learning/Murugan_et_al._2015_-_Multifarious_assembly_mixtures_-_systems_allowing_retrieval_of_diverse_stored_structures.pdf,"Arvind Murugan, Stanislas Leibler, Zorana Zeravcic",,Theory,Multifarious assembly mixtures: systems allowing retrieval of diverse stored structures,,2015
+Biddle2021-by,"@ARTICLE{Biddle2021-by,
+title = ""Allosteric conformational ensembles have unlimited capacity for
+integrating information"",
+author = ""Biddle, John W and Martinez-Corral, Rosa and Wong, Felix and
+Gunawardena, Jeremy"",
+journal = ""Elife"",
+volume = 10,
+month = jun,
+year = 2021,
+keywords = ""allostery; conformational ensembles; higher-order coopeartivity;
+information integration; linear framework; molecular biophysics;
+none; physics of living systems; structural biology"",
+language = ""en""
+}",Elife,Cell%20Learning/Biddle_et_al._2021_-_Allosteric_conformational_ensembles_have_unlimited_capacity_for_integrating_information.pdf,Jeremy Gunawardena,,"Biological Computation, Theory",Allosteric conformational ensembles have unlimited capacity for integrating information,,2021
+Venkataraman2022-hg,"@ARTICLE{Venkataraman2022-hg,
+title = ""Processive and distributive non-equilibrium networks
+discriminate in alternate limits"",
+author = ""Venkataraman, G G and Miska, E A and Jordan, David J"",
+journal = ""J Stat. Mech."",
+volume = “”,
+publisher = ""http://iopscience.iop.org/"",
+year = 2022,
+language = “en”
+}",J Stat. Mech.,Cell%20Learning/Venkataraman_et_al._2022_-_Processive_and_distributive_non-equilibrium_networks_discriminate_in_alternate_limits.pdf,,,"Biological Computation, Theory",Processive and distributive non-equilibrium networks discriminate in alternate limits,,2022
+Itakura2020-vq,"@ARTICLE{Itakura2020-vq,
+title = ""Widespread {Prion-Based} Control of Growth and Differentiation
+Strategies in Saccharomyces cerevisiae"",
+author = ""Itakura, Alan K and Chakravarty, Anupam K and Jakobson,
+Christopher M and Jarosz, Daniel F"",
+journal = ""Mol. Cell"",
+volume = 77,
+number = 2,
+pages = ""266--278.e6"",
+month = jan,
+year = 2020,
+keywords = ""Adaptive prediction; Meiosis/gametogenesis; Phenotypic variation;
+Transgenerational inheritance"",
+language = ""en""
+}",Mol. Cell,Cell%20Learning/Itakura_et_al._2020_-_Widespread_Prion-Based_Control_of_Growth_and_Differentiation_Strategies_in_Saccharomyces_cerevisiae.pdf,Daniel Jarosz,,Prion,Widespread {Prion-Based} Control of Growth and Differentiation Strategies in Saccharomyces cerevisiae,,2020
+Morgenthaler2019-za,"@ARTICLE{Morgenthaler2019-za,
+title = ""Mutations that improve efficiency of a weak-link enzyme are rare
+compared to adaptive mutations elsewhere in the genome"",
+author = ""Morgenthaler, Andrew B and Kinney, Wallis R and Ebmeier,
+Christopher C and Walsh, Corinne M and Snyder, Daniel J and
+Cooper, Vaughn S and Old, William M and Copley, Shelley D"",
+journal = ""Elife"",
+volume = 8,
+month = dec,
+year = 2019,
+keywords = ""E. coli; ProA; amplification and divergence; evolution;
+evolutionary biology; genetics; genomics; promiscuity"",
+language = ""en""
+}",Elife,Cell%20Learning/Morgenthaler_et_al._2019_-_Mutations_that_improve_efficiency_of_a_weak-link_enzyme_are_rare_compared_to_adaptive_mutations_elsewhere_in_the_genome.pdf,Shelley D Copley,,Enzyme Promiscuity,Mutations that improve efficiency of a weak-link enzyme are rare compared to adaptive mutations elsewhere in the genome,,2019
+Kristofich2018-kd,"@ARTICLE{Kristofich2018-kd,
+title = ""Synonymous mutations make dramatic contributions to fitness when
+growth is limited by a weak-link enzyme"",
+author = ""Kristofich, Johncarlo and Morgenthaler, Andrew B and Kinney,
+Wallis R and Ebmeier, Christopher C and Snyder, Daniel J and Old,
+William M and Cooper, Vaughn S and Copley, Shelley D"",
+journal = ""PLoS Genet."",
+volume = 14,
+number = 8,
+pages = ""e1007615"",
+month = aug,
+year = 2018,
+language = ""en""
+}",PLoS Genet.,Cell%20Learning/Kristofich_et_al._2018_-_Synonymous_mutations_make_dramatic_contributions_to_fitness_when_growth_is_limited_by_a_weak-link_enzyme.pdf,Shelley D Copley,,Synonymous Mutations,Synonymous mutations make dramatic contributions to fitness when growth is limited by a weak-link enzyme,,2018
+Gunawardena2012-eg,"@ARTICLE{Gunawardena2012-eg,
+title = ""A linear framework for time-scale separation in nonlinear
+biochemical systems"",
+author = ""Gunawardena, Jeremy"",
+journal = ""PLoS One"",
+volume = 7,
+number = 5,
+pages = ""e36321"",
+month = may,
+year = 2012,
+language = ""en""
+}",PLoS One,Cell%20Learning/Gunawardena_2012_-_A_linear_framework_for_time-scale_separation_in_nonlinear_biochemical_systems.pdf,Jeremy Gunawardena,,Non-equilibrium,A linear framework for time-scale separation in nonlinear biochemical systems,,2012
+Jakobson2019-fq,"@ARTICLE{Jakobson2019-fq,
+title = ""Molecular Origins of Complex Heritability in Natural
+{Genotype-to-Phenotype} Relationships"",
+author = ""Jakobson, Christopher M and Jarosz, Daniel F"",
+journal = ""Cell Syst"",
+volume = 8,
+number = 5,
+pages = ""363--379.e3"",
+month = may,
+year = 2019,
+keywords = ""complex traits; functional genomics; quantitative genetics;
+systems genetics"",
+language = ""en""
+}",Cell Syst,Cell%20Learning/Jakobson_and_Jarosz_2019_-_Molecular_Origins_of_Complex_Heritability_in_Natural_Genotype-to-Phenotype_Relationships.pdf,Daniel Jarosz,,Synonymous Mutations,Molecular Origins of Complex Heritability in Natural {Genotype-to-Phenotype} Relationships,,2019
+Khanal2015-sl,"@ARTICLE{Khanal2015-sl,
+title = ""Differential effects of a mutation on the normal and promiscuous
+activities of orthologs: implications for natural and directed
+evolution"",
+author = ""Khanal, Akhil and Yu McLoughlin, Sean and Kershner, Jamie P and
+Copley, Shelley D"",
+journal = ""Mol. Biol. Evol."",
+volume = 32,
+number = 1,
+pages = ""100--108"",
+month = jan,
+year = 2015,
+keywords = ""ProA; enzyme evolution; epistasis; molecular evolution"",
+language = ""en""
+}",Mol. Biol. Evol.,Cell%20Learning/Khanal_et_al._2015_-_Differential_effects_of_a_mutation_on_the_normal_an_..._vities_of_orthologs_-_implications_for_natural_and_directed_evolution.pdf,Shelley D Copley,,Enzyme Promiscuity,Differential effects of a mutation on the normal and promiscuous activities of orthologs: implications for natural and directed evolution,,2015
+Copley2007-xo,"@ARTICLE{Copley2007-xo,
+title = ""The origin of the {RNA} world: co-evolution of genes and
+metabolism"",
+author = ""Copley, Shelley D and Smith, Eric and Morowitz, Harold J"",
+journal = ""Bioorg. Chem."",
+volume = 35,
+number = 6,
+pages = ""430--443"",
+month = dec,
+year = 2007,
+language = ""en""
+}",Bioorg. Chem.,Cell%20Learning/Copley_et_al._2007_-_The_origin_of_the_RNA_world_-_co-evolution_of_genes_and_metabolism.pdf,"Eric Smith, Shelley D Copley",,Metabolism,The origin of the {RNA} world: co-evolution of genes and metabolism,,2007
+Holmes2017-md,"@ARTICLE{Holmes2017-md,
+title = ""{Luria-Delbr{\""u}ck}, revisited: the classic experiment does not
+rule out Lamarckian evolution"",
+author = ""Holmes, Caroline M and Ghafari, Mahan and Abbas, Anzar and
+Saravanan, Varun and Nemenman, Ilya"",
+journal = ""Phys. Biol."",
+volume = 14,
+number = 5,
+pages = ""055004"",
+month = aug,
+year = 2017,
+language = ""en""
+}",Phys. Biol.,Cell%20Learning/Holmes_et_al._2017_-_Luria-Delbruck_revisited_-_the_classic_experiment_does_not_rule_out_Lamarckian_evolution.pdf,Ilya Nemenman,,Directed mutation debate,"{Luria-Delbr{\u}ck}, revisited: the classic experiment does not rule out Lamarckian evolution",,2017
+Serobyan2020-ck,"@ARTICLE{Serobyan2020-ck,
+title = ""Transcriptional adaptation in Caenorhabditis elegans"",
+author = ""Serobyan, Vahan and Kontarakis, Zacharias and El-Brolosy, Mohamed
+A and Welker, Jordan M and Tolstenkov, Oleg and Saadeldein, Amr M
+and Retzer, Nicholas and Gottschalk, Alexander and Wehman, Ann M
+and Stainier, Didier Yr"",
+journal = ""Elife"",
+volume = 9,
+month = jan,
+year = 2020,
+keywords = ""C. elegans; RNAi; chromosomes; gene expression; genetics;
+genomics; mRNA decay; small RNA; transcriptional adaptation"",
+language = ""en""
+}",Elife,Cell%20Learning/Serobyan_et_al._2020_-_Transcriptional_adaptation_in_Caenorhabditis_elegans.pdf,,,Transcriptional Adaptation,Transcriptional adaptation in Caenorhabditis elegans,,2020
+Chakravarty2020-xf,"@ARTICLE{Chakravarty2020-xf,
+title = ""A Non-amyloid Prion Particle that Activates a Heritable Gene
+Expression Program"",
+author = ""Chakravarty, Anupam K and Smejkal, Tina and Itakura, Alan K and
+Garcia, David M and Jarosz, Daniel F"",
+journal = ""Mol. Cell"",
+volume = 77,
+number = 2,
+pages = ""251--265.e9"",
+month = jan,
+year = 2020,
+keywords = ""IDPs; RNA-binding proteins; epigenetics; non-amyloid prions;
+phase separation; post-transcriptional gene regulation"",
+language = ""en""
+}",Mol. Cell,Cell%20Learning/Chakravarty_et_al._2020_-_A_Non-amyloid_Prion_Particle_that_Activates_a_Heritable_Gene_Expression_Program.pdf,Daniel Jarosz,,"LLPS, Prion",A Non-amyloid Prion Particle that Activates a Heritable Gene Expression Program,,2020
+Melo2012-zi,"@ARTICLE{Melo2012-zi,
+title = ""Inactivation of conserved C. elegans genes engages pathogen- and
+xenobiotic-associated defenses"",
+author = ""Melo, Justine A and Ruvkun, Gary"",
+journal = ""Cell"",
+volume = 149,
+number = 2,
+pages = ""452--466"",
+month = apr,
+year = 2012,
+language = ""en""
+}",Cell,Cell%20Learning/Melo_and_Ruvkun_2012_-_Inactivation_of_conserved_C._elegans_genes_engages_pathogen-_and_xenobiotic-associated_defenses.pdf,,,,Inactivation of conserved C. elegans genes engages pathogen- and xenobiotic-associated defenses,,2012
+Kaletsky2020-hn,"@ARTICLE{Kaletsky2020-hn,
+title = ""C. elegans interprets bacterial non-coding {RNAs} to learn
+pathogenic avoidance"",
+author = ""Kaletsky, Rachel and Moore, Rebecca S and Vrla, Geoffrey D and
+Parsons, Lance R and Gitai, Zemer and Murphy, Coleen T"",
+journal = ""Nature"",
+volume = 586,
+number = 7829,
+pages = ""445--451"",
+month = oct,
+year = 2020,
+language = ""en""
+}",Nature,Cell%20Learning/Kaletsky_et_al._2020_-_C._elegans_interprets_bacterial_non-coding_RNAs_to_learn_pathogenic_avoidance.pdf,,,,C. elegans interprets bacterial non-coding {RNAs} to learn pathogenic avoidance,,2020
+Hull2019-qq,"@ARTICLE{Hull2019-qq,
+title = ""Transcription-induced formation of extrachromosomal {DNA} during
+yeast ageing"",
+author = ""Hull, Ryan M and King, Michelle and Pizza, Grazia and Krueger,
+Felix and Vergara, Xabier and Houseley, Jonathan"",
+journal = ""PLoS Biol."",
+volume = 17,
+number = 12,
+pages = ""e3000471"",
+month = dec,
+year = 2019,
+language = ""en""
+}",PLoS Biol.,Cell%20Learning/Hull_et_al._2019_-_Transcription-induced_formation_of_extrachromosomal_DNA_during_yeast_ageing.pdf,Jonathan Houseley,,"CNV, Spatial Non-randomness, Temporal Non-randomness, UK Based",Transcription-induced formation of extrachromosomal {DNA} during yeast ageing,,2019
+Cotton2022-in,"@ARTICLE{Cotton2022-in,
+title = ""{Catalysis-Induced} Phase Separation and Autoregulation of
+Enzymatic Activity"",
+author = ""Cotton, Matthew W and Golestanian, Ramin and Agudo-Canalejo,
+Jaime"",
+journal = ""Phys. Rev. Lett."",
+volume = 129,
+number = 15,
+pages = ""158101"",
+month = oct,
+year = 2022,
+language = “en”
+}",Phys. Rev. Lett.,Cell%20Learning/Cotton_et_al._2022_-_Catalysis-Induced_Phase_Separation_and_Autoregulation_of_Enzymatic_Activity.pdf,,,"LLPS, Non-equilibrium, Theory, UK Based",{Catalysis-Induced} Phase Separation and Autoregulation of Enzymatic Activity,,2022
+Baez2005-lo,"@ARTICLE{Baez2005-lo,
+title = ""Mammalian Smaug is a translational repressor that forms
+cytoplasmic foci similar to stress granules"",
+author = ""Baez, Mar{\'\i}a V and Boccaccio, Graciela L"",
+journal = ""J. Biol. Chem."",
+volume = 280,
+number = 52,
+pages = ""43131--43140"",
+month = dec,
+year = 2005,
+language = ""en""
+}",J. Biol. Chem.,Cell%20Learning/Baez_and_Boccaccio_2005_-_Mammalian_Smaug_is_a_translational_repressor_that_forms_cytoplasmic_foci_similar_to_stress_granules.pdf,,,"Granule, Prion, RNA",Mammalian Smaug is a translational repressor that forms cytoplasmic foci similar to stress granules,,2005
+De_Jesus_Astacio2021-ld,"@ARTICLE{De_Jesus_Astacio2021-ld,
+title = ""Closed microbial communities self-organize to persistently cycle
+carbon"",
+author = ""de Jes{\'u}s Astacio, Luis Miguel and Prabhakara, Kaumudi H and
+Li, Zeqian and Mickalide, Harry and Kuehn, Seppe"",
+journal = ""Proceedings of the National Academy of Sciences"",
+volume = 118,
+number = 45,
+pages = ""e2013564118"",
+year = 2021,
+language = “en”
+}",Proceedings of the National Academy of Sciences,Cell%20Learning/de_Jesus_Astacio_et_al._2021_-_Closed_microbial_communities_self-organize_to_persistently_cycle_carbon.pdf,Seppe Kuehn,,"Ecosystems, Metabolism",Closed microbial communities self-organize to persistently cycle carbon,,2021
+Lycus2017-wq,"@ARTICLE{Lycus2017-wq,
+title = ""Phenotypic and genotypic richness of denitrifiers revealed by a
+novel isolation strategy"",
+author = ""Lycus, Pawel and Lovise B{\o}thun, Kari and Bergaust, Linda and
+Peele Shapleigh, James and Reier Bakken, Lars and Frosteg{\aa}rd,
+{\AA}sa"",
+journal = ""ISME J."",
+volume = 11,
+number = 10,
+pages = ""2219--2232"",
+month = oct,
+year = 2017,
+language = ""en""
+}",ISME J.,Cell%20Learning/Lycus_et_al._2017_-_Phenotypic_and_genotypic_richness_of_denitrifiers_revealed_by_a_novel_isolation_strategy.pdf,,,Ecosystems,Phenotypic and genotypic richness of denitrifiers revealed by a novel isolation strategy,,2017
+Madabhushi2015-sz,"@ARTICLE{Madabhushi2015-sz,
+title = ""{Activity-Induced} {DNA} Breaks Govern the Expression of Neuronal
+{Early-Response} Genes"",
+author = ""Madabhushi, Ram and Gao, Fan and Pfenning, Andreas R and Pan,
+Ling and Yamakawa, Satoko and Seo, Jinsoo and Rueda, Richard and
+Phan, Trongha X and Yamakawa, Hidekuni and Pao, Ping-Chieh and
+Stott, Ryan T and Gjoneska, Elizabeta and Nott, Alexi and Cho,
+Sukhee and Kellis, Manolis and Tsai, Li-Huei"",
+journal = ""Cell"",
+volume = 161,
+number = 7,
+pages = ""1592--1605"",
+month = jun,
+year = 2015,
+language = ""en""
+}",Cell,Cell%20Learning/Madabhushi_et_al._2015_-_Activity-Induced_DNA_Breaks_Govern_the_Expression_of_Neuronal_Early-Response_Genes.pdf,Li-Huei Tsai,,"Activity-induced DSB, DSB, Neurons",{Activity-Induced} {DNA} Breaks Govern the Expression of Neuronal {Early-Response} Genes,,2015
+Suberbielle2013-pe,"@ARTICLE{Suberbielle2013-pe,
+title = ""Physiologic brain activity causes {DNA} double-strand breaks in
+neurons, with exacerbation by amyloid-$\beta$"",
+author = ""Suberbielle, Elsa and Sanchez, Pascal E and Kravitz, Alexxai V
+and Wang, Xin and Ho, Kaitlyn and Eilertson, Kirsten and Devidze,
+Nino and Kreitzer, Anatol C and Mucke, Lennart"",
+journal = ""Nat. Neurosci."",
+volume = 16,
+number = 5,
+pages = ""613--621"",
+month = may,
+year = 2013,
+language = ""en""
+}",Nat. Neurosci.,Cell%20Learning/Suberbielle_et_al._2013_-_Physiologic_brain_activity_causes_DNA_double-strand_breaks_in_neurons_with_exacerbation_by_amyloid-.pdf,,,"Activity-induced DSB, DSB, Neurons","Physiologic brain activity causes {DNA} double-strand breaks in neurons, with exacerbation by amyloid-$\beta$",,2013
+Lai2016-kd,"@ARTICLE{Lai2016-kd,
+title = ""Crosstalk between {MSH2-MSH3} and pol$\beta$ promotes
+trinucleotide repeat expansion during base excision repair"",
+author = ""Lai, Yanhao and Budworth, Helen and Beaver, Jill M and Chan,
+Nelson L S and Zhang, Zunzhen and McMurray, Cynthia T and Liu,
+Yuan"",
+journal = ""Nat. Commun."",
+volume = 7,
+pages = ""12465"",
+month = aug,
+year = 2016,
+language = ""en""
+}",Nat. Commun.,Cell%20Learning/Lai_et_al._2016_-_Crosstalk_between_MSH2-MSH3_and_pol_promotes_trinucleotide_repeat_expansion_during_base_excision_repair.pdf,,,Tri-nucleotide Repeats,Crosstalk between {MSH2-MSH3} and pol$\beta$ promotes trinucleotide repeat expansion during base excision repair,,2016
+Williams2015-ml,"@ARTICLE{Williams2015-ml,
+title = ""{MSH3} Promotes Dynamic Behavior of Trinucleotide Repeat Tracts
+In Vivo"",
+author = ""Williams, Gregory M and Surtees, Jennifer A"",
+journal = ""Genetics"",
+volume = 200,
+number = 3,
+pages = ""737--754"",
+month = jul,
+year = 2015,
+keywords = ""Msh2-Msh3; Saccharomyces cerevisiae; mismatch repair;
+trinucleotide repeat tract"",
+language = ""en""
+}",Genetics,Cell%20Learning/Williams_and_Surtees_2015_-_MSH3_Promotes_Dynamic_Behavior_of_Trinucleotide_Repeat_Tracts_In_Vivo.pdf,,,"MMR, Tri-nucleotide Repeats",{MSH3} Promotes Dynamic Behavior of Trinucleotide Repeat Tracts In Vivo,,2015
+Moore2014-xa,"@ARTICLE{Moore2014-xa,
+title = ""Induced mutations in yeast cell populations adapting to an
+unforeseen challenge"",
+author = ""Moore, Lindsay S and Wei, Wu and Stolovicki, Elad and
+Benbenishty, Tamar and Wilkening, Stefan and Steinmetz, Lars M
+and Braun, Erez and David, Lior"",
+abstract = ""The modern evolutionary synthesis assumes that mutations occur at
+random, independently of the environment in which they confer an
+advantage. However, there are indications that cells facing
+challenging conditions can adapt rapidly, utilizing processes
+beyond selection of pre-existing genetic variation. Here, we show
+that a strong regulatory challenge can induce mutations in many
+independent yeast cells, in the absence of general mutagenesis.
+Whole genome sequencing of cell lineages reveals a repertoire of
+independent mutations within a single lineage that arose only
+after the cells were exposed to the challenging environment,
+while other cells in the same lineage adapted without any
+mutation in their genomes. Thus, our experiments uncovered
+multiple alternative routes for heritable adaptation that were
+all induced in the same lineage during a short time period. Our
+results demonstrate the existence of adaptation mechanisms beyond
+random mutation, suggesting a tight connection between
+physiological and genetic processes."",
+journal = ""PLoS One"",
+volume = 9,
+number = 10,
+pages = ""e111133"",
+month = oct,
+year = 2014,
+language = ""en""
+}",PLoS One,Cell%20Learning/Moore_et_al._2014_-_Induced_mutations_in_yeast_cell_populations_adapting_to_an_unforeseen_challenge.pdf,Erez Braun,,"Biological Computation, Temporal Non-randomness",Induced mutations in yeast cell populations adapting to an unforeseen challenge,,2014
+Katzir2012-ci,"@ARTICLE{Katzir2012-ci,
+title = ""Cellular plasticity enables adaptation to unforeseen cell-cycle
+rewiring challenges"",
+author = ""Katzir, Yair and Stolovicki, Elad and Stern, Shay and Braun, Erez"",
+abstract = ""The fundamental dynamics of the cell cycle, underlying cell
+growth and reproduction, were previously found to be robust under
+a wide range of environmental and internal perturbations. This
+property was commonly attributed to its network structure, which
+enables the coordinated interactions among hundreds of proteins.
+Despite significant advances in deciphering the components and
+autonomous interactions of this network, understanding the
+interfaces of the cell cycle with other major cellular processes
+is still lacking. To gain insight into these interfaces, we used
+the process of genome-rewiring in yeast by placing an essential
+metabolic gene HIS3 from the histidine biosynthesis pathway,
+under the exclusive regulation of different cell-cycle promoters.
+In a medium lacking histidine and under partial inhibition of the
+HIS3p, the rewired cells encountered an unforeseen multitasking
+challenge; the cell-cycle regulatory genes were required to
+regulate the essential histidine-pathway gene in concert with the
+other metabolic demands, while simultaneously driving the cell
+cycle through its proper temporal phases. We show here that
+chemostat cell populations with rewired cell-cycle promoters
+adapted within a short time to accommodate the inhibition of
+HIS3p and stabilized a new phenotypic state. Furthermore, a
+significant fraction of the population was able to adapt and grow
+into mature colonies on plates under such inhibiting conditions.
+The adapted state was shown to be stably inherited across
+generations. These adaptation dynamics were accompanied by a
+non-specific and irreproducible genome-wide transcriptional
+response. Adaptation of the cell-cycle attests to its
+multitasking capabilities and flexible interface with cellular
+metabolic processes and requirements. Similar adaptation features
+were found in our previous work when rewiring HIS3 to the GAL
+system and switching cells from galactose to glucose. Thus, at
+the basis of cellular plasticity is the emergence of a
+yet-unknown general, non-specific mechanism allowing fast
+inherited adaptation to unforeseen challenges."",
+journal = ""PLoS One"",
+volume = 7,
+number = 9,
+pages = ""e45184"",
+month = sep,
+year = 2012,
+language = ""en""
+}",PLoS One,Cell%20Learning/Katzir_et_al._2012_-_Cellular_plasticity_enables_adaptation_to_unforeseen_cell-cycle_rewiring_challenges.pdf,Erez Braun,,"Accelerated Evolution, Biological Computation",Cellular plasticity enables adaptation to unforeseen cell-cycle rewiring challenges,,2012
+Tian2009-dx,"@ARTICLE{Tian2009-dx,
+title = ""Distinct nucleotide binding/hydrolysis properties and molar ratio
+of {MutSalpha} and {MutSbeta} determine their differential
+mismatch binding activities"",
+author = ""Tian, Lei and Gu, Liya and Li, Guo-Min"",
+abstract = ""MutSalpha (MSH2/MSH6) and MutSbeta (MSH2/MSH3) are eukaryotic
+mismatch recognition proteins that preferentially process
+base-base and small insertion/deletion (ID) mispairs,
+respectively, despite the fact that cells contain a
+MutSalpha:MutSbeta ratio of 10:1. To explore the mechanism
+underlying the differential mismatch recognition by these two
+proteins, purified human MutSalpha and MutSbeta were analyzed
+individually and competitively for their abilities to interact
+with a T-G and an ID substrate. We show that MutSalpha has K(D)
+values of 26.5 and 38.2 nm for the G-T and ID substrates,
+respectively, and that MutSbeta has K(D) values of 76.5 and 23.5
+nm for G-T and ID, respectively. Consistent with these results,
+competitive binding assays revealed the following relative
+binding affinities: MutSbeta-ID > MutSalpha-T-G > MutSalpha-ID >>
+MutSbeta-T-G. Interestingly, binding of MutSbeta to ID
+heteroduplexes is greatly stimulated when the MutSalpha:MutSbeta
+ratio is > or = 10. Distinct ATP/ADP binding and ATPase
+activities of MutSalpha and MutSbeta were also observed. In the
+absence of DNA, ADP binding and ATPase activities of MutSbeta are
+significantly higher than those of MutSalpha. However,
+interaction with DNA significantly stimulates the MutSalpha
+ATPase activity and reduces the MutSbeta ATPase activity, the
+consequence being that both proteins exhibit the same level of
+hydrolytic activity. We conclude that the preferential processing
+of base-base and ID heteroduplexes by MutSalpha and MutSbeta is
+determined by their significant differences in ATPase activity,
+ADP binding activity, and high cellular MutSalpha:MutSbeta ratio."",
+journal = ""J. Biol. Chem."",
+volume = 284,
+number = 17,
+pages = ""11557--11562"",
+month = apr,
+year = 2009,
+language = ""en""
+}",J. Biol. Chem.,Cell%20Learning/Tian_et_al._2009_-_Distinct_nucleotide_binding_-_hydrolysis_properties_a_..._and_MutSbeta_determine_their_differential_mismatch_binding_activities.pdf,,,"MMR, Tri-nucleotide Repeats",Distinct nucleotide binding/hydrolysis properties and molar ratio of {MutSalpha} and {MutSbeta} determine their differential mismatch binding activities,,2009
+Nakatani2015-fq,"@ARTICLE{Nakatani2015-fq,
+title = ""Large expansion of {CTG•CAG} repeats is exacerbated by
+{MutS$\beta$} in human cells"",
+author = ""Nakatani, Rie and Nakamori, Masayuki and Fujimura, Harutoshi and
+Mochizuki, Hideki and Takahashi, Masanori P"",
+abstract = ""Trinucleotide repeat expansion disorders (TRED) are caused by
+genomic expansions of trinucleotide repeats, such as CTG and CAG.
+These expanded repeats are unstable in germline and somatic
+cells, with potential consequences for disease severity. Previous
+studies have demonstrated the involvement of DNA repair proteins
+in repeat instability, although the key factors affecting large
+repeat expansion and contraction are unclear. Here we
+investigated these factors in a human cell model harboring 800
+CTG•CAG repeats by individually knocking down various DNA repair
+proteins using short interfering RNA. Knockdown of MSH2 and MSH3,
+which form the MutS$\beta$ heterodimer and function in mismatch
+repair, suppressed large repeat expansions, whereas knockdown of
+MSH6, which forms the MutS$\alpha$ heterodimer with MSH2,
+promoted large expansions exceeding 200 repeats by compensatory
+increases in MSH3 and the MutS$\beta$ complex. Knockdown of
+topoisomerase 1 (TOP1) and TDP1, which are involved in
+single-strand break repair, enhanced large repeat contractions.
+Furthermore, knockdown of senataxin, an RNA/DNA helicase which
+affects DNA:RNA hybrid formation and transcription-coupled
+nucleotide excision repair, exacerbated repeat instability in
+both directions. These results indicate that DNA repair factors,
+such as MutS$\beta$ play important roles in large repeat
+expansion and contraction, and can be an excellent therapeutic
+target for TRED."",
+journal = ""Sci. Rep."",
+volume = 5,
+pages = ""11020"",
+month = jun,
+year = 2015,
+language = ""en""
+}",Sci. Rep.,Cell%20Learning/Nakatani_et_al._2015_-_Large_expansion_of_CTGCAG_repeats_is_exacerbated_by_MutS_in_human_cells.pdf,,,"MMR, Tri-nucleotide Repeats",Large expansion of {CTG•CAG} repeats is exacerbated by {MutS$\beta$} in human cells,,2015
+Seong2005-hw,"@ARTICLE{Seong2005-hw,
+title = ""{HD} {CAG} repeat implicates a dominant property of huntingtin in
+mitochondrial energy metabolism"",
+author = ""Seong, Ihn Sik and Ivanova, Elena and Lee, Jong-Min and Choo,
+Yeun Su and Fossale, Elisa and Anderson, Maryanne and Gusella,
+James F and Laramie, Jason M and Myers, Richard H and Lesort,
+Mathieu and MacDonald, Marcy E"",
+abstract = ""The 'expanded' HD CAG repeat that causes Huntington's disease
+(HD) encodes a polyglutamine tract in huntingtin, which first
+targets the death of medium-sized spiny striatal neurons.
+Mitochondrial energetics, related to N-methyl-d-aspartate (NMDA)
+Ca2+-signaling, has long been implicated in this neuronal
+specificity, implying an integral role for huntingtin in
+mitochondrial energy metabolism. As a genetic test of this
+hypothesis, we have looked for a relationship between the length
+of the HD CAG repeat, expressed in endogenous huntingtin, and
+mitochondrial ATP production. In STHdhQ111 knock-in striatal
+cells, a juvenile onset HD CAG repeat was associated with low
+mitochondrial ATP and decreased mitochondrial ADP-uptake. This
+metabolic inhibition was associated with enhanced Ca2+-influx
+through NMDA receptors, which when blocked resulted in increased
+cellular [ATP/ADP]. We then evaluated [ATP/ADP] in 40 human
+lymphoblastoid cell lines, bearing non-HD CAG lengths (9-34
+units) or HD-causing alleles (35-70 units). This analysis
+revealed an inverse association with the longer of the two
+allelic HD CAG repeats in both the non-HD and HD ranges. Thus,
+the polyglutamine tract in huntingtin appears to regulate
+mitochondrial ADP-phosphorylation in a Ca2+-dependent process
+that fulfills the genetic criteria for the HD trigger of
+pathogenesis, and it thereby determines a fundamental biological
+parameter--cellular energy status, which may contribute to the
+exquisite vulnerability of striatal neurons in HD. Moreover, the
+evidence that this polymorphism can determine energy status in
+the non-HD range suggests that it should be tested as a potential
+physiological modifier in both health and disease."",
+journal = ""Hum. Mol. Genet."",
+volume = 14,
+number = 19,
+pages = ""2871--2880"",
+month = oct,
+year = 2005,
+language = ""en""
+}",Hum. Mol. Genet.,Cell%20Learning/Seong_et_al._2005_-_HD_CAG_repeat_implicates_a_dominant_property_of_huntingtin_in_mitochondrial_energy_metabolism.pdf,,,"Metabolism, Tri-nucleotide Repeats",{HD} {CAG} repeat implicates a dominant property of huntingtin in mitochondrial energy metabolism,,2005
+Zhang2020-lt,"@ARTICLE{Zhang2020-lt,
+title = ""Nuclear bodies formed by polyQ-ataxin-1 protein are liquid
+{RNA/protein} droplets with tunable dynamics"",
+author = ""Zhang, Sunyuan and Hinde, Elizabeth and Parkyn Schneider, Molly
+and Jans, David A and Bogoyevitch, Marie A"",
+abstract = ""A mutant form of the ataxin-1 protein with an expanded
+polyglutamine (polyQ) tract is the underlying cause of the
+inherited neurodegenerative disease spinocerebellar ataxia 1
+(SCA1). In probing the biophysical features of the nuclear bodies
+(NBs) formed by polyQ-ataxin-1, we defined ataxin-1 NBs as
+spherical liquid protein/RNA droplets capable of rapid fusion. We
+observed dynamic exchange of the ataxin-1 protein into these NBs;
+notably, cell exposure to a pro-oxidant stress could trigger a
+transition to slower ataxin-1 exchange, typical of a hydrogel
+state, which no longer showed the same dependence on RNA or
+sensitivity to 1,6-hexanediol. Furthermore, we could alter
+ataxin-1 exchange dynamics either through modulating
+intracellular ATP levels, RNA helicase inhibition, or
+siRNA-mediated depletion of select RNA helicases. Collectively,
+these findings reveal the tunable dynamics of the liquid
+RNA/protein droplets formed by polyQ-ataxin-1."",
+journal = ""Sci. Rep."",
+volume = 10,
+number = 1,
+pages = ""1557"",
+month = jan,
+year = 2020,
+language = ""en""
+}",Sci. Rep.,Cell%20Learning/Zhang_et_al._2020_-_Nuclear_bodies_formed_by_polyQ-ataxin-1_protein_are_liquid_RNA_-_protein_droplets_with_tunable_dynamics.pdf,,,"Granule, LLPS, Tri-nucleotide Repeats",Nuclear bodies formed by polyQ-ataxin-1 protein are liquid {RNA/protein} droplets with tunable dynamics,,2020
+Clabough2006-oc,"@ARTICLE{Clabough2006-oc,
+title = ""Deletion of the triplet repeat encoding polyglutamine within the
+mouse Huntington's disease gene results in subtle
+behavioral/motor phenotypes in vivo and elevated levels of {ATP}
+with cellular senescence in vitro"",
+author = ""Clabough, Erin B D and Zeitlin, Scott O"",
+abstract = ""Huntingtin (htt), the protein encoded by the Huntington's disease
+(HD) gene, contains a polymorphic stretch of glutamines (polyQ)
+near its N-terminus. When the polyQ stretch is expanded beyond
+37Q, HD results. However, the role of the normal polyQ stretch in
+the function of htt is still unknown. To determine the
+contribution of the polyQ stretch to normal htt function, we have
+generated mice with a precise deletion of the short CAG triplet
+repeat encoding 7Q in the mouse HD gene (Hdh(DeltaQ)).
+Hdh(DeltaQ/DeltaQ) mice are born with normal Mendelian frequency
+and exhibit no gross phenotypic differences in comparison to
+control littermates, suggesting that the polyQ stretch is not
+essential for htt's functions during embryonic development. Adult
+mice, however, commit more errors initially in the Barnes
+circular maze learning and memory test and perform slightly
+better than wild-type controls in the accelerating rotarod test
+for motor coordination. To determine whether these phenotypes may
+reflect an altered cellular physiology in the Hdh(DeltaQ) mice,
+we characterized the growth and energy status of primary
+embryonic and adult Hdh(DeltaQ/DeltaQ) fibroblasts in culture.
+The Hdh(DeltaQ) fibroblasts exhibited elevated levels of ATP, but
+senesced prematurely in comparison with wild-type fibroblasts.
+Taken altogether, these results suggest that htt's polyQ stretch
+is required for modulating longevity in culture and support the
+hypothesis that the polyQ stretch may also modulate a htt
+function involved in regulating energy homeostasis."",
+journal = ""Hum. Mol. Genet."",
+volume = 15,
+number = 4,
+pages = ""607--623"",
+month = feb,
+year = 2006,
+language = ""en""
+}",Hum. Mol. Genet.,Cell%20Learning/Clabough_and_Zeitlin_2006_-_Deletion_of_the_triplet_repeat_encoding_poly_..._otor_phenotypes_in_vivo_and_elevated_levels_of_ATP_with_cellular_sen....pdf,,,Tri-nucleotide Repeats,Deletion of the triplet repeat encoding polyglutamine within the mouse Huntington's disease gene results in subtle behavioral/motor phenotypes in vivo and elevated levels of {ATP} with cellular senescence in vitro,,2006
+Akkaya2018-ud,"@ARTICLE{Akkaya2018-ud,
+title = ""The Metabolic Redox Regime of Pseudomonas putida Tunes Its
+Evolvability toward Novel Xenobiotic Substrates"",
+author = ""Akkaya, {\""O}zlem and P{\'e}rez-Pantoja, Danilo R and Calles,
+Bel{\'e}n and Nikel, Pablo I and de Lorenzo, V{\'\i}ctor"",
+abstract = ""During evolution of biodegradation pathways for xenobiotic
+compounds involving Rieske nonheme iron oxygenases, the
+transition toward novel substrates is frequently associated with
+faulty reactions. Such events release reactive oxygen species
+(ROS), which are endowed with high mutagenic potential. In this
+study, we evaluated how the operation of the background metabolic
+network by an environmental bacterium may either foster or
+curtail the still-evolving pathway for 2,4-dinitrotoluene
+(2,4-DNT) catabolism. To this end, the genetically tractable
+strain Pseudomonas putida EM173 was implanted with the whole
+genetic complement necessary for the complete biodegradation of
+2,4-DNT (recruited from the environmental isolate Burkholderia
+sp. R34). By using reporter technology and direct measurements of
+ROS formation, we observed that the engineered P. putida strain
+experienced oxidative stress when catabolizing the nitroaromatic
+substrate. However, the formation of ROS was neither translated
+into significant activation of the SOS response to DNA damage nor
+did it result in a mutagenic regime (unlike what has been
+observed in Burkholderia sp. R34, the original host of the
+pathway). To inspect whether the tolerance of P. putida to
+oxidative challenges could be traced to its characteristic
+reductive redox regime, we artificially altered the NAD(P)H pool
+by means of a water-forming, NADH-specific oxidase. Under the
+resulting low-NAD(P)H status, catabolism of 2,4-DNT triggered a
+conspicuous mutagenic and genomic diversification scenario. These
+results indicate that the background biochemical network of
+environmental bacteria ultimately determines the evolvability of
+metabolic pathways. Moreover, the data explain the efficacy of
+some bacteria (e.g., pseudomonads) to host and evolve with new
+catabolic routes.IMPORTANCE Some environmental bacteria evolve
+with new capacities for the aerobic biodegradation of chemical
+pollutants by adapting preexisting redox reactions to novel
+compounds. The process typically starts by cooption of enzymes
+from an available route to act on the chemical structure of the
+substrate-to-be. The critical bottleneck is generally the first
+biochemical step, and most of the selective pressure operates on
+reshaping the initial reaction. The interim uncoupling of the
+novel substrate to preexisting Rieske nonheme iron oxygenases
+usually results in formation of highly mutagenic ROS. In this
+work, we demonstrate that the background metabolic regime of the
+bacterium that hosts an evolving catabolic pathway (e.g.,
+biodegradation of the xenobiotic 2,4-DNT) determines whether the
+cells either adopt a genetic diversification regime or a robust
+ROS-tolerant status. Furthermore, our results offer new
+perspectives to the rational design of efficient whole-cell
+biocatalysts, which are pursued in contemporary metabolic
+engineering."",
+journal = ""MBio"",
+volume = 9,
+number = 4,
+month = aug,
+year = 2018,
+keywords = ""NADPH oxidases; Pseudomonas putida; biodegradation;
+dinitrotoluene; evolution; oxidative stress; reactive oxygen
+species"",
+language = ""en""
+}",MBio,Cell%20Learning/Akkaya_et_al._2018_-_The_Metabolic_Redox_Regime_of_Pseudomonas_putida_Tunes_Its_Evolvability_toward_Novel_Xenobiotic_Substrates.pdf,,,Metabolism,The Metabolic Redox Regime of Pseudomonas putida Tunes Its Evolvability toward Novel Xenobiotic Substrates,,2018
+Bedecarrats2018-xx,"@ARTICLE{Bedecarrats2018-xx,
+title = ""{RNA} from Trained Aplysia Can Induce an Epigenetic Engram for
+{Long-Term} Sensitization in Untrained Aplysia"",
+author = ""B{\'e}d{\'e}carrats, Alexis and Chen, Shanping and Pearce, Kaycey
+and Cai, Diancai and Glanzman, David L"",
+abstract = ""The precise nature of the engram, the physical substrate of
+memory, remains uncertain. Here, it is reported that RNA
+extracted from the central nervous system of Aplysia given
+long-term sensitization (LTS) training induced sensitization when
+injected into untrained animals; furthermore, the RNA-induced
+sensitization, like training-induced sensitization, required DNA
+methylation. In cellular experiments, treatment with RNA
+extracted from trained animals was found to increase excitability
+in sensory neurons, but not in motor neurons, dissociated from
+na{\""\i}ve animals. Thus, the behavioral, and a subset of the
+cellular, modifications characteristic of a form of
+nonassociative long-term memory (LTM) in Aplysia can be
+transferred by RNA. These results indicate that RNA is sufficient
+to generate an engram for LTS in Aplysia and are consistent with
+the hypothesis that RNA-induced epigenetic changes underlie
+memory storage in Aplysia."",
+journal = ""eNeuro"",
+volume = 5,
+number = 3,
+month = may,
+year = 2018,
+keywords = ""Aplysia; RNA; epigenetics; learning and memory; memory transfer;
+sensitization"",
+language = ""en""
+}",eNeuro,Cell%20Learning/Bedecarrats_et_al._2018_-_RNA_from_Trained_Aplysia_Can_Induce_an_Epigenetic_Engram_for_Long-Term_Sensitization_in_Untrained_Aplysia.pdf,,,"Neurons, RNA Transfer",{RNA} from Trained Aplysia Can Induce an Epigenetic Engram for {Long-Term} Sensitization in Untrained Aplysia,,2018
+Deshe2020-zt,"@UNPUBLISHED{Deshe2020-zt,
+title = ""Inheritance of associative memories in C. elegans nematodes"",
+author = ""Deshe, Noa and Eliezer, Yifat and Hoch, Lihi and Itskovits, Eyal
+and Ben-Ezra, Shachaf and Zaslaver, Alon"",
+abstract = ""The notion that associative memories may be transmitted across
+generations is intriguing, yet controversial. Here, we trained C.
+elegans nematodes to associate an odorant with stressful
+starvation conditions, and surprisingly, this associative memory
+was evident two generations down of the trained animals. The
+inherited memory endowed the progeny with a fitness advantage, as
+memory reactivation induced rapid protective stress responses
+that allowed the animals to prepare in advance for an impending
+adversity. Sperm, but not oocytes, transmitted the associative
+memory, and the inheritance required H3K9 and H3K36 methylations,
+the small RNA-binding Argonaute NRDE-3, and intact neuropeptide
+secretion. Remarkably, activation of a single chemosensory neuron
+sufficed to induce a serotonin-mediated systemic stress response
+in both the parental trained generation and in its progeny. These
+findings challenge long-held concepts by establishing that
+associative memories may indeed be transferred across
+generations. \#\#\# Competing Interest Statement The authors have
+declared no competing interest."",
+journal = ""bioRxiv"",
+volume = “”,
+pages = ""2020.09.08.287318"",
+month = sep,
+year = 2020,
+language = ""en""
+}",bioRxiv,Cell%20Learning/Deshe_et_al._2020_-_Inheritance_of_associative_memories_in_C._elegans_nematodes.pdf,,,"Neurons, RNA Transfer",Inheritance of associative memories in C. elegans nematodes,,2020
+Zhang2011-ci,"@ARTICLE{Zhang2011-ci,
+title = ""Acceleration of emergence of bacterial antibiotic resistance in
+connected microenvironments"",
+author = ""Zhang, Qiucen and Lambert, Guillaume and Liao, David and Kim,
+Hyunsung and Robin, Kristelle and Tung, Chih-Kuan and Pourmand,
+Nader and Austin, Robert H"",
+abstract = ""The emergence of bacterial antibiotic resistance is a growing
+problem, yet the variables that influence the rate of emergence
+of resistance are not well understood. In a microfluidic device
+designed to mimic naturally occurring bacterial niches,
+resistance of Escherichia coli to the antibiotic ciprofloxacin
+developed within 10 hours. Resistance emerged with as few as 100
+bacteria in the initial inoculation. Whole-genome sequencing of
+the resistant organisms revealed that four functional
+single-nucleotide polymorphisms attained fixation. Knowledge
+about the rapid emergence of antibiotic resistance in the
+heterogeneous conditions within the mammalian body may be helpful
+in understanding the emergence of drug resistance during cancer
+chemotherapy."",
+journal = ""Science"",
+volume = 333,
+number = 6050,
+pages = ""1764--1767"",
+month = sep,
+year = 2011,
+language = ""en""
+}",Science,Cell%20Learning/Zhang_et_al._2011_-_Acceleration_of_emergence_of_bacterial_antibiotic_resistance_in_connected_microenvironments.pdf,,,"Accelerated Evolution, Evolution",Acceleration of emergence of bacterial antibiotic resistance in connected microenvironments,,2011
+Feynman1974-rs,"@MISC{Feynman1974-rs,
+title = ""Cargo Cult Science"",
+author = ""Feynman, Richard P"",
+journal = NA,
+volume = “”,
+year = 1974,
+language = “en”
+}",NA,Cell%20Learning/Feynman_1974_-_Cargo_Cult_Science.pdf,,,,Cargo Cult Science,,1974
+Fondon2004-lt,"@ARTICLE{Fondon2004-lt,
+title = ""Molecular origins of rapid and continuous morphological evolution"",
+author = ""Fondon, 3rd, John W and Garner, Harold R"",
+abstract = ""Mutations in cis-regulatory sequences have been implicated as
+being the predominant source of variation in morphological
+evolution. We offer a hypothesis that gene-associated tandem
+repeat expansions and contractions are a major source of
+phenotypic variation in evolution. Here, we describe a
+comparative genomic study of repetitive elements in developmental
+genes of 92 breeds of dogs. We find evidence for selection for
+divergence at coding repeat loci in the form of both elevated
+purity and extensive length polymorphism among different breeds.
+Variations in the number of repeats in the coding regions of the
+Alx-4 (aristaless-like 4) and Runx-2 (runt-related transcription
+factor 2) genes were quantitatively associated with significant
+differences in limb and skull morphology. We identified similar
+repeat length variation in the coding repeats of Runx-2, Twist,
+and Dlx-2 in several other species. The high frequency and
+incremental effects of repeat length mutations provide molecular
+explanations for swift, yet topologically conservative
+morphological evolution."",
+journal = ""Proc. Natl. Acad. Sci. U. S. A."",
+volume = 101,
+number = 52,
+pages = ""18058--18063"",
+month = dec,
+year = 2004,
+language = ""en""
+}",Proc. Natl. Acad. Sci. U. S. A.,Cell%20Learning/Fondon_and_Garner_2004_-_Molecular_origins_of_rapid_and_continuous_morphological_evolution.pdf,,,"Accelerated Evolution, Evolution",Molecular origins of rapid and continuous morphological evolution,,2004
+Gershman2022-sk,"@ARTICLE{Gershman2022-sk,
+title = ""The molecular memory code and synaptic plasticity: a
+synthesis"",
+author = ""Gershman, Samuel J"",
+abstract = ""The most widely accepted view of memory in the brain holds
+that synapses are the storage sites of memory, and that
+memories are formed through associative modification of
+synapses. This view has been challenged on conceptual and
+empirical grounds. As an alternative, it has been proposed
+that molecules within the cell body are the storage sites of
+memory, and that memories are formed through biochemical
+operations on these molecules. This paper proposes a
+synthesis of these two views, grounded in a computational
+theory of memory. Synapses are conceived as storage sites
+for the parameters of an approximate posterior probability
+distribution over latent causes. Intracellular molecules are
+conceived as storage sites for the parameters of a
+generative model. The theory stipulates how these two
+components work together as part of an integrated algorithm
+for learning and inference."",
+journal = ArXiv,
+volume = ,
+month = sep,
+year = 2022,
+copyright = ""http://creativecommons.org/licenses/by/4.0/"",
+archivePrefix = ""arXiv"",
+primaryClass = ""http://q-bio.nc/"",
+eprint = ""2209.04923""
+}",ArXiv,Cell%20Learning/Gershman_2022_-_The_molecular_memory_code_and_synaptic_plasticity_-_a_synthesis.pdf,,,Neurons,The molecular memory code and synaptic plasticity: a synthesis,,2022
+Shi2012-hu,"@ARTICLE{Shi2012-hu,
+title = ""Directed differentiation of human pluripotent stem cells to
+cerebral cortex neurons and neural networks"",
+author = ""Shi, Yichen and Kirwan, Peter and Livesey, Frederick J"",
+abstract = ""Efficient derivation of human cerebral neocortical neural stem
+cells (NSCs) and functional neurons from pluripotent stem cells
+(PSCs) facilitates functional studies of human cerebral cortex
+development, disease modeling and drug discovery. Here we provide
+a detailed protocol for directing the differentiation of human
+embryonic stem cells (hESCs) and induced pluripotent stem cells
+(iPSCs) to all classes of cortical projection neurons. We
+demonstrate an 80-d, three-stage process that recapitulates
+cortical development, in which human PSCs (hPSCs) first
+differentiate to cortical stem and progenitor cells that then
+generate cortical projection neurons in a stereotypical temporal
+order before maturing to actively fire action potentials, undergo
+synaptogenesis and form neural circuits in vitro. Methods to
+characterize cortical neuron identity and synapse formation are
+described."",
+journal = ""Nat. Protoc."",
+volume = 7,
+number = 10,
+pages = ""1836--1846"",
+month = oct,
+year = 2012,
+language = ""en""
+}",Nat. Protoc.,Cell%20Learning/Shi_et_al._2012_-_Directed_differentiation_of_human_pluripotent_stem_cells_to_cerebral_cortex_neurons_and_neural_networks.pdf,,,Neurons,Directed differentiation of human pluripotent stem cells to cerebral cortex neurons and neural networks,,2012
+Lee2019-hj,"@ARTICLE{Lee2019-hj,
+title = ""{CAG} Repeat Not Polyglutamine Length Determines Timing of
+Huntington's Disease Onset"",
+author = ""Lee, Jong-Min and Correia, Kevin and Loupe, Jacob and Kim,
+Kyung-Hee and Barker, Douglas and Hong, Eun Pyo and Chao, Michael
+J and Long, Jeffrey D and Lucente, Diane and Vonsattel, Jean Paul
+G and Pinto, Ricardo Mouro and Abu Elneel, Kawther and Ramos,
+Eliana Marisa and Mysore, Jayalakshmi Srinidhi and Gillis, Tammy
+and Wheeler, Vanessa C and MacDonald, Marcy E and Gusella, James
+F and McAllister, Branduff and Massey, Thomas and Medway,
+Christopher and Stone, Timothy C and Hall, Lynsey and Jones,
+Lesley and Holmans, Peter and Kwak, Seung and Ehrhardt, Anka G
+and Sampaio, Cristina and Ciosi, Marc and Maxwell, Alastair and
+Chatzi, Afroditi and Monckton, Darren G and Orth, Michael and
+Landwehrmeyer, G Bernhard and Paulsen, Jane S and Dorsey, E Ray
+and Shoulson, Ira and Myers, Richard H"",
+abstract = ""Summary Variable, glutamine-encoding, CAA interruptions indicate
+that a property of the uninterrupted HTT CAG repeat sequence,
+distinct from the length of huntingtin's polyglutamine segment,
+dictates the rate at which Huntington's disease (HD) develops.
+The timing of onset shows no significant association with HTT
+cis-eQTLs but is influenced, sometimes in a sex-specific manner,
+by polymorphic variation at multiple DNA maintenance genes,
+suggesting that the special onset-determining property of the
+uninterrupted CAG repeat is a propensity for length instability
+that leads to its somatic expansion. Additional naturally
+occurring genetic modifier loci, defined by GWAS, may influence
+HD pathogenesis through other mechanisms. These findings have
+profound implications for the pathogenesis of HD and other repeat
+diseases and question the fundamental premise that polyglutamine
+length determines the rate of pathogenesis in the ``polyglutamine
+disorders.''"",
+journal = ""Cell"",
+volume = 178,
+number = 4,
+pages = ""887--900.e14"",
+month = aug,
+year = 2019,
+keywords = ""Huntington's disease; CAG repeat; trinucleotide repeat; genetic
+modifier; age at onset; somatic DNA expansion; DNA maintenance;
+DNA repair; polyglutamine disease; disease modification""
+}",Cell,Cell%20Learning/Lee_et_al._2019_-_CAG_Repeat_Not_Polyglutamine_Length_Determines_Timing_of_Huntingtons_Disease_Onset.pdf,,,"Neurons, Tri-nucleotide Repeats",{CAG} Repeat Not Polyglutamine Length Determines Timing of Huntington's Disease Onset,,2019
+McMurray2010-ys,"@ARTICLE{McMurray2010-ys,
+title = ""Mechanisms of trinucleotide repeat instability during human
+development"",
+author = ""McMurray, Cynthia T"",
+abstract = ""Trinucleotide expansion underlies several human diseases.
+Expansion occurs during multiple stages of human development in
+different cell types, and is sensitive to the gender of the
+parent who transmits the repeats. Repair and replication models
+for expansions have been described, but we do not know whether
+the pathway involved is the same under all conditions and for all
+repeat tract lengths, which differ among diseases. Currently,
+researchers rely on bacteria, yeast and mice to study expansion,
+but these models differ substantially from humans. We need now to
+connect the dots among human genetics, pathway biochemistry and
+the appropriate model systems to understand the mechanism of
+expansion as it occurs in human disease."",
+journal = ""Nat. Rev. Genet."",
+volume = 11,
+number = 11,
+pages = ""786--799"",
+month = nov,
+year = 2010,
+language = ""en""
+}",Nat. Rev. Genet.,Cell%20Learning/McMurray_2010_-_Mechanisms_of_trinucleotide_repeat_instability_during_human_development.pdf,,,"Review, Tri-nucleotide Repeats",Mechanisms of trinucleotide repeat instability during human development,,2010
+Thelen2019-qt,"@ARTICLE{Thelen2019-qt,
+title = ""The Role of {RNA} Binding Proteins for Local {mRNA} Translation:
+Implications in Neurological Disorders"",
+author = ""Thelen, Maximilian Paul and Kye, Min Jeong"",
+abstract = ""As neurons are one of the most highly polarized cells in our
+body, they require sophisticated cellular mechanisms to maintain
+protein homeostasis in their subcellular compartments such as
+axons and dendrites. When neuronal protein homeostasis is
+disturbed due to genetic mutations or deletions, this often
+results in degeneration of neurons leading to devastating outcome
+such as spinal muscular atrophy (SMA), amyotrophic lateral
+sclerosis (ALS), and fragile X syndrome (FXS). Ribonucleoprotein
+(RNP) complexes are macromolecular complexes composed of RNA
+binding proteins (RBPs) and their target RNAs. RBPs contain RNA
+binding domains and bind to RNA molecules via specific sequence
+motifs. RNP complexes have various functions in gene expression
+including messenger RNA (mRNA) trafficking, RNA processing and
+silencing. In neurons, RBPs deliver specific sets of mRNAs to
+subcellular compartments such as axons and dendrites to be
+locally translated. Mutations or deletions in genes coding for
+RNPs have been reported as causes for neurological disorders such
+as SMA, ALS, and FXS. As RBPs determine axonal or dendritic mRNA
+repertoires as well as proteomes by trafficking selective mRNAs
+and regulating local protein synthesis, they play a crucial role
+for neuronal function. In this review, we summarize the role of
+well-known RBPs, SMN, TDP-43, FUS, and FMRP, and review their
+function for local protein synthesis in neurons. Furthermore, we
+discuss their pathological contribution to the neurological
+disorders."",
+journal = ""Front Mol Biosci"",
+volume = 6,
+pages = ""161"",
+year = 2019,
+keywords = ""ALS; FXS; RNA binding proteins; SMA; local protein synthesis;
+mRNA translation; neurodegeneration; ribonucleoproteins"",
+language = ""en""
+}",Front Mol Biosci,Cell%20Learning/Thelen_and_Kye_2019_-_The_Role_of_RNA_Binding_Proteins_for_Local_mRNA_Translation_-_Implications_in_Neurological_Disorders.pdf,,,"Neurons, RNA, Tri-nucleotide Repeats",The Role of {RNA} Binding Proteins for Local {mRNA} Translation: Implications in Neurological Disorders,,2019
+Sephton2015-pp,"@ARTICLE{Sephton2015-pp,
+title = ""The function of {RNA-binding} proteins at the synapse:
+implications for neurodegeneration"",
+author = ""Sephton, Chantelle F and Yu, Gang"",
+abstract = ""The loss of synapses is a central event in neurodegenerative
+diseases. Synaptic proteins are often associated with disease
+neuropathology, but their role in synaptic loss is not fully
+understood. Of the many processes involved in sustaining the
+integrity of synapses, local protein translation can directly
+impact synaptic formation, communication, and maintenance.
+RNA-binding proteins and their association with RNA granules
+serve to regulate mRNA transportation and translation at synapses
+and in turn regulate the synapse. Genetic mutations in
+RNA-binding proteins FUS and TDP-43 have been linked with causing
+neurodegenerative diseases: amyotrophic lateral sclerosis and
+frontotemporal dementia. The observation that mutations in FUS
+and TDP-43 coincide with changes in RNA granules provides
+evidence that dysfunction of RNA metabolism may underlie the
+mechanism of synaptic loss in these diseases. However, we do not
+know how mutations in RNA-binding proteins would affect RNA
+granule dynamics and local translation, or if these alterations
+would cause neurodegeneration. Further investigation into this
+area will lead to important insights into how disruption of RNA
+metabolism and local translation at synapses can cause
+neurodegenerative diseases."",
+journal = ""Cell. Mol. Life Sci."",
+volume = 72,
+number = 19,
+pages = ""3621--3635"",
+month = oct,
+year = 2015,
+keywords = ""Amyotrophic lateral sclerosis; FUS; Frontotemporal dementia;
+Local translation; RNA granules; RNP granules; Stress granules;
+TDP-43"",
+language = ""en""
+}",Cell. Mol. Life Sci.,Cell%20Learning/Sephton_and_Yu_2015_-_The_function_of_RNA-binding_proteins_at_the_synapse_-_implications_for_neurodegeneration.pdf,,,"Granule, LLPS, Neurons, RNA, Tri-nucleotide Repeats",The function of {RNA-binding} proteins at the synapse: implications for neurodegeneration,,2015
+Iyer2015-pu,"@ARTICLE{Iyer2015-pu,
+title = ""{DNA} triplet repeat expansion and mismatch repair"",
+author = ""Iyer, Ravi R and Pluciennik, Anna and Napierala, Marek and Wells,
+Robert D"",
+abstract = ""DNA mismatch repair is a conserved antimutagenic pathway that
+maintains genomic stability through rectification of DNA
+replication errors and attenuation of chromosomal rearrangements.
+Paradoxically, mutagenic action of mismatch repair has been
+implicated as a cause of triplet repeat expansions that cause
+neurological diseases such as Huntington disease and myotonic
+dystrophy. This mutagenic process requires the mismatch
+recognition factor MutS$\beta$ and the MutL$\alpha$ (and/or
+possibly MutL$\gamma$) endonuclease, and is thought to be
+triggered by the transient formation of unusual DNA structures
+within the expanded triplet repeat element. This review
+summarizes the current knowledge of DNA mismatch repair
+involvement in triplet repeat expansion, which encompasses in
+vitro biochemical findings, cellular studies, and various in vivo
+transgenic animal model experiments. We present current
+mechanistic hypotheses regarding mismatch repair protein function
+in mediating triplet repeat expansions and discuss potential
+therapeutic approaches targeting the mismatch repair pathway."",
+journal = ""Annu. Rev. Biochem."",
+volume = 84,
+pages = ""199--226"",
+month = jan,
+year = 2015,
+keywords = ""DNA mismatch repair; hereditary neurological diseases; non-B-DNA
+structures; repeat expansion diseases; triplet repeats"",
+language = ""en""
+}",Annu. Rev. Biochem.,Cell%20Learning/Iyer_et_al._2015_-_DNA_triplet_repeat_expansion_and_mismatch_repair.pdf,,,"MMR, Neurons, Review, Tri-nucleotide Repeats",{DNA} triplet repeat expansion and mismatch repair,,2015
+Xue2019-wy,"@ARTICLE{Xue2019-wy,
+title = ""Environment-to-phenotype mapping and adaptation strategies in
+varying environments"",
+author = ""Xue, Bingkan and Sartori, Pablo and Leibler, Stanislas"",
+abstract = ""Biological organisms exhibit diverse strategies for adapting to
+varying environments. For example, a population of organisms may
+express the same phenotype in all environments “unvarying” strategy or follow environmental cues and express alternative phenotypes to match the environment “tracking” strategy or
+diversify into coexisting phenotypes to cope with environmental
+uncertainty (``bet-hedging strategy''). We introduce a general
+framework for studying how organisms respond to environmental
+variations, which models an adaptation strategy by an abstract
+mapping from environmental cues to phenotypic traits. Depending
+on the accuracy of environmental cues and the strength of natural
+selection, we find different adaptation strategies represented by
+mappings that maximize the long-term growth rate of a population.
+The previously studied strategies emerge as special cases of our
+model: The tracking strategy is favorable when environmental cues
+are accurate, whereas when cues are noisy, organisms can either
+use an unvarying strategy or, remarkably, use the uninformative
+cue as a source of randomness to bet hedge. Our model of the
+environment-to-phenotype mapping is based on a network with
+hidden units; the performance of the strategies is shown to rely
+on having a high-dimensional internal representation, which can
+even be random."",
+journal = ""Proc. Natl. Acad. Sci. U. S. A."",
+volume = 116,
+number = 28,
+pages = ""13847--13855"",
+month = jul,
+year = 2019,
+keywords = ""evolutionary theory; fluctuating environments; phenotypic
+plasticity; population dynamics; survival strategies"",
+language = ""en""
+}",Proc. Natl. Acad. Sci. U. S. A.,Cell%20Learning/Xue_et_al._2019_-_Environment-to-phenotype_mapping_and_adaptation_strategies_in_varying_environments.pdf,"BingKan Xue, Stanislas Leibler",,Theory,Environment-to-phenotype mapping and adaptation strategies in varying environments,,2019
+Jordan2013-el,"@ARTICLE{Jordan2013-el,
+title = ""Behavioral diversity in microbes and low-dimensional phenotypic
+spaces"",
+author = ""Jordan, David and Kuehn, Seppe and Katifori, Eleni and Leibler,
+Stanislas"",
+abstract = ""Systematic studies of phenotypic diversity--required for
+understanding evolution--lag behind investigations of genetic
+diversity. Here we develop a quantitative approach to studying
+behavioral diversity, which we apply to swimming of the ciliate
+Tetrahymena. We measure the full-lifetime behavior of hundreds of
+individual organisms at high temporal resolution, over several
+generations and in diverse nutrient conditions. To characterize
+population diversity and temporal variability we introduce a
+unique statistical framework grounded in the notion of a
+phenotypic space of behaviors. We show that this space is
+effectively low dimensional with dimensions that correlate with a
+two-state ``roaming and dwelling'' model of swimming behavior.
+Temporal variability over the lifetime of an individual is
+correlated with the fraction of time spent roaming whereas
+diversity between individuals is correlated with the speed of
+roaming. Quantifying the dynamics of behavioral variation shows
+that behavior over the lifetime of an individual is strongly
+nonstationary. Analysis of behavioral dynamics between
+generations reveals complex patterns of behavioral heritability
+that point to the importance of considering correlations beyond
+mothers and daughters. Our description of a low-dimensional
+behavioral space should enable the systematic study of the
+evolutionary and ecological bases of phenotypic constraints.
+Future experimental and theoretical studies of behavioral
+diversity will have to account for the possibility of
+nonstationary and environmentally dependent behavioral dynamics
+that we observe."",
+journal = ""Proc. Natl. Acad. Sci. U. S. A."",
+volume = 110,
+number = 34,
+pages = ""14018--14023"",
+month = aug,
+year = 2013,
+keywords = ""behavioral variation in microbes; biological sciences; systems
+biology"",
+language = ""en""
+}",Proc. Natl. Acad. Sci. U. S. A.,Cell%20Learning/Jordan_et_al._2013_-_Behavioral_diversity_in_microbes_and_low-dimensional_phenotypic_spaces.pdf,,,,Behavioral diversity in microbes and low-dimensional phenotypic spaces,,2013
+Pleska2021-vk,"@ARTICLE{Pleska2021-vk,
+title = ""Nongenetic individuality, changeability, and inheritance in
+bacterial behavior"",
+author = ""Ple{\v s}ka, Maro{\v s} and Jordan, David and Frentz, Zak and
+Xue, Bingkan and Leibler, Stanislas"",
+abstract = ""Isogenic populations often display remarkable levels of
+phenotypic diversity even in constant, homogeneous environments.
+Such diversity results from differences between individuals
+(nongenetic individuality) as well as changes during individuals' lifetimes (changeability). Yet, studies that capture and quantify both sources of diversity are scarce. Here
+we measure the swimming behavior of hundreds of Escherichia coli
+bacteria continuously over two generations and use a
+model-independent method for quantifying behavior to show that
+the behavioral space of E. coli is low-dimensional, with
+variations occurring mainly along two independent and
+interpretable behavioral traits. By statistically decomposing the
+diversity in these two traits, we find that individuality is the
+main source of diversity, while changeability makes a smaller but
+significant contribution. Finally, we show that even though
+traits of closely related individuals can be remarkably
+different, they exhibit positive correlations across generations
+that imply nongenetic inheritance. The model-independent
+experimental and theoretical framework developed here paves the
+way for more general studies of microbial behavioral diversity."",
+journal = ""Proc. Natl. Acad. Sci. U. S. A."",
+volume = 118,
+number = 13,
+month = mar,
+year = 2021,
+keywords = ""behavioral diversity; microbial motility; nongenetic inheritance"",
+language = ""en""
+}",Proc. Natl. Acad. Sci. U. S. A.,Cell%20Learning/Pleska_et_al._2021_-_Nongenetic_individuality_changeability_and_inheritance_in_bacterial_behavior.pdf,,,,"Nongenetic individuality, changeability, and inheritance in bacterial behavior",,2021
+Thornquist2021-un,"@ARTICLE{Thornquist2021-un,
+title = ""Biochemical evidence accumulates across neurons to drive a
+network-level eruption"",
+author = ""Thornquist, Stephen C and Pitsch, Maximilian J and Auth,
+Charlotte S and Crickmore, Michael A"",
+abstract = ""Neural network computations are usually assumed to emerge from
+patterns of fast electrical activity. Challenging this view, we
+show that a male fly's decision to persist in mating hinges on a
+biochemical computation that enables processing over minutes to
+hours. Each neuron in a recurrent network contains slightly
+different internal molecular estimates of mating progress.
+Protein kinase A (PKA) activity contrasts this internal
+measurement with input from the other neurons to represent
+accumulated evidence that the goal of the network has been
+achieved. When consensus is reached, PKA pushes the network
+toward a large-scale and synchronized burst of calcium influx
+that we call an eruption. Eruptions transform continuous
+deliberation within the network into an all-or-nothing output,
+after which the male will no longer sacrifice his life to
+continue mating. Here, biochemical activity, invisible to most
+large-scale recording techniques, is the key computational
+currency directing behavior and motivational state."",
+journal = ""Mol. Cell"",
+volume = 81,
+number = 4,
+pages = ""675--690.e8"",
+month = feb,
+year = 2021,
+keywords = ""Drosophila; FLIM; PKA; cAMP; eruption; evidence accumulation;
+motivation; neural networks; sexual behavior; time"",
+language = ""en""
+}",Mol. Cell,Cell%20Learning/Thornquist_et_al._2021_-_Biochemical_evidence_accumulates_across_neurons_to_drive_a_network-level_eruption.pdf,,,Neurons,Biochemical evidence accumulates across neurons to drive a network-level eruption,,2021
+Osman2022-bw,"@ARTICLE{Osman2022-bw,
+title = ""Protein metalation in a nutshell"",
+author = ""Osman, Deenah and Robinson, Nigel J"",
+abstract = ""Metalation, the acquisition of metals by proteins, must avoid
+mis-metalation with tighter binding metals. This is illustrated
+by four selected proteins that require different metals: all
+show similar ranked orders of affinity for bioavailable metals,
+as described in a universal affinity series (the Irving-Williams
+series). Crucially, cellular protein metalation occurs in
+competition with other metal binding sites. The strength of this
+competition defines the intracellular availability of each
+metal: its magnitude has been estimated by calibrating a cells'
+set of DNA-binding, metal-sensing, transcriptional regulators.
+This has established that metal availabilities (as free energies
+for forming metal complexes) are maintained to the inverse of
+the universal series. The tightest binding metals are least
+available. With these availabilities, correct metalation is
+achieved."",
+journal = ""FEBS Lett."",
+volume = """",
+month = sep,
+year = 2022,
+keywords = ""Irving-Williams series; cobalt; copper; iron; magnesium;
+manganese; metal sensor; metalation; nickel; zinc"",
+copyright = ""http://onlinelibrary.wiley.com/termsAndConditions%5C%5C#vor"",
+language = ""en""
+}",FEBS Lett.,Cell%20Learning/Osman_and_Robinson_2022_-_Protein_metalation_in_a_nutshell.pdf,Nigel J Robinson,,,Protein metalation in a nutshell,,2022

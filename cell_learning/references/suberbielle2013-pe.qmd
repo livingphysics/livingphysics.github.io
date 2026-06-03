@@ -1,0 +1,27 @@
+---
+title: "Physiologic brain activity causes DNA double-strand breaks in neurons, with exacerbation by amyloid-$\\beta$"
+subtitle: "Citation key: Suberbielle2013-pe"
+---
+
+*Nat. Neurosci. · 2013*
+
+**Tags:** Activity-induced DSB, DSB, Neurons
+
+[📄 Download PDF](../files/Suberbielle_et_al._2013_-_Physiologic_brain_activity_causes_DNA_double-strand_breaks_in_neurons_with_exacerbation_by_amyloid-.pdf)
+
+```bibtex
+@ARTICLE{Suberbielle2013-pe,
+title = "Physiologic brain activity causes {DNA} double-strand breaks in
+neurons, with exacerbation by amyloid-$\beta$",
+author = "Suberbielle, Elsa and Sanchez, Pascal E and Kravitz, Alexxai V
+and Wang, Xin and Ho, Kaitlyn and Eilertson, Kirsten and Devidze,
+Nino and Kreitzer, Anatol C and Mucke, Lennart",
+journal = "Nat. Neurosci.",
+volume = 16,
+number = 5,
+pages = "613--621",
+month = may,
+year = 2013,
+language = "en"
+}
+```

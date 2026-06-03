@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>References – Cell Learning</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-88a5d52b92e05037114998d63bd85d90.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Cell Learning</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Proposal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../people/index.html"> 
+<span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../references/index.html"> 
+<span class="menu-text">References</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../references/index.html">References</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proposal</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../people/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">People</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/daniel-jarosz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Daniel Jarosz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/erez-braun.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Erez Braun</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/eric-smith.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Eric Smith</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/jeremy-gunawardena.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jeremy Gunawardena</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/jonathan-houseley.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jonathan Houseley</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/nigel-j-robinson.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nigel J Robinson</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/shelley-d-copley.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shelley D Copley</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/stanislas-leibler.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stanislas Leibler</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/susan-m-rosenberg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Susan M Rosenberg</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../references/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">References</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The reference library backing this proposal. Each entry links to its detail page and PDF.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Reference</th>
+<th>Title</th>
+<th>Year</th>
+<th>Journal</th>
+<th>Tags</th>
+<th>PDF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../references/akkaya2018-ud.html">Akkaya2018-ud</a></td>
+<td>The Metabolic Redox Regime of Pseudomonas putida Tunes Its Evolvability toward Novel Xenobiotic Substrates</td>
+<td>2018</td>
+<td>MBio</td>
+<td>Metabolism</td>
+<td><a href="../files/Akkaya_et_al._2018_-_The_Metabolic_Redox_Regime_of_Pseudomonas_putida_Tunes_Its_Evolvability_toward_Novel_Xenobiotic_Substrates.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/baez2005-lo.html">Baez2005-lo</a></td>
+<td>Mammalian Smaug is a translational repressor that forms cytoplasmic foci similar to stress granules</td>
+<td>2005</td>
+<td>J. Biol. Chem.</td>
+<td>Granule, Prion, RNA</td>
+<td><a href="../files/Baez_and_Boccaccio_2005_-_Mammalian_Smaug_is_a_translational_repressor_that_forms_cytoplasmic_foci_similar_to_stress_granules.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/bedecarrats2018-xx.html">Bedecarrats2018-xx</a></td>
+<td>RNA from Trained Aplysia Can Induce an Epigenetic Engram for Long-Term Sensitization in Untrained Aplysia</td>
+<td>2018</td>
+<td>eNeuro</td>
+<td>Neurons, RNA Transfer</td>
+<td><a href="../files/Bedecarrats_et_al._2018_-_RNA_from_Trained_Aplysia_Can_Induce_an_Epigenetic_Engram_for_Long-Term_Sensitization_in_Untrained_Aplysia.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/biddle2021-by.html">Biddle2021-by</a></td>
+<td>Allosteric conformational ensembles have unlimited capacity for integrating information</td>
+<td>2021</td>
+<td>Elife</td>
+<td>Biological Computation, Theory</td>
+<td><a href="../files/Biddle_et_al._2021_-_Allosteric_conformational_ensembles_have_unlimited_capacity_for_integrating_information.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/brisson2003-bu.html">Brisson2003-bu</a></td>
+<td>The directed mutation controversy in an evolutionary context</td>
+<td>2003</td>
+<td>Crit. Rev.&nbsp;Microbiol.</td>
+<td>Directed mutation debate</td>
+<td><a href="../files/Brisson_2003_-_The_directed_mutation_controversy_in_an_evolutionary_context.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/chakravarty2020-xf.html">Chakravarty2020-xf</a></td>
+<td>A Non-amyloid Prion Particle that Activates a Heritable Gene Expression Program</td>
+<td>2020</td>
+<td>Mol. Cell</td>
+<td>LLPS, Prion</td>
+<td><a href="../files/Chakravarty_et_al._2020_-_A_Non-amyloid_Prion_Particle_that_Activates_a_Heritable_Gene_Expression_Program.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/clabough2006-oc.html">Clabough2006-oc</a></td>
+<td>Deletion of the triplet repeat encoding polyglutamine within the mouse Huntington’s disease gene results in subtle behavioral/motor phenotypes in vivo and elevated levels of ATP with cellular senescence in vitro</td>
+<td>2006</td>
+<td>Hum. Mol. Genet.</td>
+<td>Tri-nucleotide Repeats</td>
+<td><a href="../files/Clabough_and_Zeitlin_2006_-_Deletion_of_the_triplet_repeat_encoding_poly_..._otor_phenotypes_in_vivo_and_elevated_levels_of_ATP_with_cellular_sen....pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/copley2007-xo.html">Copley2007-xo</a></td>
+<td>The origin of the RNA world: co-evolution of genes and metabolism</td>
+<td>2007</td>
+<td>Bioorg. Chem.</td>
+<td>Metabolism</td>
+<td><a href="../files/Copley_et_al._2007_-_The_origin_of_the_RNA_world_-_co-evolution_of_genes_and_metabolism.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/cotton2022-in.html">Cotton2022-in</a></td>
+<td>Catalysis-Induced Phase Separation and Autoregulation of Enzymatic Activity</td>
+<td>2022</td>
+<td>Phys. Rev.&nbsp;Lett.</td>
+<td>LLPS, Non-equilibrium, Theory, UK Based</td>
+<td><a href="../files/Cotton_et_al._2022_-_Catalysis-Induced_Phase_Separation_and_Autoregulation_of_Enzymatic_Activity.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/de-jesus-astacio2021-ld.html">De_Jesus_Astacio2021-ld</a></td>
+<td>Closed microbial communities self-organize to persistently cycle carbon</td>
+<td>2021</td>
+<td>Proceedings of the National Academy of Sciences</td>
+<td>Ecosystems, Metabolism</td>
+<td><a href="../files/de_Jesus_Astacio_et_al._2021_-_Closed_microbial_communities_self-organize_to_persistently_cycle_carbon.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/deshe2020-zt.html">Deshe2020-zt</a></td>
+<td>Inheritance of associative memories in C. elegans nematodes</td>
+<td>2020</td>
+<td>bioRxiv</td>
+<td>Neurons, RNA Transfer</td>
+<td><a href="../files/Deshe_et_al._2020_-_Inheritance_of_associative_memories_in_C._elegans_nematodes.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/feynman1974-rs.html">Feynman1974-rs</a></td>
+<td>Cargo Cult Science</td>
+<td>1974</td>
+<td>NA</td>
+<td></td>
+<td><a href="../files/Feynman_1974_-_Cargo_Cult_Science.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/fondon2004-lt.html">Fondon2004-lt</a></td>
+<td>Molecular origins of rapid and continuous morphological evolution</td>
+<td>2004</td>
+<td>Proc. Natl. Acad. Sci. U. S. A.</td>
+<td>Accelerated Evolution, Evolution</td>
+<td><a href="../files/Fondon_and_Garner_2004_-_Molecular_origins_of_rapid_and_continuous_morphological_evolution.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/garcia2016-ey.html">Garcia2016-ey</a></td>
+<td>A common bacterial metabolite elicits prion-based bypass of glucose repression</td>
+<td>2016</td>
+<td>Elife</td>
+<td>Prion</td>
+<td><a href="../files/Garcia_et_al._2016_-_A_common_bacterial_metabolite_elicits_prion-based_bypass_of_glucose_repression.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/gershman2022-sk.html">Gershman2022-sk</a></td>
+<td>The molecular memory code and synaptic plasticity: a synthesis</td>
+<td>2022</td>
+<td>ArXiv</td>
+<td>Neurons</td>
+<td><a href="../files/Gershman_2022_-_The_molecular_memory_code_and_synaptic_plasticity_-_a_synthesis.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/gunawardena2012-eg.html">Gunawardena2012-eg</a></td>
+<td>A linear framework for time-scale separation in nonlinear biochemical systems</td>
+<td>2012</td>
+<td>PLoS One</td>
+<td>Non-equilibrium</td>
+<td><a href="../files/Gunawardena_2012_-_A_linear_framework_for_time-scale_separation_in_nonlinear_biochemical_systems.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/holmes2017-md.html">Holmes2017-md</a></td>
+<td>Luria-Delbr, revisited: the classic experiment does not rule out Lamarckian evolution</td>
+<td>2017</td>
+<td>Phys. Biol.</td>
+<td>Directed mutation debate</td>
+<td><a href="../files/Holmes_et_al._2017_-_Luria-Delbruck_revisited_-_the_classic_experiment_does_not_rule_out_Lamarckian_evolution.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/hull2017-bn.html">Hull2017-bn</a></td>
+<td>Environmental change drives accelerated adaptation through stimulated copy number variation</td>
+<td>2017</td>
+<td>PLoS Biol.</td>
+<td>CNV, Spatial Non-randomness, Temporal Non-randomness, UK Based</td>
+<td><a href="../files/Hull_et_al._2017_-_Environmental_change_drives_accelerated_adaptation_through_stimulated_copy_number_variation.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/hull2019-qq.html">Hull2019-qq</a></td>
+<td>Transcription-induced formation of extrachromosomal DNA during yeast ageing</td>
+<td>2019</td>
+<td>PLoS Biol.</td>
+<td>CNV, Spatial Non-randomness, Temporal Non-randomness, UK Based</td>
+<td><a href="../files/Hull_et_al._2019_-_Transcription-induced_formation_of_extrachromosomal_DNA_during_yeast_ageing.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/itakura2020-vq.html">Itakura2020-vq</a></td>
+<td>Widespread Prion-Based Control of Growth and Differentiation Strategies in Saccharomyces cerevisiae</td>
+<td>2020</td>
+<td>Mol. Cell</td>
+<td>Prion</td>
+<td><a href="../files/Itakura_et_al._2020_-_Widespread_Prion-Based_Control_of_Growth_and_Differentiation_Strategies_in_Saccharomyces_cerevisiae.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/iyer2015-pu.html">Iyer2015-pu</a></td>
+<td>DNA triplet repeat expansion and mismatch repair</td>
+<td>2015</td>
+<td>Annu. Rev.&nbsp;Biochem.</td>
+<td>MMR, Neurons, Review, Tri-nucleotide Repeats</td>
+<td><a href="../files/Iyer_et_al._2015_-_DNA_triplet_repeat_expansion_and_mismatch_repair.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/jakobson2019-fq.html">Jakobson2019-fq</a></td>
+<td>Molecular Origins of Complex Heritability in Natural Genotype-to-Phenotype Relationships</td>
+<td>2019</td>
+<td>Cell Syst</td>
+<td>Synonymous Mutations</td>
+<td><a href="../files/Jakobson_and_Jarosz_2019_-_Molecular_Origins_of_Complex_Heritability_in_Natural_Genotype-to-Phenotype_Relationships.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/jordan2013-el.html">Jordan2013-el</a></td>
+<td>Behavioral diversity in microbes and low-dimensional phenotypic spaces</td>
+<td>2013</td>
+<td>Proc. Natl. Acad. Sci. U. S. A.</td>
+<td></td>
+<td><a href="../files/Jordan_et_al._2013_-_Behavioral_diversity_in_microbes_and_low-dimensional_phenotypic_spaces.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/kaletsky2020-hn.html">Kaletsky2020-hn</a></td>
+<td>C. elegans interprets bacterial non-coding RNAs to learn pathogenic avoidance</td>
+<td>2020</td>
+<td>Nature</td>
+<td></td>
+<td><a href="../files/Kaletsky_et_al._2020_-_C._elegans_interprets_bacterial_non-coding_RNAs_to_learn_pathogenic_avoidance.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/katzir2012-ci.html">Katzir2012-ci</a></td>
+<td>Cellular plasticity enables adaptation to unforeseen cell-cycle rewiring challenges</td>
+<td>2012</td>
+<td>PLoS One</td>
+<td>Accelerated Evolution, Biological Computation</td>
+<td><a href="../files/Katzir_et_al._2012_-_Cellular_plasticity_enables_adaptation_to_unforeseen_cell-cycle_rewiring_challenges.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/khanal2015-sl.html">Khanal2015-sl</a></td>
+<td>Differential effects of a mutation on the normal and promiscuous activities of orthologs: implications for natural and directed evolution</td>
+<td>2015</td>
+<td>Mol. Biol. Evol.</td>
+<td>Enzyme Promiscuity</td>
+<td><a href="../files/Khanal_et_al._2015_-_Differential_effects_of_a_mutation_on_the_normal_an_..._vities_of_orthologs_-_implications_for_natural_and_directed_evolution.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/kristofich2018-kd.html">Kristofich2018-kd</a></td>
+<td>Synonymous mutations make dramatic contributions to fitness when growth is limited by a weak-link enzyme</td>
+<td>2018</td>
+<td>PLoS Genet.</td>
+<td>Synonymous Mutations</td>
+<td><a href="../files/Kristofich_et_al._2018_-_Synonymous_mutations_make_dramatic_contributions_to_fitness_when_growth_is_limited_by_a_weak-link_enzyme.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/lai2016-kd.html">Lai2016-kd</a></td>
+<td>Crosstalk between MSH2-MSH3 and pol<span class="math inline">\(\beta\)</span> promotes trinucleotide repeat expansion during base excision repair</td>
+<td>2016</td>
+<td>Nat. Commun.</td>
+<td>Tri-nucleotide Repeats</td>
+<td><a href="../files/Lai_et_al._2016_-_Crosstalk_between_MSH2-MSH3_and_pol_promotes_trinucleotide_repeat_expansion_during_base_excision_repair.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/lee2019-hj.html">Lee2019-hj</a></td>
+<td>CAG Repeat Not Polyglutamine Length Determines Timing of Huntington’s Disease Onset</td>
+<td>2019</td>
+<td>Cell</td>
+<td>Neurons, Tri-nucleotide Repeats</td>
+<td><a href="../files/Lee_et_al._2019_-_CAG_Repeat_Not_Polyglutamine_Length_Determines_Timing_of_Huntingtons_Disease_Onset.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/lenski1993-wz.html">Lenski1993-wz</a></td>
+<td>The directed mutation controversy and neo-Darwinism</td>
+<td>1993</td>
+<td>Science</td>
+<td>Directed mutation debate</td>
+<td><a href="../files/Lenski_and_Mittler_1993_-_The_directed_mutation_controversy_and_neo-Darwinism.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/lycus2017-wq.html">Lycus2017-wq</a></td>
+<td>Phenotypic and genotypic richness of denitrifiers revealed by a novel isolation strategy</td>
+<td>2017</td>
+<td>ISME J.</td>
+<td>Ecosystems</td>
+<td><a href="../files/Lycus_et_al._2017_-_Phenotypic_and_genotypic_richness_of_denitrifiers_revealed_by_a_novel_isolation_strategy.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/madabhushi2015-sz.html">Madabhushi2015-sz</a></td>
+<td>Activity-Induced DNA Breaks Govern the Expression of Neuronal Early-Response Genes</td>
+<td>2015</td>
+<td>Cell</td>
+<td>Activity-induced DSB, DSB, Neurons</td>
+<td><a href="../files/Madabhushi_et_al._2015_-_Activity-Induced_DNA_Breaks_Govern_the_Expression_of_Neuronal_Early-Response_Genes.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/mcmurray2010-ys.html">McMurray2010-ys</a></td>
+<td>Mechanisms of trinucleotide repeat instability during human development</td>
+<td>2010</td>
+<td>Nat. Rev.&nbsp;Genet.</td>
+<td>Review, Tri-nucleotide Repeats</td>
+<td><a href="../files/McMurray_2010_-_Mechanisms_of_trinucleotide_repeat_instability_during_human_development.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/melo2012-zi.html">Melo2012-zi</a></td>
+<td>Inactivation of conserved C. elegans genes engages pathogen- and xenobiotic-associated defenses</td>
+<td>2012</td>
+<td>Cell</td>
+<td></td>
+<td><a href="../files/Melo_and_Ruvkun_2012_-_Inactivation_of_conserved_C._elegans_genes_engages_pathogen-_and_xenobiotic-associated_defenses.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/moore2014-xa.html">Moore2014-xa</a></td>
+<td>Induced mutations in yeast cell populations adapting to an unforeseen challenge</td>
+<td>2014</td>
+<td>PLoS One</td>
+<td>Biological Computation, Temporal Non-randomness</td>
+<td><a href="../files/Moore_et_al._2014_-_Induced_mutations_in_yeast_cell_populations_adapting_to_an_unforeseen_challenge.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/morgenthaler2019-za.html">Morgenthaler2019-za</a></td>
+<td>Mutations that improve efficiency of a weak-link enzyme are rare compared to adaptive mutations elsewhere in the genome</td>
+<td>2019</td>
+<td>Elife</td>
+<td>Enzyme Promiscuity</td>
+<td><a href="../files/Morgenthaler_et_al._2019_-_Mutations_that_improve_efficiency_of_a_weak-link_enzyme_are_rare_compared_to_adaptive_mutations_elsewhere_in_the_genome.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/murugan2015-rz.html">Murugan2015-rz</a></td>
+<td>Multifarious assembly mixtures: systems allowing retrieval of diverse stored structures</td>
+<td>2015</td>
+<td>Proc. Natl. Acad. Sci. U. S. A.</td>
+<td>Theory</td>
+<td><a href="../files/Murugan_et_al._2015_-_Multifarious_assembly_mixtures_-_systems_allowing_retrieval_of_diverse_stored_structures.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/nakatani2015-fq.html">Nakatani2015-fq</a></td>
+<td>Large expansion of CTG•CAG repeats is exacerbated by MutS<span class="math inline">\(\beta\)</span> in human cells</td>
+<td>2015</td>
+<td>Sci. Rep.</td>
+<td>MMR, Tri-nucleotide Repeats</td>
+<td><a href="../files/Nakatani_et_al._2015_-_Large_expansion_of_CTGCAG_repeats_is_exacerbated_by_MutS_in_human_cells.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/osman2022-bw.html">Osman2022-bw</a></td>
+<td>Protein metalation in a nutshell</td>
+<td>2022</td>
+<td>FEBS Lett.</td>
+<td></td>
+<td><a href="../files/Osman_and_Robinson_2022_-_Protein_metalation_in_a_nutshell.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/pleska2021-vk.html">Pleska2021-vk</a></td>
+<td>Nongenetic individuality, changeability, and inheritance in bacterial behavior</td>
+<td>2021</td>
+<td>Proc. Natl. Acad. Sci. U. S. A.</td>
+<td></td>
+<td><a href="../files/Pleska_et_al._2021_-_Nongenetic_individuality_changeability_and_inheritance_in_bacterial_behavior.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/ponder2005-et.html">Ponder2005-et</a></td>
+<td>A switch from high-fidelity to error-prone DNA double-strand break repair underlies stress-induced mutation</td>
+<td>2005</td>
+<td>Mol. Cell</td>
+<td>Directed mutation debate, Spatial Non-randomness, Temporal Non-randomness</td>
+<td><a href="../files/Ponder_et_al._2005_-_A_switch_from_high-fidelity_to_error-prone_DNA_double-strand_break_repair_underlies_stress-induced_mutation.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/rivoire2014-lh.html">Rivoire2014-lh</a></td>
+<td>A model for the generation and transmission of variations in evolution</td>
+<td>2014</td>
+<td>Proc. Natl. Acad. Sci. U. S. A.</td>
+<td>Theory</td>
+<td><a href="../files/Rivoire_and_Leibler_2014_-_A_model_for_the_generation_and_transmission_of_variations_in_evolution.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/seong2005-hw.html">Seong2005-hw</a></td>
+<td>HD CAG repeat implicates a dominant property of huntingtin in mitochondrial energy metabolism</td>
+<td>2005</td>
+<td>Hum. Mol. Genet.</td>
+<td>Metabolism, Tri-nucleotide Repeats</td>
+<td><a href="../files/Seong_et_al._2005_-_HD_CAG_repeat_implicates_a_dominant_property_of_huntingtin_in_mitochondrial_energy_metabolism.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/sephton2015-pp.html">Sephton2015-pp</a></td>
+<td>The function of RNA-binding proteins at the synapse: implications for neurodegeneration</td>
+<td>2015</td>
+<td>Cell. Mol. Life Sci.</td>
+<td>Granule, LLPS, Neurons, RNA, Tri-nucleotide Repeats</td>
+<td><a href="../files/Sephton_and_Yu_2015_-_The_function_of_RNA-binding_proteins_at_the_synapse_-_implications_for_neurodegeneration.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/serobyan2020-ck.html">Serobyan2020-ck</a></td>
+<td>Transcriptional adaptation in Caenorhabditis elegans</td>
+<td>2020</td>
+<td>Elife</td>
+<td>Transcriptional Adaptation</td>
+<td><a href="../files/Serobyan_et_al._2020_-_Transcriptional_adaptation_in_Caenorhabditis_elegans.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/shi2012-hu.html">Shi2012-hu</a></td>
+<td>Directed differentiation of human pluripotent stem cells to cerebral cortex neurons and neural networks</td>
+<td>2012</td>
+<td>Nat. Protoc.</td>
+<td>Neurons</td>
+<td><a href="../files/Shi_et_al._2012_-_Directed_differentiation_of_human_pluripotent_stem_cells_to_cerebral_cortex_neurons_and_neural_networks.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/stolovicki2006-sd.html">Stolovicki2006-sd</a></td>
+<td>Synthetic gene recruitment reveals adaptive reprogramming of gene regulation in yeast</td>
+<td>2006</td>
+<td>Genetics</td>
+<td></td>
+<td><a href="../files/Stolovicki_et_al._2006_-_Synthetic_gene_recruitment_reveals_adaptive_reprogramming_of_gene_regulation_in_yeast.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/suberbielle2013-pe.html">Suberbielle2013-pe</a></td>
+<td>Physiologic brain activity causes DNA double-strand breaks in neurons, with exacerbation by amyloid-<span class="math inline">\(\beta\)</span></td>
+<td>2013</td>
+<td>Nat. Neurosci.</td>
+<td>Activity-induced DSB, DSB, Neurons</td>
+<td><a href="../files/Suberbielle_et_al._2013_-_Physiologic_brain_activity_causes_DNA_double-strand_breaks_in_neurons_with_exacerbation_by_amyloid-.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/thelen2019-qt.html">Thelen2019-qt</a></td>
+<td>The Role of RNA Binding Proteins for Local mRNA Translation: Implications in Neurological Disorders</td>
+<td>2019</td>
+<td>Front Mol Biosci</td>
+<td>Neurons, RNA, Tri-nucleotide Repeats</td>
+<td><a href="../files/Thelen_and_Kye_2019_-_The_Role_of_RNA_Binding_Proteins_for_Local_mRNA_Translation_-_Implications_in_Neurological_Disorders.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/thornquist2021-un.html">Thornquist2021-un</a></td>
+<td>Biochemical evidence accumulates across neurons to drive a network-level eruption</td>
+<td>2021</td>
+<td>Mol. Cell</td>
+<td>Neurons</td>
+<td><a href="../files/Thornquist_et_al._2021_-_Biochemical_evidence_accumulates_across_neurons_to_drive_a_network-level_eruption.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/tian2009-dx.html">Tian2009-dx</a></td>
+<td>Distinct nucleotide binding/hydrolysis properties and molar ratio of MutSalpha and MutSbeta determine their differential mismatch binding activities</td>
+<td>2009</td>
+<td>J. Biol. Chem.</td>
+<td>MMR, Tri-nucleotide Repeats</td>
+<td><a href="../files/Tian_et_al._2009_-_Distinct_nucleotide_binding_-_hydrolysis_properties_a_..._and_MutSbeta_determine_their_differential_mismatch_binding_activities.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/venkataraman2022-hg.html">Venkataraman2022-hg</a></td>
+<td>Processive and distributive non-equilibrium networks discriminate in alternate limits</td>
+<td>2022</td>
+<td>J Stat. Mech.</td>
+<td>Biological Computation, Theory</td>
+<td><a href="../files/Venkataraman_et_al._2022_-_Processive_and_distributive_non-equilibrium_networks_discriminate_in_alternate_limits.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/williams2015-ml.html">Williams2015-ml</a></td>
+<td>MSH3 Promotes Dynamic Behavior of Trinucleotide Repeat Tracts In Vivo</td>
+<td>2015</td>
+<td>Genetics</td>
+<td>MMR, Tri-nucleotide Repeats</td>
+<td><a href="../files/Williams_and_Surtees_2015_-_MSH3_Promotes_Dynamic_Behavior_of_Trinucleotide_Repeat_Tracts_In_Vivo.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/xue2016-ng.html">Xue2016-ng</a></td>
+<td>Evolutionary learning of adaptation to varying environments through a transgenerational feedback</td>
+<td>2016</td>
+<td>Proc. Natl. Acad. Sci. U. S. A.</td>
+<td>Theory</td>
+<td><a href="../files/Xue_and_Leibler_2016_-_Evolutionary_learning_of_adaptation_to_varying_environments_through_a_transgenerational_feedback.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/xue2019-wy.html">Xue2019-wy</a></td>
+<td>Environment-to-phenotype mapping and adaptation strategies in varying environments</td>
+<td>2019</td>
+<td>Proc. Natl. Acad. Sci. U. S. A.</td>
+<td>Theory</td>
+<td><a href="../files/Xue_et_al._2019_-_Environment-to-phenotype_mapping_and_adaptation_strategies_in_varying_environments.pdf">📄</a></td>
+</tr>
+<tr class="even">
+<td><a href="../references/zhang2011-ci.html">Zhang2011-ci</a></td>
+<td>Acceleration of emergence of bacterial antibiotic resistance in connected microenvironments</td>
+<td>2011</td>
+<td>Science</td>
+<td>Accelerated Evolution, Evolution</td>
+<td><a href="../files/Zhang_et_al._2011_-_Acceleration_of_emergence_of_bacterial_antibiotic_resistance_in_connected_microenvironments.pdf">📄</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../references/zhang2020-lt.html">Zhang2020-lt</a></td>
+<td>Nuclear bodies formed by polyQ-ataxin-1 protein are liquid RNA/protein droplets with tunable dynamics</td>
+<td>2020</td>
+<td>Sci. Rep.</td>
+<td>Granule, LLPS, Tri-nucleotide Repeats</td>
+<td><a href="../files/Zhang_et_al._2020_-_Nuclear_bodies_formed_by_polyQ-ataxin-1_protein_are_liquid_RNA_-_protein_droplets_with_tunable_dynamics.pdf">📄</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

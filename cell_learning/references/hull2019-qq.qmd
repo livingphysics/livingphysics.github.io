@@ -1,0 +1,26 @@
+---
+title: "Transcription-induced formation of extrachromosomal DNA during yeast ageing"
+subtitle: "Citation key: Hull2019-qq"
+---
+
+*PLoS Biol. · 2019*
+
+**Tags:** CNV, Spatial Non-randomness, Temporal Non-randomness, UK Based
+
+[📄 Download PDF](../files/Hull_et_al._2019_-_Transcription-induced_formation_of_extrachromosomal_DNA_during_yeast_ageing.pdf)
+
+```bibtex
+@ARTICLE{Hull2019-qq,
+title = "Transcription-induced formation of extrachromosomal {DNA} during
+yeast ageing",
+author = "Hull, Ryan M and King, Michelle and Pizza, Grazia and Krueger,
+Felix and Vergara, Xabier and Houseley, Jonathan",
+journal = "PLoS Biol.",
+volume = 17,
+number = 12,
+pages = "e3000471",
+month = dec,
+year = 2019,
+language = "en"
+}
+```

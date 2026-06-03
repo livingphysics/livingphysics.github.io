@@ -1,0 +1,7 @@
+# Nigel J Robinson
+
+Nigel J Robinson studies protein metalation at Durham University.  A third of proteins, and half of enzymes require metals.  Enzymes require the correct metal co-factor to be bound, however, steric effects are not sufficient to discriminate competing metals for sites in nascent proteins.  The Robinson lab has found that cells actively maintain intracellular concentrations of metals at levels inverse to their binding affinities, which is known as the Irving-Williams series for divalent metals. 
+
+Summary of contributions
+
+[Untitled](Nigel%20J%20Robinson/Untitled%204b995bb589064739afb52a088140105c.csv)

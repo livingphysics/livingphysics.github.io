@@ -1,0 +1,23 @@
+---
+title: "The directed mutation controversy in an evolutionary context"
+subtitle: "Citation key: Brisson2003-bu"
+---
+
+*Crit. Rev. Microbiol. · 2003*
+
+**Tags:** Directed mutation debate
+
+[📄 Download PDF](../files/Brisson_2003_-_The_directed_mutation_controversy_in_an_evolutionary_context.pdf)
+
+```bibtex
+@ARTICLE{Brisson2003-bu,
+title = "The directed mutation controversy in an evolutionary context",
+author = "Brisson, Dustin",
+journal = "Crit. Rev. Microbiol.",
+volume = 29,
+number = 1,
+pages = "25--35",
+year = 2003,
+language = "en"
+}
+```

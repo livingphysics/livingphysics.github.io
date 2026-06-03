@@ -1,0 +1,14 @@
+---
+title: "Jeremy Gunawardena"
+---
+
+Paragraph for main document from the Jeremy Gunawardena page
+
+Summary of contributions
+
+## Related references
+
+| Reference | Title |
+| --- | --- |
+| [Biddle2021-by](../references/biddle2021-by.qmd) | Allosteric conformational ensembles have unlimited capacity for integrating information |
+| [Gunawardena2012-eg](../references/gunawardena2012-eg.qmd) | A linear framework for time-scale separation in nonlinear biochemical systems |

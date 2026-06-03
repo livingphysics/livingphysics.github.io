@@ -1,0 +1,27 @@
+---
+title: "Evolutionary learning of adaptation to varying environments through a transgenerational feedback"
+subtitle: "Citation key: Xue2016-ng"
+---
+
+*Proc. Natl. Acad. Sci. U. S. A. · 2016*
+
+**Tags:** Theory
+
+[📄 Download PDF](../files/Xue_and_Leibler_2016_-_Evolutionary_learning_of_adaptation_to_varying_environments_through_a_transgenerational_feedback.pdf)
+
+```bibtex
+@ARTICLE{Xue2016-ng,
+title = "Evolutionary learning of adaptation to varying environments
+through a transgenerational feedback",
+author = "Xue, Bingkan and Leibler, Stanislas",
+journal = "Proc. Natl. Acad. Sci. U. S. A.",
+volume = 113,
+number = 40,
+pages = "11266--11271",
+month = oct,
+year = 2016,
+keywords = "bet hedging; environmental fluctuations; epigenetic inheritance;
+evolution; population growth",
+language = "en"
+}
+```

@@ -1,0 +1,26 @@
+---
+title: "Crosstalk between MSH2-MSH3 and pol$\\beta$ promotes trinucleotide repeat expansion during base excision repair"
+subtitle: "Citation key: Lai2016-kd"
+---
+
+*Nat. Commun. · 2016*
+
+**Tags:** Tri-nucleotide Repeats
+
+[📄 Download PDF](../files/Lai_et_al._2016_-_Crosstalk_between_MSH2-MSH3_and_pol_promotes_trinucleotide_repeat_expansion_during_base_excision_repair.pdf)
+
+```bibtex
+@ARTICLE{Lai2016-kd,
+title = "Crosstalk between {MSH2-MSH3} and pol$\beta$ promotes
+trinucleotide repeat expansion during base excision repair",
+author = "Lai, Yanhao and Budworth, Helen and Beaver, Jill M and Chan,
+Nelson L S and Zhang, Zunzhen and McMurray, Cynthia T and Liu,
+Yuan",
+journal = "Nat. Commun.",
+volume = 7,
+pages = "12465",
+month = aug,
+year = 2016,
+language = "en"
+}
+```

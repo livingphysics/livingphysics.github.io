@@ -1,0 +1,27 @@
+---
+title: "A common bacterial metabolite elicits prion-based bypass of glucose repression"
+subtitle: "Citation key: Garcia2016-ey"
+---
+
+*Elife · 2016*
+
+**Tags:** Prion
+
+[📄 Download PDF](../files/Garcia_et_al._2016_-_A_common_bacterial_metabolite_elicits_prion-based_bypass_of_glucose_repression.pdf)
+
+```bibtex
+@ARTICLE{Garcia2016-ey,
+title = "A common bacterial metabolite elicits prion-based bypass of
+glucose repression",
+author = "Garcia, David M and Dietrich, David and Clardy, Jon and Jarosz,
+Daniel F",
+journal = "Elife",
+volume = 5,
+month = nov,
+year = 2016,
+keywords = "Dekkera bruxellensis; S. cerevisiae; Staphylococcus gallinarum;
+catabolite repression; chromosomes; genes; infectious disease;
+lactic acid; microbiology; molecular communication; prion",
+language = "en"
+}
+```

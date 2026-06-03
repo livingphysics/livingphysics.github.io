@@ -1,0 +1,56 @@
+---
+title: "HD CAG repeat implicates a dominant property of huntingtin in mitochondrial energy metabolism"
+subtitle: "Citation key: Seong2005-hw"
+---
+
+*Hum. Mol. Genet. · 2005*
+
+**Tags:** Metabolism, Tri-nucleotide Repeats
+
+[📄 Download PDF](../files/Seong_et_al._2005_-_HD_CAG_repeat_implicates_a_dominant_property_of_huntingtin_in_mitochondrial_energy_metabolism.pdf)
+
+```bibtex
+@ARTICLE{Seong2005-hw,
+title = "{HD} {CAG} repeat implicates a dominant property of huntingtin in
+mitochondrial energy metabolism",
+author = "Seong, Ihn Sik and Ivanova, Elena and Lee, Jong-Min and Choo,
+Yeun Su and Fossale, Elisa and Anderson, Maryanne and Gusella,
+James F and Laramie, Jason M and Myers, Richard H and Lesort,
+Mathieu and MacDonald, Marcy E",
+abstract = "The 'expanded' HD CAG repeat that causes Huntington's disease
+(HD) encodes a polyglutamine tract in huntingtin, which first
+targets the death of medium-sized spiny striatal neurons.
+Mitochondrial energetics, related to N-methyl-d-aspartate (NMDA)
+Ca2+-signaling, has long been implicated in this neuronal
+specificity, implying an integral role for huntingtin in
+mitochondrial energy metabolism. As a genetic test of this
+hypothesis, we have looked for a relationship between the length
+of the HD CAG repeat, expressed in endogenous huntingtin, and
+mitochondrial ATP production. In STHdhQ111 knock-in striatal
+cells, a juvenile onset HD CAG repeat was associated with low
+mitochondrial ATP and decreased mitochondrial ADP-uptake. This
+metabolic inhibition was associated with enhanced Ca2+-influx
+through NMDA receptors, which when blocked resulted in increased
+cellular [ATP/ADP]. We then evaluated [ATP/ADP] in 40 human
+lymphoblastoid cell lines, bearing non-HD CAG lengths (9-34
+units) or HD-causing alleles (35-70 units). This analysis
+revealed an inverse association with the longer of the two
+allelic HD CAG repeats in both the non-HD and HD ranges. Thus,
+the polyglutamine tract in huntingtin appears to regulate
+mitochondrial ADP-phosphorylation in a Ca2+-dependent process
+that fulfills the genetic criteria for the HD trigger of
+pathogenesis, and it thereby determines a fundamental biological
+parameter--cellular energy status, which may contribute to the
+exquisite vulnerability of striatal neurons in HD. Moreover, the
+evidence that this polymorphism can determine energy status in
+the non-HD range suggests that it should be tested as a potential
+physiological modifier in both health and disease.",
+journal = "Hum. Mol. Genet.",
+volume = 14,
+number = 19,
+pages = "2871--2880",
+month = oct,
+year = 2005,
+language = "en"
+}
+```

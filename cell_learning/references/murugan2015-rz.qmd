@@ -1,0 +1,27 @@
+---
+title: "Multifarious assembly mixtures: systems allowing retrieval of diverse stored structures"
+subtitle: "Citation key: Murugan2015-rz"
+---
+
+*Proc. Natl. Acad. Sci. U. S. A. · 2015*
+
+**Tags:** Theory
+
+[📄 Download PDF](../files/Murugan_et_al._2015_-_Multifarious_assembly_mixtures_-_systems_allowing_retrieval_of_diverse_stored_structures.pdf)
+
+```bibtex
+@ARTICLE{Murugan2015-rz,
+title = "Multifarious assembly mixtures: systems allowing retrieval of
+diverse stored structures",
+author = "Murugan, Arvind and Zeravcic, Zorana and Brenner, Michael P and
+Leibler, Stanislas",
+journal = "Proc. Natl. Acad. Sci. U. S. A.",
+volume = 112,
+number = 1,
+pages = "54--59",
+month = jan,
+year = 2015,
+keywords = "complex materials; programmed assembly; stored structures",
+language = "en"
+}
+```

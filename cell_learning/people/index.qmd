@@ -1,0 +1,15 @@
+---
+title: "People"
+---
+
+People and labs whose work informs this proposal.
+
+- [Daniel Jarosz](daniel-jarosz.qmd)
+- [Erez Braun](erez-braun.qmd)
+- [Eric Smith](eric-smith.qmd)
+- [Jeremy Gunawardena](jeremy-gunawardena.qmd)
+- [Jonathan Houseley](jonathan-houseley.qmd)
+- [Nigel J Robinson](nigel-j-robinson.qmd)
+- [Shelley D Copley](shelley-d-copley.qmd)
+- [Stanislas Leibler](stanislas-leibler.qmd)
+- [Susan M Rosenberg](susan-m-rosenberg.qmd)

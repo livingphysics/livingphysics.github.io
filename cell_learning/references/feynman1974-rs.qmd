@@ -1,0 +1,19 @@
+---
+title: "Cargo Cult Science"
+subtitle: "Citation key: Feynman1974-rs"
+---
+
+*NA · 1974*
+
+[📄 Download PDF](../files/Feynman_1974_-_Cargo_Cult_Science.pdf)
+
+```bibtex
+@MISC{Feynman1974-rs,
+title = "Cargo Cult Science",
+author = "Feynman, Richard P",
+journal = NA,
+volume = “”,
+year = 1974,
+language = “en”
+}
+```

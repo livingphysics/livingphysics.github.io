@@ -1,0 +1,47 @@
+---
+title: "Environment-to-phenotype mapping and adaptation strategies in varying environments"
+subtitle: "Citation key: Xue2019-wy"
+---
+
+*Proc. Natl. Acad. Sci. U. S. A. · 2019*
+
+**Tags:** Theory
+
+[📄 Download PDF](../files/Xue_et_al._2019_-_Environment-to-phenotype_mapping_and_adaptation_strategies_in_varying_environments.pdf)
+
+```bibtex
+@ARTICLE{Xue2019-wy,
+title = "Environment-to-phenotype mapping and adaptation strategies in
+varying environments",
+author = "Xue, Bingkan and Sartori, Pablo and Leibler, Stanislas",
+abstract = "Biological organisms exhibit diverse strategies for adapting to
+varying environments. For example, a population of organisms may
+express the same phenotype in all environments “unvarying” strategy or follow environmental cues and express alternative phenotypes to match the environment “tracking” strategy or
+diversify into coexisting phenotypes to cope with environmental
+uncertainty (``bet-hedging strategy''). We introduce a general
+framework for studying how organisms respond to environmental
+variations, which models an adaptation strategy by an abstract
+mapping from environmental cues to phenotypic traits. Depending
+on the accuracy of environmental cues and the strength of natural
+selection, we find different adaptation strategies represented by
+mappings that maximize the long-term growth rate of a population.
+The previously studied strategies emerge as special cases of our
+model: The tracking strategy is favorable when environmental cues
+are accurate, whereas when cues are noisy, organisms can either
+use an unvarying strategy or, remarkably, use the uninformative
+cue as a source of randomness to bet hedge. Our model of the
+environment-to-phenotype mapping is based on a network with
+hidden units; the performance of the strategies is shown to rely
+on having a high-dimensional internal representation, which can
+even be random.",
+journal = "Proc. Natl. Acad. Sci. U. S. A.",
+volume = 116,
+number = 28,
+pages = "13847--13855",
+month = jul,
+year = 2019,
+keywords = "evolutionary theory; fluctuating environments; phenotypic
+plasticity; population dynamics; survival strategies",
+language = "en"
+}
+```

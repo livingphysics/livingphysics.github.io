@@ -1,0 +1,42 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "people/*.qmd"
+    - "references/*.qmd"
+
+website:
+  title: "Cell Learning"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Proposal
+      - href: people/index.qmd
+        text: People
+      - href: references/index.qmd
+        text: References
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - href: index.qmd
+        text: Proposal
+      - section: People
+        href: people/index.qmd
+        contents:
+          - auto: people/*.qmd
+      - section: References
+        href: references/index.qmd
+        contents:
+          - references/index.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    css: styles.css
+    grid:
+      body-width: 900px
+    html-math-method: mathjax

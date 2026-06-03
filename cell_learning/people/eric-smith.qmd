@@ -1,0 +1,13 @@
+---
+title: "Eric Smith"
+---
+
+Paragraph for main document from the Eric Smith page
+
+Summary of contributions
+
+## Related references
+
+| Reference | Title |
+| --- | --- |
+| [Copley2007-xo](../references/copley2007-xo.qmd) | The origin of the RNA world: co-evolution of genes and metabolism |

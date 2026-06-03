@@ -1,0 +1,25 @@
+---
+title: "A switch from high-fidelity to error-prone DNA double-strand break repair underlies stress-induced mutation"
+subtitle: "Citation key: Ponder2005-et"
+---
+
+*Mol. Cell · 2005*
+
+**Tags:** Directed mutation debate, Spatial Non-randomness, Temporal Non-randomness
+
+[📄 Download PDF](../files/Ponder_et_al._2005_-_A_switch_from_high-fidelity_to_error-prone_DNA_double-strand_break_repair_underlies_stress-induced_mutation.pdf)
+
+```bibtex
+@ARTICLE{Ponder2005-et,
+title = "A switch from high-fidelity to error-prone {DNA} double-strand
+break repair underlies stress-induced mutation",
+author = "Ponder, Rebecca G and Fonville, Natalie C and Rosenberg, Susan M",
+journal = "Mol. Cell",
+volume = 19,
+number = 6,
+pages = "791--804",
+month = sep,
+year = 2005,
+language = "en"
+}
+```

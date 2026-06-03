@@ -1,0 +1,27 @@
+---
+title: "Synonymous mutations make dramatic contributions to fitness when growth is limited by a weak-link enzyme"
+subtitle: "Citation key: Kristofich2018-kd"
+---
+
+*PLoS Genet. · 2018*
+
+**Tags:** Synonymous Mutations
+
+[📄 Download PDF](../files/Kristofich_et_al._2018_-_Synonymous_mutations_make_dramatic_contributions_to_fitness_when_growth_is_limited_by_a_weak-link_enzyme.pdf)
+
+```bibtex
+@ARTICLE{Kristofich2018-kd,
+title = "Synonymous mutations make dramatic contributions to fitness when
+growth is limited by a weak-link enzyme",
+author = "Kristofich, Johncarlo and Morgenthaler, Andrew B and Kinney,
+Wallis R and Ebmeier, Christopher C and Snyder, Daniel J and Old,
+William M and Cooper, Vaughn S and Copley, Shelley D",
+journal = "PLoS Genet.",
+volume = 14,
+number = 8,
+pages = "e1007615",
+month = aug,
+year = 2018,
+language = "en"
+}
+```

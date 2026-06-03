@@ -1,0 +1,16 @@
+---
+title: "Stanislas Leibler"
+---
+
+Paragraph for main document from the Stan Leibler page
+
+Summary of contributions
+
+## Related references
+
+| Reference | Title |
+| --- | --- |
+| [Xue2016-ng](../references/xue2016-ng.qmd) | Evolutionary learning of adaptation to varying environments through a transgenerational feedback |
+| [Rivoire2014-lh](../references/rivoire2014-lh.qmd) | A model for the generation and transmission of variations in evolution |
+| [Murugan2015-rz](../references/murugan2015-rz.qmd) | Multifarious assembly mixtures: systems allowing retrieval of diverse stored structures |
+| [Xue2019-wy](../references/xue2019-wy.qmd) | Environment-to-phenotype mapping and adaptation strategies in varying environments |

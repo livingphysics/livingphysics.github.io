@@ -1,0 +1,40 @@
+---
+title: "Directed differentiation of human pluripotent stem cells to cerebral cortex neurons and neural networks"
+subtitle: "Citation key: Shi2012-hu"
+---
+
+*Nat. Protoc. · 2012*
+
+**Tags:** Neurons
+
+[📄 Download PDF](../files/Shi_et_al._2012_-_Directed_differentiation_of_human_pluripotent_stem_cells_to_cerebral_cortex_neurons_and_neural_networks.pdf)
+
+```bibtex
+@ARTICLE{Shi2012-hu,
+title = "Directed differentiation of human pluripotent stem cells to
+cerebral cortex neurons and neural networks",
+author = "Shi, Yichen and Kirwan, Peter and Livesey, Frederick J",
+abstract = "Efficient derivation of human cerebral neocortical neural stem
+cells (NSCs) and functional neurons from pluripotent stem cells
+(PSCs) facilitates functional studies of human cerebral cortex
+development, disease modeling and drug discovery. Here we provide
+a detailed protocol for directing the differentiation of human
+embryonic stem cells (hESCs) and induced pluripotent stem cells
+(iPSCs) to all classes of cortical projection neurons. We
+demonstrate an 80-d, three-stage process that recapitulates
+cortical development, in which human PSCs (hPSCs) first
+differentiate to cortical stem and progenitor cells that then
+generate cortical projection neurons in a stereotypical temporal
+order before maturing to actively fire action potentials, undergo
+synaptogenesis and form neural circuits in vitro. Methods to
+characterize cortical neuron identity and synapse formation are
+described.",
+journal = "Nat. Protoc.",
+volume = 7,
+number = 10,
+pages = "1836--1846",
+month = oct,
+year = 2012,
+language = "en"
+}
+```

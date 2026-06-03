@@ -1,0 +1,43 @@
+---
+title: "RNA from Trained Aplysia Can Induce an Epigenetic Engram for Long-Term Sensitization in Untrained Aplysia"
+subtitle: "Citation key: Bedecarrats2018-xx"
+---
+
+*eNeuro · 2018*
+
+**Tags:** Neurons, RNA Transfer
+
+[📄 Download PDF](../files/Bedecarrats_et_al._2018_-_RNA_from_Trained_Aplysia_Can_Induce_an_Epigenetic_Engram_for_Long-Term_Sensitization_in_Untrained_Aplysia.pdf)
+
+```bibtex
+@ARTICLE{Bedecarrats2018-xx,
+title = "{RNA} from Trained Aplysia Can Induce an Epigenetic Engram for
+{Long-Term} Sensitization in Untrained Aplysia",
+author = "B{\'e}d{\'e}carrats, Alexis and Chen, Shanping and Pearce, Kaycey
+and Cai, Diancai and Glanzman, David L",
+abstract = "The precise nature of the engram, the physical substrate of
+memory, remains uncertain. Here, it is reported that RNA
+extracted from the central nervous system of Aplysia given
+long-term sensitization (LTS) training induced sensitization when
+injected into untrained animals; furthermore, the RNA-induced
+sensitization, like training-induced sensitization, required DNA
+methylation. In cellular experiments, treatment with RNA
+extracted from trained animals was found to increase excitability
+in sensory neurons, but not in motor neurons, dissociated from
+na{\"\i}ve animals. Thus, the behavioral, and a subset of the
+cellular, modifications characteristic of a form of
+nonassociative long-term memory (LTM) in Aplysia can be
+transferred by RNA. These results indicate that RNA is sufficient
+to generate an engram for LTS in Aplysia and are consistent with
+the hypothesis that RNA-induced epigenetic changes underlie
+memory storage in Aplysia.",
+journal = "eNeuro",
+volume = 5,
+number = 3,
+month = may,
+year = 2018,
+keywords = "Aplysia; RNA; epigenetics; learning and memory; memory transfer;
+sensitization",
+language = "en"
+}
+```

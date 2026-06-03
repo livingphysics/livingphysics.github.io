@@ -1,0 +1,26 @@
+---
+title: "Environmental change drives accelerated adaptation through stimulated copy number variation"
+subtitle: "Citation key: Hull2017-bn"
+---
+
+*PLoS Biol. · 2017*
+
+**Tags:** CNV, Spatial Non-randomness, Temporal Non-randomness, UK Based
+
+[📄 Download PDF](../files/Hull_et_al._2017_-_Environmental_change_drives_accelerated_adaptation_through_stimulated_copy_number_variation.pdf)
+
+```bibtex
+@ARTICLE{Hull2017-bn,
+title = "Environmental change drives accelerated adaptation through
+stimulated copy number variation",
+author = "Hull, Ryan M and Cruz, Cristina and Jack, Carmen V and Houseley,
+Jonathan",
+journal = "PLoS Biol.",
+volume = 15,
+number = 6,
+pages = "e2001333",
+month = jun,
+year = 2017,
+language = "en"
+}
+```

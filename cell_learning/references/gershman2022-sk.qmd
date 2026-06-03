@@ -1,0 +1,42 @@
+---
+title: "The molecular memory code and synaptic plasticity: a synthesis"
+subtitle: "Citation key: Gershman2022-sk"
+---
+
+*ArXiv · 2022*
+
+**Tags:** Neurons
+
+[📄 Download PDF](../files/Gershman_2022_-_The_molecular_memory_code_and_synaptic_plasticity_-_a_synthesis.pdf)
+
+```bibtex
+@ARTICLE{Gershman2022-sk,
+title = "The molecular memory code and synaptic plasticity: a
+synthesis",
+author = "Gershman, Samuel J",
+abstract = "The most widely accepted view of memory in the brain holds
+that synapses are the storage sites of memory, and that
+memories are formed through associative modification of
+synapses. This view has been challenged on conceptual and
+empirical grounds. As an alternative, it has been proposed
+that molecules within the cell body are the storage sites of
+memory, and that memories are formed through biochemical
+operations on these molecules. This paper proposes a
+synthesis of these two views, grounded in a computational
+theory of memory. Synapses are conceived as storage sites
+for the parameters of an approximate posterior probability
+distribution over latent causes. Intracellular molecules are
+conceived as storage sites for the parameters of a
+generative model. The theory stipulates how these two
+components work together as part of an integrated algorithm
+for learning and inference.",
+journal = ArXiv,
+volume = ,
+month = sep,
+year = 2022,
+copyright = "http://creativecommons.org/licenses/by/4.0/",
+archivePrefix = "arXiv",
+primaryClass = "http://q-bio.nc/",
+eprint = "2209.04923"
+}
+```

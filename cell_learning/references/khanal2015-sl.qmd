@@ -1,0 +1,28 @@
+---
+title: "Differential effects of a mutation on the normal and promiscuous activities of orthologs: implications for natural and directed evolution"
+subtitle: "Citation key: Khanal2015-sl"
+---
+
+*Mol. Biol. Evol. · 2015*
+
+**Tags:** Enzyme Promiscuity
+
+[📄 Download PDF](../files/Khanal_et_al._2015_-_Differential_effects_of_a_mutation_on_the_normal_an_..._vities_of_orthologs_-_implications_for_natural_and_directed_evolution.pdf)
+
+```bibtex
+@ARTICLE{Khanal2015-sl,
+title = "Differential effects of a mutation on the normal and promiscuous
+activities of orthologs: implications for natural and directed
+evolution",
+author = "Khanal, Akhil and Yu McLoughlin, Sean and Kershner, Jamie P and
+Copley, Shelley D",
+journal = "Mol. Biol. Evol.",
+volume = 32,
+number = 1,
+pages = "100--108",
+month = jan,
+year = 2015,
+keywords = "ProA; enzyme evolution; epistasis; molecular evolution",
+language = "en"
+}
+```

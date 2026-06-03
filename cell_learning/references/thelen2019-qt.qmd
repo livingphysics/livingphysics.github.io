@@ -1,0 +1,50 @@
+---
+title: "The Role of RNA Binding Proteins for Local mRNA Translation: Implications in Neurological Disorders"
+subtitle: "Citation key: Thelen2019-qt"
+---
+
+*Front Mol Biosci · 2019*
+
+**Tags:** Neurons, RNA, Tri-nucleotide Repeats
+
+[📄 Download PDF](../files/Thelen_and_Kye_2019_-_The_Role_of_RNA_Binding_Proteins_for_Local_mRNA_Translation_-_Implications_in_Neurological_Disorders.pdf)
+
+```bibtex
+@ARTICLE{Thelen2019-qt,
+title = "The Role of {RNA} Binding Proteins for Local {mRNA} Translation:
+Implications in Neurological Disorders",
+author = "Thelen, Maximilian Paul and Kye, Min Jeong",
+abstract = "As neurons are one of the most highly polarized cells in our
+body, they require sophisticated cellular mechanisms to maintain
+protein homeostasis in their subcellular compartments such as
+axons and dendrites. When neuronal protein homeostasis is
+disturbed due to genetic mutations or deletions, this often
+results in degeneration of neurons leading to devastating outcome
+such as spinal muscular atrophy (SMA), amyotrophic lateral
+sclerosis (ALS), and fragile X syndrome (FXS). Ribonucleoprotein
+(RNP) complexes are macromolecular complexes composed of RNA
+binding proteins (RBPs) and their target RNAs. RBPs contain RNA
+binding domains and bind to RNA molecules via specific sequence
+motifs. RNP complexes have various functions in gene expression
+including messenger RNA (mRNA) trafficking, RNA processing and
+silencing. In neurons, RBPs deliver specific sets of mRNAs to
+subcellular compartments such as axons and dendrites to be
+locally translated. Mutations or deletions in genes coding for
+RNPs have been reported as causes for neurological disorders such
+as SMA, ALS, and FXS. As RBPs determine axonal or dendritic mRNA
+repertoires as well as proteomes by trafficking selective mRNAs
+and regulating local protein synthesis, they play a crucial role
+for neuronal function. In this review, we summarize the role of
+well-known RBPs, SMN, TDP-43, FUS, and FMRP, and review their
+function for local protein synthesis in neurons. Furthermore, we
+discuss their pathological contribution to the neurological
+disorders.",
+journal = "Front Mol Biosci",
+volume = 6,
+pages = "161",
+year = 2019,
+keywords = "ALS; FXS; RNA binding proteins; SMA; local protein synthesis;
+mRNA translation; neurodegeneration; ribonucleoproteins",
+language = "en"
+}
+```

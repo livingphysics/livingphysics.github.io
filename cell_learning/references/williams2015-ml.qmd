@@ -1,0 +1,27 @@
+---
+title: "MSH3 Promotes Dynamic Behavior of Trinucleotide Repeat Tracts In Vivo"
+subtitle: "Citation key: Williams2015-ml"
+---
+
+*Genetics · 2015*
+
+**Tags:** MMR, Tri-nucleotide Repeats
+
+[📄 Download PDF](../files/Williams_and_Surtees_2015_-_MSH3_Promotes_Dynamic_Behavior_of_Trinucleotide_Repeat_Tracts_In_Vivo.pdf)
+
+```bibtex
+@ARTICLE{Williams2015-ml,
+title = "{MSH3} Promotes Dynamic Behavior of Trinucleotide Repeat Tracts
+In Vivo",
+author = "Williams, Gregory M and Surtees, Jennifer A",
+journal = "Genetics",
+volume = 200,
+number = 3,
+pages = "737--754",
+month = jul,
+year = 2015,
+keywords = "Msh2-Msh3; Saccharomyces cerevisiae; mismatch repair;
+trinucleotide repeat tract",
+language = "en"
+}
+```

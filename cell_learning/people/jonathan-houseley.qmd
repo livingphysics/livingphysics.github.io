@@ -1,0 +1,16 @@
+---
+title: "Jonathan Houseley"
+---
+
+[Jon Houseley " Babraham Institute](https://www.babraham.ac.uk/our-research/epigenetics/jon-houseley)
+
+Recent work from Jon Houseley shows that highly directed mutations in yeast in response to copper toxicity are in fact adaptive. A series of papers his lab has demonstrated that in response to  copper, an environmental stressor in yeast, cells undergo stimulated copy number amplification of the CUP1 gene, which encodes a protein that sequesters excess copper.  This stimulated copy number variation (CNV) is dependent on the transcription of the gene, and it results in the formation of extra-chromosomal circular DNA elements, which form due to the repetitive nature of the CUP1 locus.  This CNV is likely a result of the interplay between the transcriptional machinery and the DNA replication machinery, as it is dependent on late firing origins of replication present in CUP1 repeats regions.
+
+Summary of contributions
+
+## Related references
+
+| Reference | Title |
+| --- | --- |
+| [Hull2017-bn](../references/hull2017-bn.qmd) | Environmental change drives accelerated adaptation through stimulated copy number variation |
+| [Hull2019-qq](../references/hull2019-qq.qmd) | Transcription-induced formation of extrachromosomal DNA during yeast ageing |

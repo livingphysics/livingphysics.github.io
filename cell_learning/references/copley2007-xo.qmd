@@ -1,0 +1,25 @@
+---
+title: "The origin of the RNA world: co-evolution of genes and metabolism"
+subtitle: "Citation key: Copley2007-xo"
+---
+
+*Bioorg. Chem. · 2007*
+
+**Tags:** Metabolism
+
+[📄 Download PDF](../files/Copley_et_al._2007_-_The_origin_of_the_RNA_world_-_co-evolution_of_genes_and_metabolism.pdf)
+
+```bibtex
+@ARTICLE{Copley2007-xo,
+title = "The origin of the {RNA} world: co-evolution of genes and
+metabolism",
+author = "Copley, Shelley D and Smith, Eric and Morowitz, Harold J",
+journal = "Bioorg. Chem.",
+volume = 35,
+number = 6,
+pages = "430--443",
+month = dec,
+year = 2007,
+language = "en"
+}
+```

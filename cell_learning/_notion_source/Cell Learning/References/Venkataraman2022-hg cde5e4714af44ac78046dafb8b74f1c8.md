@@ -1,0 +1,17 @@
+# Venkataraman2022-hg
+
+Bibtex: @ARTICLE{Venkataraman2022-hg,
+title = "Processive and distributive non-equilibrium networks
+discriminate in alternate limits",
+author = "Venkataraman, G G and Miska, E A and Jordan, David J",
+journal = "J Stat. Mech.",
+volume = “”,
+publisher = "http://iopscience.iop.org/",
+year = 2022,
+language = “en”
+}
+Tags: Biological Computation, Theory
+Title: Processive and distributive non-equilibrium networks discriminate in alternate limits
+Journal: J Stat. Mech.
+PDF: ../Venkataraman_et_al._2022_-_Processive_and_distributive_non-equilibrium_networks_discriminate_in_alternate_limits.pdf
+Year: 2022

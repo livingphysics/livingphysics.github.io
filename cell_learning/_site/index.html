@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Cell Learning</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-88a5d52b92e05037114998d63bd85d90.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Cell Learning</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Proposal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./people/index.html"> 
+<span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./references/index.html"> 
+<span class="menu-text">References</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Proposal</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Proposal</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./people/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">People</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./people/daniel-jarosz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Daniel Jarosz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./people/erez-braun.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Erez Braun</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./people/eric-smith.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Eric Smith</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./people/jeremy-gunawardena.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jeremy Gunawardena</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./people/jonathan-houseley.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jonathan Houseley</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./people/nigel-j-robinson.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nigel J Robinson</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./people/shelley-d-copley.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shelley D Copley</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./people/stanislas-leibler.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stanislas Leibler</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./people/susan-m-rosenberg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Susan M Rosenberg</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./references/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#scientific-background" id="toc-scientific-background" class="nav-link" data-scroll-target="#scientific-background">Scientific Background</a>
+  <ul class="collapse">
+  <li><a href="#overcoming-evolutionary-speed-limits" id="toc-overcoming-evolutionary-speed-limits" class="nav-link" data-scroll-target="#overcoming-evolutionary-speed-limits">Overcoming evolutionary speed limits</a></li>
+  <li><a href="#learning-to-improvise" id="toc-learning-to-improvise" class="nav-link" data-scroll-target="#learning-to-improvise">Learning to improvise</a></li>
+  <li><a href="#failing-to-learn" id="toc-failing-to-learn" class="nav-link" data-scroll-target="#failing-to-learn">Failing to learn</a></li>
+  <li><a href="#learning-to-learn" id="toc-learning-to-learn" class="nav-link" data-scroll-target="#learning-to-learn">Learning to learn</a></li>
+  <li><a href="#metabolism-perception-and-control" id="toc-metabolism-perception-and-control" class="nav-link" data-scroll-target="#metabolism-perception-and-control">Metabolism: perception and control</a></li>
+  <li><a href="#cell-learning-and-the-brain" id="toc-cell-learning-and-the-brain" class="nav-link" data-scroll-target="#cell-learning-and-the-brain">Cell learning and the brain</a></li>
+  </ul></li>
+  <li><a href="#sociological-considerations" id="toc-sociological-considerations" class="nav-link" data-scroll-target="#sociological-considerations">Sociological Considerations</a></li>
+  <li><a href="#people" id="toc-people" class="nav-link" data-scroll-target="#people">People</a></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Cell Learning</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>The overwhelming diversity of life on earth is evidence of the ability of biological systems to adapt and diversify to an extent unmatched by other complex physical systems. It is clear that given enough time, we could engineer biological matter to solve pressing human problems: for example, we could evolve bacteria to consume toxic waste, modify plants to be more heat and drought resistant, or create cell lines that are particularly well suited for making drugs. The primary goal of this research program would be to make the process of evolving biological systems to solve problems faster, more efficient, and more general. We aim do this by focusing resources on <em>Cell Learning</em>.</p>
+</section>
+<section id="scientific-background" class="level1">
+<h1>Scientific Background</h1>
+<p>The traditionalist view of biology considers the genome as a central “blueprint” from which function and structure emerge as a directed, acyclic map, a so-called “genotype <span class="math inline">\(\to\)</span>phenotype” map.&nbsp; Evolution occurs through changes to the blueprint which propagate to changes in phenotype and eventually fitness, subjected to selection as the “survival of the fittest”. These changes, or mutations, are dogmatically taken to be random both in space and time.&nbsp; Spatially random means that changes are to be uniform over genome position, and temporally random means that they occur at random times and not e.g.&nbsp;in response to environmental cues.&nbsp;</p>
+<p>The classic experiment of Luria and Delbruk, is thought to have proven, once and for all, that mutations occur randomly in time, and are not <em>directed</em>.&nbsp; It is clear now that, while this beautiful, foundational experiment in quantitative biology demonstrates that it is true that mutations of <em>Escherichia coli</em> that provide resistance to phage infection arise randomly, it is not true for all biological systems.&nbsp; In a sense, this experiment was almost too beautiful, and its results served to stifle research on directed mutation for decades, as discussed at length below, in the context of the work of <a href="./people/susan-m-rosenberg.html">Susan M. Rosenberg</a> and <a href="./people/jonathan-houseley.html">Jonathan Houseley</a>, among others.&nbsp;</p>
+<p>Among evolutionary biologists, non-random mutation is known as <em>directed</em> mutation. There has been a long and contentious <a href="./references/index.html">debate</a> about the existence of directed mutations, but their existence has been clearly settled. As is common in this field, remarkable results are often met with small and grudging concessions. Once the existence of a phenomenon is proved, it is reluctantly accepted with caveats, one of the most common being, that yes it exists but no it is not beneficial, or adaptive. Thus the existence of directed mutation was quickly superseded by the non-existence of adaptive mutation. The new dogma is then that directed mutations are simply the results of the breakdown of normally high-fidelity systems and the “blind watchmaker” is replaced by the “sick watchmaker”.</p>
+<p>As we will show, in biology, simple paradigms often work almost “too-well”, so well in fact that they stigmatize alternative avenues of research. Unfortunately, this leads to critical slowing of progress as a field reaches the boundary of what these paradigms can explain in the absence of alternatives. There is a bright side however, the slowing of advancement in these fields has not yet come with a concomitant slowing of research output, in fact the opposite has happened. Lack of progress has led to an expansion of data collection as more haystacks need to be searched for ever fewer needles.&nbsp; The fact that his data is collected and analyzed through the lens of paradigms that have reached the end of their useful lives is not a complete disaster. Although misinterpreted in the context in which they are presented, the data nonetheless exist and were collected by instruments that are at least pointed in the right direction.&nbsp; This provides a unique opportunity to accelerate progress simply by changing the lens.</p>
+<section id="overcoming-evolutionary-speed-limits" class="level2">
+<h2 class="anchored" data-anchor-id="overcoming-evolutionary-speed-limits">Overcoming evolutionary speed limits</h2>
+<p>Neo-Darwinian evolution by random mutation and natural selection is necessarily slow, and speeding it up, by increasing effective population size, is extremely inefficient. An exponentially growing population of <em>E. coli of <span class="math inline">\(10^{10}\)</span></em> cells <strong>will have a mutation at every site in its genome after one generation. Under very strong selection, we can fix a mutation in one generation, however if only one mutation confers survival, <span class="math inline">\(10^{10}-1\)</span> cells worth of biomass are lost. If we could speed up evolutionary process with minimal increases in the strength of selection, we could avoid the pitfalls associated with strong selection and still solve problems in reasonable time. One way to increase the speed of such evolutionary processes is to relax the requirements that mutations need be random. </strong></p>
+<p>We hypothesize that environmental nutrients and toxins that invoke strong transcriptional responses may promote mutations such as copy number variations at induced loci, especially when those loci are repetitive in nature, effectively focusing mutations at genes that are important for growth in the presence of those nutrients or toxins, and thereby accelerating the formation of novel alleles that confer increased fitness in the current environment. We will look at this idea of induced CNV at repetitive loci n the context of neurons later in the document, but there is good evidence that stimulated mutation in adverse conditions is both common and adaptive, as discussed below.</p>
+<p><a href="./people/susan-m-rosenberg.html">Susan M Rosenberg</a> demonstrated that in the bacterial <em>Escherichia coli,</em> mutations are indeed not random as we’ve defined them. Rosenberg’s group engineered bacteria to have a nonfunctional Lac gene, which is required for growth on lactose.&nbsp; She observed that in response to this growth-arresting stress, a subpopulation of cells up-regulated their rate of mutagenesis. She further found that this up-regulation was localized to sites near DNA double-strand breaks.&nbsp; This subpopulation of mutator cells was able to escape growth arrest, and form colonies on lactose.&nbsp; Over the course of more than a decade, the Rosenberg group elucidated molecular mechanisms responsible for this adaptive mutagenesis.&nbsp; There appear to be two distinct mechanisms, corresponding to two different mutational strategies - point mutation and gene duplication.&nbsp; Both mechanisms require the SOS stress response for initiation, and are closely tied to competing high and low-fidelity polymerases competing for binding on open DNA strands during double-strand break repair. Although the Rosenberg group showed conclusively that mutations could be regulated in time, the evidence for spatial regulation was weaker.&nbsp; Her group observed that the mutational landscape broadly followed the distribution of double-strand breaks in DNA throughout the genome; mutations were not localized to the Lac gene.</p>
+<p>Recent work from <a href="./people/jonathan-houseley.html">Jon Houseley</a> shows that highly directed mutations in yeast in response to copper toxicity are in fact adaptive. A series of papers his lab has demonstrated that in response to copper, an environmental stressor in yeast, cells undergo stimulated copy number amplification of the CUP1 gene, which encodes a protein that sequesters excess copper. This stimulated copy number variation (CNV) is dependent on the transcription of the gene, and it results in the formation of extra-chromosomal circular DNA elements, which form due to the repetitive nature of the CUP1 locus. This CNV is likely a result of the interplay between the transcriptional machinery and the DNA replication machinery, as it is dependent on late firing origins of replication present in CUP1 repeats regions.</p>
+</section>
+<section id="learning-to-improvise" class="level2">
+<h2 class="anchored" data-anchor-id="learning-to-improvise">Learning to improvise</h2>
+<p>Cell learning has the potential to greatly speed up the evolution of novel function, in fact it was recognized over 100 years ago that learning (Baldwin effect) and phenotypic plasticity (genetic assimilation), for example, can speed up evolution. These ideas have recently been formalized into new general theories which account for adaptation within and across generations when learned information is passed down with differing heritabilities. These show directly the potential for <a href="./references/xue2016-ng.html">plasticity</a>, learning, and <a href="./references/rivoire2014-lh.html">transgenerational effects</a> to accelerate evolution. Interestingly some mechanisms, such as variation at repetitive loci, seem to facilitate accelerated evolution both in single cells such as yeast and in higher organisms, with a nice example coming from the <a href="./references/fondon2004-lt.html">morphological variation among dog breeds</a>.</p>
+<p>Growth and cell division, or at least the potential for growth and division, are universal properties of living systems. We can think of a biological homeostasis as the steady state of some subset of species in a complex non-equilibrium chemical system which maintain this process or its potential. We define learning as the adaptation of this system to maintain homeostasis in the face of changing environmental inputs. For example, when we introduce an antibiotic to a dividing bacteria, its steady state growth and cell division are disrupted. Ultimately, cells will find stable genetic changes which permit them to continue to grow and divide, but this process can be proceeded by many non-genetic but heritable improvisation steps. For example, when bacteria are challenged with antibiotics in a a gradient, cells first continue to grow without dividing. This increase in cell volume effectively dilutes the concentration of antibiotic in the cytoplasm, buying some time for the cell to come up with other solutions. Often, the next step is to over-express a non-specific efflux pump, which further reduces the cytoplasmic concentration. It is only upon this improvised base that cells have the time to establish more long term genetic solutions, such as changes in the protein to which the antibiotic binds .</p>
+<p>Closely related to cell learning is the ability of cells to learn how to deal with new challenges. More precisely, we are interested in ways cells find to maintain steady states in the face of changing environmental inputs. This can be called improvisation in cases where cells must learn to adapt to combinations of environments that they have never seen before, and memory when they recall how to adapt to environments they have previously experienced.</p>
+<p>We propose to engineer a cellular system that is optimized for its ability to learn and improvise.</p>
+<p>The potential for cellular systems to improvise was convincingly demonstrated in yeast in a set of experiments from the group of <a href="./people/erez-braun.html">Erez Braun</a>. In short, Braun and colleagues engineered a completely novel challenge for yeast to overcome by placing the genes required to synthesize an essential amino acid (histidine) under a promoter that yeast evolved to respond to the sugar galactose <a href="./references/stolovicki2006-sd.html">Stolovicki2006-sd</a>. In its evolutionary past, yeast preferred to use glucose over galactose as an energy source and so in the presence of glucose it would turn off the galactose promoter. Thus yeast grown in glucose with this Gal-His operon would face a challenge, to turn off the galactose promoter would prevent the synthesis of an essential amino acid. Braun and colleagues then showed that yeast are able to learn how to solve this problem and rapidly adapt their gene expression to de-repress the promoter and produce the necessary histidine. They checked that this adaptation was not due to genetic mutations and further showed through transcriptomics that different populations of yeast arrived at unique solutions to the challenge.</p>
+</section>
+<section id="failing-to-learn" class="level2">
+<h2 class="anchored" data-anchor-id="failing-to-learn">Failing to learn</h2>
+<p>Overlooked modes of cellular learning or improvisation may be one reason for the “failures” of traditional directed evolution approaches. For example, imagine you want to improve the function of an enzyme via directed evolution by making the product of the enzyme necessary for the growth of a micro-organism. In many cases when this is attempted, the cell finds some sort of “work-around”, ultimately surviving without direct improvements to the efficiency of the enzyme your design has targeted. Some very nice work showing the ways in which cells learn to deal with these so-called “weak-link” enzymes comes from the <a href="./people/shelley-d-copley.html">Copley lab</a>.</p>
+<p>A promiscuous enzyme is one who that is involved in more than one reaction. The Copley lab has shown that when the secondary function of a promiscuous enzyme is made essential in <em>Escherichia coli,</em> the gene encoding the ‘weak-link’ enzyme is often amplified, but mutations improving the now essential activity occurred only rarely.</p>
+<blockquote class="blockquote">
+<p><em>Most adaptive mutations occurred elsewhere in the genome. Some mutations increase expression of the enzyme upstream of the weak-link enzyme, pushing material through the dysfunctional metabolic pathway. Others enhance production of a co-substrate for a downstream enzyme, thereby pulling material through the pathway. Most of these latter mutations are detrimental in wild-type&nbsp;E. coli, and thus would require reversion or compensation once a sufficient new activity has evolved</em></p>
+</blockquote>
+<p>In the context of cell learning, any cell that is able to learn, i.e.&nbsp;make the requisite regulatory changes (e.g.&nbsp;via plasticity or transcriptional adaptation) to the upstream or downstream enzymes would have a growth advantage. Then via a Baldwin effect or genetic assimilation type mechanism, these changes could be remembered for future generations and fixed as mutations which provide the same transcriptional changes. Thus it may be precisely the cells ability to learn that leads to the prevalence of such “failures” in directed evolution experiments. In some cases, remembering what the cell has learned need not even require making mutations in the DNA. A nice example comes from the Jarosz lab in their studies of heritable gene expression programs that result from non-mutation based triggers.</p>
+<p>Many organisms, including yeast, have ancient transcriptional programs that dictate how and when to use different metabolic energy sources, of which carbon sources are one of the most important. In many organisms, glucose is a preferred carbon source, and its presence will often prevent cells from utilizing other carbon sources. However, depending on the statistics of how often glucose is encountered, the strength of this repression should in principle vary, allowing yeast to switch fro being metabolic specialists to generalists. In this context, <a href="./people/daniel-jarosz.html">Daniel Jarosz</a> and colleagues have found that yeast can generate a non-mutation based heritable switch to relive glucose associated repression, called [GAR+]. The Jarosz lab characterizes this heritable element as a prion, as it has the hallmarks of a prion, it arises at a frequency higher than expected for genetic mutations, shows non-mendelian inheritance, which is chaperone dependent. Prions are usually associated with so called amyloid proteins, e.g.&nbsp;the [PSI+] or [URE3] prions in yeast, which can adopt different folded states, however [GAR+] seems to be a non-amyloid based prion.</p>
+<p>Perhaps even more intriguing is the [SMAUG+] prion, which has also been studied extensively by the Jarosz lab, which is a prion formed by the yeast homolog of RNA binding protein encoded by VTS1 gene. This prion is involved in the balance between mitotic proliferation and meiosis in yeast and seems particularly important for predictive growth strategies in fluctuating environments. Like the [GAR+] prion, the [SMAUG+] prion seems not to be amyloid based, but rather depends on the condensation of Vts1 into phase separated granules. These granules are heritable and result in coordinated transcriptional changes which down-regulate a coherent network of mRNAs and improve growth under nutrient limited conditions. This is not simply a yeast protein, however, and has two homologs in mammals. Incredibly, <a href="./references/baez2005-lo.html">in mice</a>, mSmaug1 is expressed in the central nervous system, and is abundant granules that are localized in post-synaptic sub-cellular regions where translation is tightly regulated by synaptic stimulation.</p>
+</section>
+<section id="learning-to-learn" class="level2">
+<h2 class="anchored" data-anchor-id="learning-to-learn">Learning to learn</h2>
+<p>We propose that the ability of cellular systems to learn and improvise is rooted in the combinatorial nature of the chemical reaction networks that underlie cellular function.</p>
+<p>For example, it has been proposed that the combinatorial nature of multi-protein complexes can be utilized to store memories by tuning the strength of interactions between individual components. These <a href="./references/murugan2015-rz.html">multifarious assembly mixtures</a> can then “recall” memories, in this case memories are large multi-protein complexes with a specific composition, by seeding the mixture with a particular sub-complex and allowing the rest to self-assemble. Other recent work from the <a href="./people/jeremy-gunawardena.html">Gunawardena</a> lab, has shown that cooperatively in the binding of such complexes, mediated through allosteric conformational changes has the capacity to generate arbitrarily <a href="./references/biddle2021-by.html">complex integration functions</a>.</p>
+<p>The authors of this proposal have recently published a <a href="./references/venkataraman2022-hg.html">paper</a> that demonstrates how the dynamics of the non-equilibrium assembly of combinatorial complexes can be tuned to drive either recall or innovation. Such complex formation could occur processively, with assembly occurring sequentially in a prescribed order, or they could form in a distributive manner, in which any interacting components are able to bind and assemble in any order. We show that both schemes are capable of selectively forming a desired final complex even in the presence of competing reactions and thus are capable of information processing. Additionally, we show how networks can be designed in a way that modulating the propensity of single reaction can shift a process between processivity and distributivity, and that energy consumption plays a central role in such a switch. Complexes that form in a distributive manner are naturally able to explore more of the combinatorial complex space, providing a basis for innovation. The major finding of our work was to show that innovation and precise recall do not preclude each other and in fact are possible <em>using the same hard-wired network.</em> Furthermore, this shift can be modulated by simple ubiquitous processes such as the consumption of ATP.</p>
+<p>An interesting prediction of our work is that distributive networks, capable of innovation and improvisation, are likely to have many multivalent interactions and to have active, energy driven, processes that disassemble them. The active disassembly is counter-intuitive, but necessary for accuracy. These features turn out to be hallmarks of the nascent field of liquid-liquid phase separation in biology. Phase separated, or membrane-less organelles, are ubiquitous in cells, are multicomponent complexes that not only incorporate a variety of proteins but also often nucleic acid scaffolds. Also known as granules, one major class is called stress granules, and these form when cells experience generalized stress conditions. It is consistent with our predictions that their formation could be used to generate novelty in hopes of adapting to unexpected stresses.</p>
+<p>Recently, <a href="./references/cotton2022-in.html">Cotton and colleagues</a> have shown that catalysis alone can induce granule formation, and that phase separation induced in this manner, rather than by equilibrium interactions, requires a fast rate of catalytic turnover. This means that such a mechanism is in agreement with our prediction that kinetic regime reactions, which are fast and dissipative, should favor phase separation. The authors also point out that upon phase separation induced by catalysis, the catalytic rate drops, providing a potential auto regulatory mechanism for metabolic reactions.</p>
+<p>One such catalytic mechanism, which we have also shown can be used to drive kinetic discrimination, is the active, energy driven, disassembly of RNA duplexes through the action of RNA helicases. So-called DEAD-box RNA helicases are known to be major components associated with granules throughout biology. This points to RNA as a possible central player in cell learning and an essential component of the molecular basis of adaptation and improvisation. RNA has recently been show to play an important but mysterious role in learning in simple systems, such as planarian, aplysia, and in the nematode C. elegans, particularly in this animals ability to learn to recognize and avoid bacteria harboring either synthetic RNAi molecules that target conserved genes, <a href="./references/melo2012-zi.html">Melo2012-zi</a> or natural “avoidance-triggering” RNA <a href="./references/kaletsky2020-hn.html">Kaletsky2020-hn</a>.</p>
+</section>
+<section id="metabolism-perception-and-control" class="level2">
+<h2 class="anchored" data-anchor-id="metabolism-perception-and-control">Metabolism: perception and control</h2>
+<p>It is of note that the examples of learning and improvisation we have so far mentioned all concern the adaptation of the cellular metabolism, often to unforeseen challenges as in the cases of the essential amino acid production of the Braun group or of the weak link enzymes of the Copley group, but also as algorithms which optimize behavioral responses with respect to past evolutionary history as in the glucose repression or copper toxicity programs. Central to all of metabolism is the balance between oxidation and reduction, electron transport plays the critical role and in both organic and inorganic settings. This theory of universal metabolism come from the work of <a href="./people/eric-smith.html">Eric Smith</a> and in it, he proposes that all life can be subdivided according to where they get their energy, and primarily whether they are reductive or oxidative, and whether they are heterotrophic or autotrophic. In his theory of the origin of life, he shows how persistent metabolic cycles, and in particular the citric acid cycle (which underlies all known life on early) not only self-organizes, but <strong>inevitably</strong> self organizes because it acts to concentrate the enormous store of energy in the geo-chemistry of the earth itself. As he states, of the citric acid cycle,</p>
+<blockquote class="blockquote">
+<p><em>This cycle is self amplifying, it works from the environmental sources of carbon, it works from the earth’s sources of electrons, and everything in the biosphere is made from it. The biosphere is what you can make if these are the compounds you have.</em></p>
+</blockquote>
+<p>Smith takes the view that auto-catalytic metabolic cycles like the citric acid cycle are the underlying organizing principles of living systems. From this we infer that biological networks, from the molecular scale networks of gene regulatory interactions to the ecosystem scale networks of species interactions, are themselves organized around and in service to these metabolic cycles.</p>
+<p>A striking visual example of biological systems organizing around metabolism can be found in Windogradsky columns. These are columns of pond mud that are sealed in tall glass tubes in which micro-organisms organize themselves spatially according to redox potential, resulting in strikingly colorful visual bands. After sealing and priming with <span class="math inline">\(CO_2\)</span> from anaerobic bacteria present, distinct layers form that take advantage of the particular conditions generated spatially from countercurrent oxygen and hydrogen sulfide gradients, with sulfur reducing anaerobic and non-photosynthetic bacteria at the bottom, and photosynthetic, aerobic, non-sulphur bacteria at the top, with colorful layers in between of green and purple sulfur and non sulfur bacteria. This sort of community organization also appears in other chemical cycles, for example in bacterial communities that denitrify soil. Denitrification is a chemical process by which nitrate <span class="math inline">\(NO_3^-\)</span> is reduced back to molecular nitrogen <span class="math inline">\(N_2\)</span>. In bacteria, this process is carried out enzymatically in multiple steps that produce nitrite, nitric oxide, nitrous oxide, and finally molecular nitrogen (<span class="math inline">\(NO_3^- \to NO_2^- \to NO \to N_2O \to N_2\)</span>). Recently, <a href="./references/lycus2017-wq.html">genomic analysis</a> of denitrifying soil bacterial communities have shown that within a community, not all bacteria have all of the enzymes necessary for complete dentrification. What is most surprising though, is that some bacteria have the enzymes to make the toxic intermediate <span class="math inline">\(NO\)</span> but not to reduce it further, in isolation, these organisms would be unable to denitrify this toxic product further and would likely die. One possibility for this is that having different species with different sets of enzymes allows for reorganization of the relative enzyme levels through population dynamics, a mechanism of control independent of and orthogonal from gene regulatory networks.</p>
+<p>Another example of this metabolism first view which extends to the community or ecosystem level comes from some recent work from the group of Seppe Kuehn has shown that microbes in closed ecosystems will self-organize to persistently <a href="./references/de-jesus-astacio2021-ld.html">cycle carbon</a>. In context of the universal metabolism picture, we envision that the biological molecules reorganize themselves though both gene expression dynamics in the cell and though ecosystem dynamics in communities in service of the underlying metabolic cycle. This is a theme we will return to, that biological systems, organize their macromolecules not slavishly according to some genomic blueprint, but flexibly in service of the underlying metabolic cycles. It is also interesting to note that this organization occurs across scales, there is reorganization of of genetic networks within a cell, for example in the Gal::His system, there is re-organization between species e.g.&nbsp;in the [GAR+] prion system, and there is reorganization at the ecosystem scale in the persistent carbon cycling system.</p>
+<p>We propose that the redox state of the cell may be a collective variable that serves purposes of both perception and control. As an analogy, imagine driving a car and trying to keep it on the road in windy conditions. One solution would be to have a wind velocity sensor and to program a control system that accounts for the effects of the wind on the vehicle. However, by just keeping the car on the road in the windy conditions, you would find that your steering corrections are anti-correlated with the wind velocity, despite the fact that there is no sensor for wind as such. This sort of perceptual control allows for arbitrarily complex control based only on the <em>effects</em> of myriad unobserved variable on the observable state without requiring a direct sensor for each of these influences.</p>
+</section>
+<section id="cell-learning-and-the-brain" class="level2">
+<h2 class="anchored" data-anchor-id="cell-learning-and-the-brain">Cell learning and the brain</h2>
+<p>We propose that there is in fact a connection between cell learning and generalized learning in higher organisms. The idea that intra-cellular computation is occurring and complements synaptic based learning and memory is not new, for example integrate and fire neuron models utilize spike trains to modulate the internal state of the neuron until some threshold is reached. While this sort of model is rooted in accumulation of membrane potential, recent work from Stephen Thornquist shows that activity driven cyclic AMP accumulation can integrate information from many neurons over the time scale of hours that culminates in a calcium influx “eruption” which acts as a signal to the downstream network.</p>
+<p>We were led to thinking about this purely from our work on ATP/ADP ratio driven orthogonality switching in non-equilibirum networks and the observation that spiking in neurons not only causes dramatic swings in this ratio as ATP is burned to re-polarize membranes after firing, but also seems to <a href="./references/madabhushi2015-sz.html">induce double stranded breaks</a> in neuronal DNA. These double stranded breaks were also observed in the context of physiological brain activity in mice when they were shown to increase when mice were allowed to explore novel environments <a href="./references/suberbielle2013-pe.html">Suberbielle2013-pe</a> . This work also showed that Amyloid<span class="math inline">\(\beta\)</span> seems to play an important role in the DSB repair in these mice. In the context of our work, we were intrigued by the possibility that ATP/ADP ratio driven orthogonality switching was coupled to repeat expansion and contraction and that changes to the DNA of neurons themselves was important for learning and memory. In neurons, the metabolic push-pull of depolarization and re-polarization can in principle shift such complexes between processive and distributive assembly and thus provide either memory or flexibility as needed in ways that can be modulated directly by spiking.</p>
+<p>We developed a simple, surely wrong, but possibly useful model of how neuronal activity could drive orthogonality switching via modulating the ATP/ADP ratio in response to spiking, and that the network state, in either the kinetic or energetic regime, would either expand or contract the number of repeats at a neuronal DNA locus. Here we looked to a connection that comes from the study of <a href="./references/index.html">tri-nucleotide repeat diseases</a> such as Ataxia and Huntington’s disease. The genetic basis of these disease is the expansion of CAG repeat regions. These repeat regions result in so called polyQ stretches in the proteins they code for. It has been shown that these proteins, and their RNAs, are major components of granules. The etiology of these diseases is the progressive expansion of these repeats at the DNA level with disease occurring after a certain number of repeats is exceeded. It is the repetitive nature of the region itself that is required for expansion, presumably through the mismatch repair pathways, so completely removing the repeat region prevents the disease. However, mice generated without the repeat region show <a href="./references/clabough2006-oc.html">behavioral and motor defects</a> as adults. Thus the repeats seem to be required for normal neuronal function and we propose that it is their participation in complexes important for cell learning that is required. We hypothesized that there was a physiological number of repeats that would maintain the macro-molecular network that controlled the repeat expansion dynamics. If there were too few repeats, the smaller disordered regions in the protein and the shorter mRNA would provide insufficient sites for the multivalent interactions required for phase separation. However, too many repeats could cause a phase transition, resulting from too many inter-molecular interactions, and this “gelation” would destroy the necessary liquid like properties of the assembly that would maintain the repeat numbers and facilitate intracellular learning.</p>
+<p>All of these are in-line with many of the major theories and experimental evidence in this field, but while current theories focussed on these aggregates as the cause of the disease, we predicted that they could be merely a side effect. This view maybe gaining more support with recent findings that drugs that are exceptionally good at destroying aggregates seem to offer <a href="https://www.bloomberg.com/news/features/2022-09-12/aduhelm-drug-approval-saga-has-alzheimer-s-patients-in-limbo">no cognitive improvement clinically</a> and that the original evidence that the plaques were causal for cognitive impairment <a href="https://www.science.org/content/article/potential-fabrication-research-images-threatens-key-theory-alzheimers-disease">may have been fraudulent</a>.</p>
+<p>In the course of developing this model <strong>we were surprised that evidence for it already existed, albeit scattered among fields with different focuses</strong>. One of the concrete predictions from our theory work was that molecular interactions in the energetic regime should be slower but more stable, and those in the kinetic regime should be faster to initiate but also more likely to dissociate. Having seen the connection between double stranded break repair, and repetitive loci, we were interested to find that the repeats themselves could provide exactly a mechanistic basis for orthogonality switching (See Figure Below) which depends on the mismatch repair machinery <a href="./references/williams2015-ml.html">Williams2015-ml</a> .</p>
+<p><img src="images/repeat-expansion.png" class="img-fluid"></p>
+<p>Repeat expansion and contraction in neurons as the result of induced double stranded breaks and repair or rescission. Repeat expansion occurs in the kinetic regime, which favors the faster, less stable binding and subsequent filling in of single stranded repeat regions, possibly via preferential association with MutS<span class="math inline">\(\alpha\)</span> and through the action of DNA pol<span class="math inline">\(\beta\)</span> <a href="./references/lai2016-kd.html">Lai2016-kd</a>. Repeat maintenance or contraction occurs in the energetic regime, where more stable duplexes, which form more slowly, are favored. In this case, MutS<span class="math inline">\(\beta\)</span> mediated hairpin excision is a likely mechanism of contraction .</p>
+<p>Consistent with this model there are two MMR pathways which rely on two different hetero-dimers, the MutS<span class="math inline">\(\alpha\)</span> pathway with the MSH2/MSH6 dimer and the MutS<span class="math inline">\(\beta\)</span> pathway with the MSH2/MSH3 dimer. It is striking that these pathways are preferentially associated with expansion or contraction of repeats <a href="./references/nakatani2015-fq.html">Nakatani2015-fq</a> , and that which pathway is utilized is controlled by the ATP/ADP ratio <a href="./references/tian2009-dx.html">Tian2009-dx</a> !</p>
+<p>Here a connection can be made between LLPS and granule biology and this model of metabolism driven repeat dynamics, and in particular the role of RNA. Many neurodegenerative diseases involve specifically mutations in RNA biding proteins <a href="./references/thelen2019-qt.html">Thelen2019-qt</a>. In addition, these RNA binding proteins are known to be involved in phase separation at the synapse, with proteins like FUS and TDP-43 being two of the most <a href="./references/sephton2015-pp.html">well studied</a> It is interesting to note that the proteins alone, for example the huntingtin protein in Huntington’s disease, are not wholly causative of the phenotype. In fact, reducing the number of RNAs with CAG repeats reduces the Huntington’s disease phenotype without affecting protein levels. Furthermore, introduction RNAs containing repeats has been shown to worsen the phenotype in mice. In Ataxia, another trinucleotide repeat disease, PolyQ Ataxin protein was found to interact with RNA to form droplets, and that this formation was dependent on helicase activity <a href="./references/zhang2020-lt.html">Zhang2020-lt</a>.</p>
+<p>We propose a central role for RNA in both normal and pathophysiology in neuronal learning related to its association with granules. We propose that the formation and dissolution of granules is a self regulating process. On short time scales, its dynamics are dominated by fluctuations in the ATP/ADP ratio induced by spiking. On longer timescales, these fluctuations drive shifts from expansion-favored to contraction-favored repeat expansion, providing auto-regulation on longer time-scales. The length of the repeats themselves, both at the RNA level and at the polyQ level, tune granule properties through modulation of multivalent interactions. In disease states, this feedback mechanism breaks down, and unchecked repeat expansion results in loss of granule like properties, i.e.&nbsp;aggregation and solidification. We propose that as the cell learns to maintain its internal state in the presence of its inputs from spiking, this learning process combines with spiking dynamics and results in neuron based learning in general. <strong>In fact, it has been shown that RNA transplantation can itself transfer memories e.g.&nbsp;in <a href="./references/bedecarrats2018-xx.html">Aplysia</a> and <a href="./references/deshe2020-zt.html">C. elegans</a>, we presume by transferring the learned intracellular state in the presence of somewhat low-dimensional spiking dynamics.</strong></p>
+<p>Finally, we find a connection between repeat dynamics, granules, RNA and of metabolism. In our model, energy metabolism is important for the dynamics in the form of the ATP/ADP ratio. Swings in this ratio drive the transitions from kinetic discrimination to energetic discrimination and thus from favoring expansion to contraction. <a href="./references/seong2005-hw.html">Seong and colleagues</a>, at Mass. General hospital, find a direct connection between huntingdin protein and mitochondrial energy metabolism. In a neuronal cell line from the same cells that die prematurely in the disease, this group introduced the number of repeats associated with juvenile onset disease, and noted that</p>
+<blockquote class="blockquote">
+<p><em>In ST HdhQ111 knock-in striatal cells, a juvenile onset HD CAG repeat was associated with low mitochondrial ATP and decreased mitochondrial ADP-uptake. This metabolic inhibition was associated with enhanced Ca21 -influx through NMDA receptors, which when blocked resulted in increased cellular [ATP/ADP]. We then evaluated [ATP/ADP] in 40 human lymphoblastoid cell lines, bearing non-HD CAG lengths (9 – 34 units) or HD-causing alleles (35 – 70 units). This analysis revealed an inverse association with the longer of the two allelic HD CAG repeats in both the non-HD and HD ranges. Thus, the polyglutamine tract in huntingtin appears to regulate mitochondrial ADP-phosphorylation in a Ca21 -dependent process that fulfills the genetic criteria for the HD trigger of pathogenesis, and it thereby determines a fundamental biological parameter—cellular energy status, which may contribute to the exquisite vulnerability of striatal neurons in HD.</em></p>
+</blockquote>
+<p>Additionally, mouse cells in which the huntingtin repeat region was deleted showed elevated levels of ATP and senesced prematurely <a href="./references/clabough2006-oc.html">Clabough2006-oc</a>.</p>
+</section>
+</section>
+<section id="sociological-considerations" class="level1">
+<h1>Sociological Considerations</h1>
+<p>In biology, it is often difficult to translate a problem into a formal context. We mentioned before the Luria-Delbruck experiment as a foundational experiment for the modern synthesis view that mutations were random and not directed. This heart of the experiment was the fluctuation test. The idea of this test was to compare the mean number of survivors and their variance after a population was grown from a small number of cells and then stressed. If mutations arose randomly <em>before</em> the stress there would be some jackpot events where almost every cell in the population was resistant, but if they arose <em>in response</em> to the event, it would be very unlikely. Luria and Delbruck were able to formalize what you would expect from the two cases in the form of a statistical test on the shape of a distribution. The fluctuation test was a remarkable experiment because it takes a biological question, <em>are mutations acquired randomly or in response to environmental cues</em>, and cleanly translates it into a formal question, <em>does the number of survivors vary according to a Poisson distribution or not</em>. However, this formalization is, of course, more limited that the original biological question. The formal question we are in fact answering is “is the distribution of the number of surviving of E. coli Strain B, when exposed to Phage T1, significantly different from a Poisson distribution”. Clearly this is of a much more limited scope than the original question. We know now e.g.&nbsp;that if the bacteria tested had harbored the CRISPR/Cas-9 immunity system, these results could have been different. Furthermore, even the answer to the formalized question, “is this distribution significantly different from a Poisson distribution” is limited to the context of two alternative models, with H=0 consistent with Lamarkian, and H=1 Darwinian acquisition of mutations. However, H=1 does not preclude the possibility that the data could come from a mixed Lamarkian/Darwinian model as was pointed out in a <a href="./references/holmes2017-md.html">recent re-analysis</a> of the original data.</p>
+<p>Formalization is one the main challenges for scientists. In biology in particular, though, the narrow scope of questions in which formal methods apply has some important consequences. In cases where the results of such experiments agree with conventional wisdom, results are readily extrapolated beyond the true limits of the scope of their formalization, and this extrapolation is generally accepted. However, when the results disagree with prevailing wisdom, their validity is attacked based on the limits of the scope of the formalization, and indeed, even when all of the requisite proofs are made, the results are often relegated to be true only in the very limited domain of the formalized problem.</p>
+<p>While it is given that scientists should not extrapolate their results beyond the contexts in which they have been investigated (<a href="./references/feynman1974-rs.html">Feynman level integrity</a> should be de rigueur), when this level of scrutiny is not applied uniformly across results in a discipline it provides an opportunity for discrimination. As a result, scientists who wish to present results that go agains prevailing wisdom often understate the significance of their results. As an example, lets consider the case of synonymous and non-synonymous genetic mutations. In the “genome as blueprint” world, the DNA sequence provides the blueprint from which proteins are made. Because there are 20 amino acids and DNA uses triplet codons of the 4 possible nucleotides to encode each amino acid there are 64 possible codons for these 20 amino acids. The result is that there is degeneracy in the code and thus different codons can code for the same amino acid. For example, CCU, CCA, CCG, and CCC all code for the amino acid Proline. These mutations (CCC-CCU) are called synonymous mutations because they code for the same amino acid and result in the same protein. It is widely held that such mutations are neutral because they do not change the protein sequence. This neutrality then forms the basis of determining whether regions in the genome are under positive selection by looking at the ration of non-synonymous mutations to synonymous mutations (dN/dS).</p>
+<p>In a recent publication the Jarosz group measured the fitness effects of synonymous and non-synonymous mutations by recombining genetic variants from a collection of wild yeast in such a way that there were many more individuals then there were variants being mapped. In this way, the phenotypic consequences of these variants could be determined with essentially nucleotide resolution. This statistical power allowed them to map the genetic contributions of natural variants to 90 quantitative traits. One of their most interesting findings was that the effect size of non-synonymous and synonymous mutations were effectively the same! Jarosz merely points to the fact that the ratio of non-synonymous mutations to synonymous ones, the dN/dS ratio, is widely used as the basis to determine whether sequences are under positive selective pressure, and underlying this calculation is the assumption that synonymous mutations are neutral! He goes on to ask the audience simply to be…</p>
+<p>open to the idea of thinking about, at least some, synonymous variants as a type of regulatory variant that can arise within an open reading frame, and at the very least accept that is is unwise to ignore them (as is standard practice) in evolutionary biology but as well in clinical genetics.</p>
+<p>In addition to the findings of <a href="./people/daniel-jarosz.html">Daniel Jarosz</a> that synonymous mutations have similar fitness effects to non-synonymous mutations in yeast, <a href="./people/shelley-d-copley.html">Shelley Copley</a> has found that synonymous mutations play an important role in fitness in the context of her “weak link” enzyme systems. In <em>Salmonella enterica, she</em> found that two synonymous mutations increased the growth rate by 41 and 67% .</p>
+<p>Scientists like Dan Jarosz, who are extremely successful in the current academic system, recognize when their findings are likely to be met with significant push-back and are effective at pre-empting this. However, this has an unfortunate consequence; even when a group of like minded scientists get together, their discussions often seem directed at the spectre of a critic in the audience, possibly stifling some of the most exciting discussions and future research paths.</p>
+<p>One of the major opportunities we have is to recast existing evidence in a new light. We were constantly amazed to find that the answers to very specific questions we had and which would require extensive and involved laboratory experiments had already been answered, albeit in different contexts. For example, when we started focusing on the ATP/ADP ratio as a result of our insights from the non-equilibirum modeling, we were amazed to find that for example, a group had already shown that it is precisely this ratio which determines whether MutS<span class="math inline">\(\alpha\)</span> or MutS<span class="math inline">\(\beta\)</span> MMR was favored. However, we often found that the context in which results were presented was unhelpful. All too often, we found the context to be too focussed on the cell as an optimal growth machine focused on maintaining its genome. Thus, changes in energetic dynamics would be characterized as “metabolic breakdown” and its mutagenic events such as DSB would be “loss of genome integrity”. Genome integrity would inevitability have to be maintained and the breakdown of its maintenance mechanisms would invariably be implicated in cancer. It is a bit lucky then, that we believe that these genomic events are in-fact crucial for cell learning. The focus on genome integrity and its implications for cancer mean that these systems and their mechanisms are extraordinarily well studied.</p>
+<hr>
+</section>
+<section id="people" class="level1">
+<h1>People</h1>
+<p><a href="./people/index.html">People</a></p>
+<hr>
+</section>
+<section id="notes" class="level1">
+<h1>Notes</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here we take random in space to mean with a uniform probability distribution over genomic locations, and random in time to mean with exponentially distributed waiting times between mutational events.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If by nothing else than by the discovery of the CRISPR/Cas-9 phage immunity system in bacteria, which directs the inclusion in the genome of short repeat sequences in response to phage infection (non-random in time) and places these into CRISPR loci (non-random in space)</p>
+</div>
+</div>
+<p><a href="./references/index.html">References</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

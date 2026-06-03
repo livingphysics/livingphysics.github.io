@@ -1,0 +1,55 @@
+---
+title: "CAG Repeat Not Polyglutamine Length Determines Timing of Huntington's Disease Onset"
+subtitle: "Citation key: Lee2019-hj"
+---
+
+*Cell · 2019*
+
+**Tags:** Neurons, Tri-nucleotide Repeats
+
+[📄 Download PDF](../files/Lee_et_al._2019_-_CAG_Repeat_Not_Polyglutamine_Length_Determines_Timing_of_Huntingtons_Disease_Onset.pdf)
+
+```bibtex
+@ARTICLE{Lee2019-hj,
+title = "{CAG} Repeat Not Polyglutamine Length Determines Timing of
+Huntington's Disease Onset",
+author = "Lee, Jong-Min and Correia, Kevin and Loupe, Jacob and Kim,
+Kyung-Hee and Barker, Douglas and Hong, Eun Pyo and Chao, Michael
+J and Long, Jeffrey D and Lucente, Diane and Vonsattel, Jean Paul
+G and Pinto, Ricardo Mouro and Abu Elneel, Kawther and Ramos,
+Eliana Marisa and Mysore, Jayalakshmi Srinidhi and Gillis, Tammy
+and Wheeler, Vanessa C and MacDonald, Marcy E and Gusella, James
+F and McAllister, Branduff and Massey, Thomas and Medway,
+Christopher and Stone, Timothy C and Hall, Lynsey and Jones,
+Lesley and Holmans, Peter and Kwak, Seung and Ehrhardt, Anka G
+and Sampaio, Cristina and Ciosi, Marc and Maxwell, Alastair and
+Chatzi, Afroditi and Monckton, Darren G and Orth, Michael and
+Landwehrmeyer, G Bernhard and Paulsen, Jane S and Dorsey, E Ray
+and Shoulson, Ira and Myers, Richard H",
+abstract = "Summary Variable, glutamine-encoding, CAA interruptions indicate
+that a property of the uninterrupted HTT CAG repeat sequence,
+distinct from the length of huntingtin's polyglutamine segment,
+dictates the rate at which Huntington's disease (HD) develops.
+The timing of onset shows no significant association with HTT
+cis-eQTLs but is influenced, sometimes in a sex-specific manner,
+by polymorphic variation at multiple DNA maintenance genes,
+suggesting that the special onset-determining property of the
+uninterrupted CAG repeat is a propensity for length instability
+that leads to its somatic expansion. Additional naturally
+occurring genetic modifier loci, defined by GWAS, may influence
+HD pathogenesis through other mechanisms. These findings have
+profound implications for the pathogenesis of HD and other repeat
+diseases and question the fundamental premise that polyglutamine
+length determines the rate of pathogenesis in the ``polyglutamine
+disorders.''",
+journal = "Cell",
+volume = 178,
+number = 4,
+pages = "887--900.e14",
+month = aug,
+year = 2019,
+keywords = "Huntington's disease; CAG repeat; trinucleotide repeat; genetic
+modifier; age at onset; somatic DNA expansion; DNA maintenance;
+DNA repair; polyglutamine disease; disease modification"
+}
+```

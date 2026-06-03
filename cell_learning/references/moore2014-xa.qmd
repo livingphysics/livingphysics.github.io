@@ -1,0 +1,44 @@
+---
+title: "Induced mutations in yeast cell populations adapting to an unforeseen challenge"
+subtitle: "Citation key: Moore2014-xa"
+---
+
+*PLoS One · 2014*
+
+**Tags:** Biological Computation, Temporal Non-randomness
+
+[📄 Download PDF](../files/Moore_et_al._2014_-_Induced_mutations_in_yeast_cell_populations_adapting_to_an_unforeseen_challenge.pdf)
+
+```bibtex
+@ARTICLE{Moore2014-xa,
+title = "Induced mutations in yeast cell populations adapting to an
+unforeseen challenge",
+author = "Moore, Lindsay S and Wei, Wu and Stolovicki, Elad and
+Benbenishty, Tamar and Wilkening, Stefan and Steinmetz, Lars M
+and Braun, Erez and David, Lior",
+abstract = "The modern evolutionary synthesis assumes that mutations occur at
+random, independently of the environment in which they confer an
+advantage. However, there are indications that cells facing
+challenging conditions can adapt rapidly, utilizing processes
+beyond selection of pre-existing genetic variation. Here, we show
+that a strong regulatory challenge can induce mutations in many
+independent yeast cells, in the absence of general mutagenesis.
+Whole genome sequencing of cell lineages reveals a repertoire of
+independent mutations within a single lineage that arose only
+after the cells were exposed to the challenging environment,
+while other cells in the same lineage adapted without any
+mutation in their genomes. Thus, our experiments uncovered
+multiple alternative routes for heritable adaptation that were
+all induced in the same lineage during a short time period. Our
+results demonstrate the existence of adaptation mechanisms beyond
+random mutation, suggesting a tight connection between
+physiological and genetic processes.",
+journal = "PLoS One",
+volume = 9,
+number = 10,
+pages = "e111133",
+month = oct,
+year = 2014,
+language = "en"
+}
+```

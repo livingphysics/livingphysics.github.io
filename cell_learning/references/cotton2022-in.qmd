@@ -1,0 +1,26 @@
+---
+title: "Catalysis-Induced Phase Separation and Autoregulation of Enzymatic Activity"
+subtitle: "Citation key: Cotton2022-in"
+---
+
+*Phys. Rev. Lett. · 2022*
+
+**Tags:** LLPS, Non-equilibrium, Theory, UK Based
+
+[📄 Download PDF](../files/Cotton_et_al._2022_-_Catalysis-Induced_Phase_Separation_and_Autoregulation_of_Enzymatic_Activity.pdf)
+
+```bibtex
+@ARTICLE{Cotton2022-in,
+title = "{Catalysis-Induced} Phase Separation and Autoregulation of
+Enzymatic Activity",
+author = "Cotton, Matthew W and Golestanian, Ramin and Agudo-Canalejo,
+Jaime",
+journal = "Phys. Rev. Lett.",
+volume = 129,
+number = 15,
+pages = "158101",
+month = oct,
+year = 2022,
+language = “en”
+}
+```

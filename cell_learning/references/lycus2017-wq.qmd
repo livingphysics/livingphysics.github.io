@@ -1,0 +1,27 @@
+---
+title: "Phenotypic and genotypic richness of denitrifiers revealed by a novel isolation strategy"
+subtitle: "Citation key: Lycus2017-wq"
+---
+
+*ISME J. · 2017*
+
+**Tags:** Ecosystems
+
+[📄 Download PDF](../files/Lycus_et_al._2017_-_Phenotypic_and_genotypic_richness_of_denitrifiers_revealed_by_a_novel_isolation_strategy.pdf)
+
+```bibtex
+@ARTICLE{Lycus2017-wq,
+title = "Phenotypic and genotypic richness of denitrifiers revealed by a
+novel isolation strategy",
+author = "Lycus, Pawel and Lovise B{\o}thun, Kari and Bergaust, Linda and
+Peele Shapleigh, James and Reier Bakken, Lars and Frosteg{\aa}rd,
+{\AA}sa",
+journal = "ISME J.",
+volume = 11,
+number = 10,
+pages = "2219--2232",
+month = oct,
+year = 2017,
+language = "en"
+}
+```
